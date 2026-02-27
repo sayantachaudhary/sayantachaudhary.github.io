@@ -1,0 +1,72 @@
+body {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.5;
+  min-height: 100vh;
+  background-color: var(--neutral-100);
+  color: var(--neutral-900);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Layout */
+.container {
+  max-width: 768px;
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+*:focus {
+  outline: none;
+}
+
+*:focus-visible {
+  outline: 2px solid var(--primary-500);
+  outline-offset: 2px;
+  border-radius: calc(var(--spacing) * 2);
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--neutral-200);
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0;
+  color: var(--neutral-100);
+  font-size: var(--text-sm);
+}
+
+/* Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* Better line wrapping */
+p {
+  text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/* Create a root stacking context */
+/* #root, */
+/* #__next { */
+/*   isolation: isolate; */
+/* } */

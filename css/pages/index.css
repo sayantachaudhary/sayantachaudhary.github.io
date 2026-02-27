@@ -1,0 +1,73 @@
+.hero {
+  .lead {
+    font-size: var(--text-base);
+    color: var(--neutral-600);
+  }
+}
+
+/* header { */
+/**/
+/*   .hero { */
+/*     margin-bottom: calc(var(--spacing) * 4); */
+/*   } */
+/**/
+/*   .role { */
+/*     color: var(--neutral-500); */
+/*   } */
+/**/
+/*   .lead { */
+/*     font-size: var(--text-2xl); */
+/*     color: var(--neutral-500); */
+/*   } */
+/* } */
+
+/* .hero { */
+/*   margin-bottom: calc(var(--spacing) * 4); */
+/* } */
+
+section {
+  margin: calc(var(--spacing) * 16) 0;
+
+  h2 {
+    margin-bottom: 2rem;
+  }
+}
+
+.life-cards {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing) * 4);
+
+  a {
+    display: flex;
+    align-items: center;
+    gap: calc(var(--spacing) * 4);
+    color: inherit;
+    padding: calc(var(--spacing) * 4);
+    text-decoration: none;
+    border: 1px solid var(--neutral-300);
+    border-radius: calc(var(--spacing) * 2);
+
+    &:hover {
+      box-shadow: 4px 4px var(--primary-500);
+    }
+
+    .icon {
+      font-size: var(--text-2xl);
+    }
+
+    .content h3 {
+      font-size: var(--text-lg);
+    }
+
+    .content p {
+      margin: calc(var(--spacing) * 1) 0 0;
+      color: var(--neutral-500);
+    }
+  }
+}
+
+#contact address {
+  display: flex;
+  gap: 1rem;
+}
