@@ -1,7 +1,17 @@
 .hero {
+  background-color: var(--neutral-100);
+  padding: calc(var(--spacing) * 16);
+  box-shadow: var(--shadow-2xl);
+
   .lead {
     font-size: var(--text-base);
     color: var(--neutral-600);
+  }
+
+  .inline-flex {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
   }
 }
 

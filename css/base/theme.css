@@ -52,9 +52,6 @@
   /* 20 = 5rem     = 80px */
   /* 24 = 6rem     = 96px */
 
-  --shadow-1: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
-  --shadow-2: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-
   --shadow-2xs: 0 1px rgb(0 0 0 / 0.05);
   --shadow-xs: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
@@ -110,8 +107,8 @@
 
 /* Use vite/ESModules to reduce bundle size, lucide is built to be fully tree-shakable */
 [data-lucide] {
-  width: 1.25rem;
-  height: 1.25rem;
-  stroke-width: 1.5;
+  width: 1em;
+  height: 1em;
+  stroke-width: 2px;
   vertical-align: middle;
 }

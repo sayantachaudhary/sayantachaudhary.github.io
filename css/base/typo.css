@@ -35,8 +35,8 @@ h6 {
 }
 
 p {
-  line-height: 1.6;
+  line-height: 1.9;
   color: var(--neutral-600);
   text-wrap: pretty;
-  margin-bottom: 2rem;
+  margin-bottom: 1em;
 }
