@@ -41,8 +41,8 @@ body {
   display: flex;
   gap: 1rem;
   padding: 1rem;
-  border: 1px solid var(--neutral-300);
-  border-radius: calc(var(--spacing) * 2);
+  border: 1px solid var(--neutral-200);
+  border-radius: var(--radius-md);
   background-color: var(--neutral-100);
 
   .media-img {
@@ -58,7 +58,7 @@ body {
     }
 
     .media-text {
-      color: var(--neutral-500);
+      color: var(--neutral-600);
     }
   }
 

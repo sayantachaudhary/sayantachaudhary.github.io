@@ -40,7 +40,7 @@ body {
   display: flex;
   gap: 1rem;
   padding: 1rem;
-  border: 1px solid var(--neutral-300);
+  border: 1px solid var(--neutral-200);
   border-radius: calc(var(--spacing) * 2);
   background-color: var(--neutral-100);
 
