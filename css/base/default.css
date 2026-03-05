@@ -30,16 +30,7 @@ body {
 
 hr {
   border: none;
-  border-top: 1px solid var(--neutral-200);
-}
-
-.footer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 2rem 0;
-  color: var(--neutral-100);
-  font-size: var(--text-sm);
+  /* border-top: 1px solid var(--neutral-300); */
 }
 
 /* Avoid text overflows */
@@ -72,3 +63,11 @@ h6 {
 /* #__next { */
 /*   isolation: isolate; */
 /* } */
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: calc(var(--spacing) * 16);
+  font-size: var(--text-sm);
+}

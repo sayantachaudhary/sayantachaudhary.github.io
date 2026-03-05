@@ -1,11 +1,6 @@
-/* dark mode shadow */
 /* 
-  <btn class="bg-sky-500 hover:bg-sty-600 focus:outline-2 focus:outline-offset-2 focus:outline-sky-500 active:bg-sky-700 ..."> Save </btn>
-  :hover
-  :focus-visible
-  :active - box-shadow, inset 
-  (Box shadow > Borders)
-  :disabled - opacity
+  <btn class="bg-sky-500 hover:bg-sty-600 focus:outline-2 focus:outline-offset-2 focus:outline-sky-500 active:bg-sky-700 ..."> Button </btn>
+  dark mode shadow 
 */
 
 .btn {
@@ -61,8 +56,10 @@
   background-color: transparent;
   color: var(--neutral-800);
 
-  &:hover:not(:disabled) {
-    background-color: var(--neutral-200);
+  @media (hover: hover) {
+    &:hover:not(:disabled) {
+      background-color: var(--neutral-200);
+    }
   }
 
   &:active:not(:disabled) {
@@ -72,12 +69,14 @@
 
 .btn-link {
   background-color: transparent;
-  color: var(--neutral-800);
+  color: var(--primary-500);
   text-decoration: underline wavy var(--primary-500) 1px;
-  text-underline-offset: 4px;
+  text-underline-offset: 2px;
 
-  &:hover:not(:disabled) {
-    text-decoration: none;
+  @media (hover: hover) {
+    &:hover:not(:disabled) {
+      text-decoration: none;
+    }
   }
 }
 

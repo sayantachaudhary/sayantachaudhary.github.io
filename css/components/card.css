@@ -11,14 +11,15 @@
   border: 1px solid var(--neutral-200);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-lg);
-  padding: 1rem 0;
-  background-color: var(--neutral-100);
+  padding: calc(var(--spacing) * 4) 0;
   overflow: hidden;
+  background-color: var(--neutral-100);
+
+  transition: box-shadow 200ms ease;
 
   &:hover {
-    /* box-shadow: 4px 4px var(--primary-500); */
+    box-shadow: 4px 4px var(--primary-500);
     box-shadow: var(--shadow-lg);
-    transition: all 0.25s ease;
   }
 
   @media (min-width: 640px) {
@@ -36,12 +37,12 @@
   }
 
   .card-header {
-    margin: 1rem 0;
-    padding: 0 1rem;
+    margin: calc(var(--spacing) * 4) 0;
+    padding: 0 calc(var(--spacing) * 4);
 
     .card-title {
-      font-size: 1.25rem;
-      margin-bottom: var(--spacing);
+      font-size: var(--text-xl);
+      margin-bottom: calc(var(--spacing) * 1);
     }
 
     .card-subtitle {
@@ -53,14 +54,13 @@
     flex: 1;
 
     .card-text {
-      margin: 0;
-      padding: 0 1rem;
-      color: var(--neutral-700);
+      padding: 0 calc(var(--spacing) * 4);
+      color: var(--neutral-600);
     }
   }
 
   .card-footer {
-    padding: 1rem 1rem;
+    padding: calc(var(--spacing) * 4) calc(var(--spacing) * 4);
 
     a {
       font-size: var(--text-sm);

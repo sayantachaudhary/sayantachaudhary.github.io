@@ -1,6 +1,5 @@
 /* Line-height and font size are inversely proportinal */
 /* Bigger text needs less line-height, smaller text needs more */
-
 h1 {
   font-size: var(--text-4xl);
   line-height: 1.1;
@@ -40,19 +39,28 @@ h6 {
 p {
   line-height: 1.6;
   color: var(--neutral-600);
-  text-wrap: pretty;
-  max-width: 65ch;
 }
 
-/* .prose p { */
-/*   margin-bottom: 1rem; */
-/* } */
-/* .prose is a common class name for long-form readable content — same pattern Tailwind uses. */
-/* .rich-text */
-/* .lead — intro/subtitle paragraph */
-/* naming the css class list */
+.prose {
+  line-height: 1.75;
+  max-width: 65ch;
 
-/* wider content needs more breathing room */
-/* .prose p { */
-/*   line-height: 1.75; */
-/* } */
+  a {
+    text-decoration: underline;
+    font-weight: 500;
+  }
+}
+
+.prose> :first-child {
+  margin-top: 0;
+}
+
+.prose> :last-child {
+  margin-bottom: 0;
+}
+
+.lead {
+  /* intro/subtitle paragraph */
+  color: var(--neutral-600);
+  font-size: var(--text-lg);
+}

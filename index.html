@@ -6,20 +6,19 @@
     <title>Sayanta's Portfolio</title>
     <meta name="description" content="Plz SEO" />
     <meta name="author" content="Sayanta Chaudhary" />
-    <!-- <meta name="description" content="" /> -->
+    <meta name="description" content="" />
+    <!-- Favicon -->
     <link rel="icon" href="./assets/images/favicon/favicon.ico" />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="96x96"
-      href="./assets/images/favicon/favicon-96x96.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="./assets/images/favicon/apple-touch-icon.png"
-    />
+    <link rel="icon" type="image/png" sizes="96x96" href="./assets/images/favicon/favicon-96x96.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/favicon/apple-touch-icon.png" />
     <link rel="manifest" href="./site.webmanifest" />
+    <!-- Social meta -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://example.com/page.html">
+    <meta property="og:title" content="Content Title">
+    <meta property="og:image" content="https://example.com/image.jpg">
+    <meta property="og:description" content="Description Here" />
+    <meta property="og:site_name" content="Site Name">
     <!-- External CSS -->
     <link rel="preconnect" href="https://rsms.me/" />
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
@@ -27,7 +26,7 @@
     <!-- Base Style -->
     <link rel="stylesheet" href="./css/base/preflight.css" />
     <link rel="stylesheet" href="./css/base/theme.css" />
-    <link rel="stylesheet" href="./css/base/typo.css" />
+    <link rel="stylesheet" href="./css/base/font.css" />
     <link rel="stylesheet" href="./css/base/default.css" />
     <!-- Components -->
     <link rel="stylesheet" href="./css/components/button.css" />
@@ -38,7 +37,6 @@
     <!-- JS -->
     <script src="./js/navbar.js" defer></script>
     <script src="./js/script.js" defer></script>
-    <!-- Use ESModules to reduce bundle size, lucide is built to be fully tree-shakable -->
     <script src="https://unpkg.com/lucide@latest"></script>
   </head>
 
@@ -304,7 +302,6 @@
               GitHub
             </a>
 
-            <!-- counter.websiteout.net -->
             <a
               href="mailto:someone@example.com"
               target="_blank"
@@ -320,7 +317,7 @@
 
       <hr />
 
-      <footer class="footer container">
+      <footer class="footer">
         <p>Copyright &copy; 2026 · Sayanta Chaudhary</p>
       </footer>
     </div>
