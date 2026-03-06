@@ -1,13 +1,3 @@
-*:focus {
-  outline: none;
-}
-
-*:focus-visible {
-  outline: 2px solid var(--primary-500);
-  outline-offset: 2px;
-  border-radius: calc(var(--spacing) * 2);
-}
-
 :root {
   scroll-behavior: smooth;
   --font-sans: inter, serif;

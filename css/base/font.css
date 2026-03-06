@@ -59,8 +59,8 @@ p {
   margin-bottom: 0;
 }
 
+/* intro/subtitle paragraph */
 .lead {
-  /* intro/subtitle paragraph */
-  color: var(--neutral-600);
   font-size: var(--text-lg);
+  color: var(--neutral-600);
 }

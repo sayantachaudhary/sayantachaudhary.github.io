@@ -62,7 +62,7 @@ section {
     }
 
     .content p {
-      color: var(--neutral-600);
+      color: var(--neutral-500);
     }
   }
 }
