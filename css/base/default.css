@@ -29,41 +29,34 @@ main {
   padding-inline: 1rem;
 }
 
-.stack {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
+/* .stack { */
+/*   display: flex; */
+/*   flex-direction: column; */
+/*   gap: 1rem; */
+/* } */
 
-.cluster {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
+/* .cluster { */
+/*   display: flex; */
+/*   flex-wrap: wrap; */
+/*   gap: 1rem; */
+/* } */
 
-.grid {
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
-}
+/* .grid { */
+/*   display: grid; */
+/*   gap: 1rem; */
+/*   grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)); */
+/* } */
 
-.center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+/* .center { */
+/*   display: flex; */
+/*   align-items: center; */
+/*   justify-content: center; */
+/*   min-height: 100vh; */
+/* } */
 
-.center-full {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-}
-
-.footer {
-  text-align: center;
-  padding-block: calc(var(--spacing) * 16);
-  font-size: var(--text-sm);
+hr {
+  border: none;
+  border-top: 1px solid var(--neutral-300);
 }
 
 /* Accessibility */
@@ -100,21 +93,4 @@ h4,
 h5,
 h6 {
   text-wrap: balance;
-}
-
-/* Create a root stacking context */
-/* #root, */
-/* #__next { */
-/*   isolation: isolate; */
-/* } */
-
-hr {
-  border: none;
-  /* border-top: 1px solid var(--neutral-300); */
-}
-
-.page-header {
-  margin-top: calc(var(--spacing) * 8);
-  padding-bottom: calc(var(--spacing) * 8);
-  text-align: center;
 }

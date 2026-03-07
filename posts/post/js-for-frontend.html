@@ -1,72 +1,73 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title></title>
-  </head>
 
-  <body>
-    <h1 id="javascript-for-frontend-development-a-beginner-s-guide">
-      JavaScript for Frontend Development: A Beginner&#39;s Guide
-    </h1>
-    <p>
-      Hello there! lets start with basic to advanced JavaScript concepts. This
-      is just a guide not a tutorial to learn JavaScript. You can use this as a
-      reference to learn JavaScript. This is the first part of the series.
-    </p>
-    <h2 id="table-of-contents">Table of Contents</h2>
-    <ul>
-      <li>
-        <a href="#javascript-basics">JavaScript Basics</a> - First things first
-      </li>
-      <li>
-        <a href="#variables-and-data-types">Variables and Data Types</a> -
-        Storing and working with information
-      </li>
-      <li>
-        <a href="#functions">Functions</a> - Making reusable blocks of code
-      </li>
-      <li>
-        <a href="#arrow-functions">Arrow Functions</a> - The modern way to write
-        functions
-      </li>
-      <li>
-        <a href="#arrays-and-objects">Arrays and Objects</a> - Working with
-        collections of data
-      </li>
-      <li>
-        <a href="#destructuring">Destructuring</a> - Unpacking values from
-        arrays and objects
-      </li>
-      <li>
-        <a href="#template-literals">Template Literals</a> - Better string
-        formatting
-      </li>
-      <li>
-        <a href="#conditional-logic">Conditional Logic</a> - Making decisions in
-        your code
-      </li>
-      <li>
-        <a href="#ternary-operator">The Ternary Operator</a> - Shorthand
-        conditionals
-      </li>
-      <li>
-        <a href="#restspread-operator">Rest/Spread Operator</a> - The versatile
-        three dots
-      </li>
-      <li>
-        <a href="#optional-chaining">Optional Chaining</a> - Safely accessing
-        nested properties
-      </li>
-    </ul>
-    <h2 id="javascript-basics">JavaScript Basics</h2>
-    <p>
-      JavaScript is the language of the web. While HTML gives structure and CSS
-      provides style, JavaScript adds behavior and interactivity to websites.
-    </p>
-    <p>Let&#39;s start with some basics:</p>
-    <pre><code class="lang-javascript"><span class="hljs-comment">// This is a comment - the computer ignores this
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title></title>
+</head>
+
+<body>
+  <h1 id="javascript-for-frontend-development-a-beginner-s-guide">
+    JavaScript for Frontend Development: A Beginner&#39;s Guide
+  </h1>
+  <p>
+    Hello there! lets start with basic to advanced JavaScript concepts. This
+    is just a guide not a tutorial to learn JavaScript. You can use this as a
+    reference to learn JavaScript. This is the first part of the series.
+  </p>
+  <h2 id="table-of-contents">Table of Contents</h2>
+  <ul>
+    <li>
+      <a href="#javascript-basics">JavaScript Basics</a> - First things first
+    </li>
+    <li>
+      <a href="#variables-and-data-types">Variables and Data Types</a> -
+      Storing and working with information
+    </li>
+    <li>
+      <a href="#functions">Functions</a> - Making reusable blocks of code
+    </li>
+    <li>
+      <a href="#arrow-functions">Arrow Functions</a> - The modern way to write
+      functions
+    </li>
+    <li>
+      <a href="#arrays-and-objects">Arrays and Objects</a> - Working with
+      collections of data
+    </li>
+    <li>
+      <a href="#destructuring">Destructuring</a> - Unpacking values from
+      arrays and objects
+    </li>
+    <li>
+      <a href="#template-literals">Template Literals</a> - Better string
+      formatting
+    </li>
+    <li>
+      <a href="#conditional-logic">Conditional Logic</a> - Making decisions in
+      your code
+    </li>
+    <li>
+      <a href="#ternary-operator">The Ternary Operator</a> - Shorthand
+      conditionals
+    </li>
+    <li>
+      <a href="#restspread-operator">Rest/Spread Operator</a> - The versatile
+      three dots
+    </li>
+    <li>
+      <a href="#optional-chaining">Optional Chaining</a> - Safely accessing
+      nested properties
+    </li>
+  </ul>
+  <h2 id="javascript-basics">JavaScript Basics</h2>
+  <p>
+    JavaScript is the language of the web. While HTML gives structure and CSS
+    provides style, JavaScript adds behavior and interactivity to websites.
+  </p>
+  <p>Let&#39;s start with some basics:</p>
+  <pre><code class="lang-javascript"><span class="hljs-comment">// This is a comment - the computer ignores this
         text</span>
 
       <span class="hljs-comment">// Printing to the console</span>
@@ -82,16 +83,16 @@
       console.log(<span class="hljs-number">10</span> / <span class="hljs-number">2</span>); <span
         class="hljs-comment">// Output: 5</span>
     </code></pre>
-    <p>
-      The console is your friend - it&#39;s where you can see output from your
-      code and test things out while learning.
-    </p>
-    <h2 id="variables-and-data-types">Variables and Data Types</h2>
-    <p>
-      Variables are like containers that store information. In JavaScript, we
-      have several ways to declare them:
-    </p>
-    <pre><code class="lang-javascript"><span class="hljs-comment">// Declaring variables</span>
+  <p>
+    The console is your friend - it&#39;s where you can see output from your
+    code and test things out while learning.
+  </p>
+  <h2 id="variables-and-data-types">Variables and Data Types</h2>
+  <p>
+    Variables are like containers that store information. In JavaScript, we
+    have several ways to declare them:
+  </p>
+  <pre><code class="lang-javascript"><span class="hljs-comment">// Declaring variables</span>
       <span class="hljs-keyword">let</span> name = <span class="hljs-string">'Sarah'</span>; <span
         class="hljs-comment">// Use let when the value might change later</span>
       <span class="hljs-keyword">const</span> age = <span class="hljs-number">25</span>; <span class="hljs-comment">//
@@ -116,17 +117,17 @@
       <span class="hljs-keyword">const</span> myObject = { <span class="hljs-attr">name</span>: <span
         class="hljs-string">'Book'</span> }; <span class="hljs-comment">// Object (collection of key-value pairs)</span>
     </code></pre>
-    <p>
-      Always try to use <code>const</code> when possible, and
-      <code>let</code> when you need to change the value later. This makes your
-      code more predictable!
-    </p>
-    <h2 id="functions">Functions</h2>
-    <p>
-      Functions are reusable blocks of code. Think of them as little machines
-      that do specific tasks:
-    </p>
-    <pre><code class="lang-javascript"><span class="hljs-comment">// Basic function declaration</span>
+  <p>
+    Always try to use <code>const</code> when possible, and
+    <code>let</code> when you need to change the value later. This makes your
+    code more predictable!
+  </p>
+  <h2 id="functions">Functions</h2>
+  <p>
+    Functions are reusable blocks of code. Think of them as little machines
+    that do specific tasks:
+  </p>
+  <pre><code class="lang-javascript"><span class="hljs-comment">// Basic function declaration</span>
       <span class="hljs-function"><span class="hljs-keyword">function</span> <span
           class="hljs-title">sayHello</span><span class="hljs-params">(name)</span> {</span>
       <span class="hljs-keyword">return</span> <span class="hljs-string">'Hello, '</span> + name + <span
@@ -148,16 +149,16 @@
       console.<span class="hljs-built_in">log</span>(<span class="hljs-built_in">sum</span>); <span
         class="hljs-comment">// Output: 8</span>
     </code></pre>
-    <p>
-      Functions help avoid repeating code and make your program more organized.
-      They can take inputs (parameters) and give back outputs (return values).
-    </p>
-    <h2 id="arrow-functions">Arrow Functions</h2>
-    <p>
-      Arrow functions are a newer, shorter way to write functions. They&#39;re
-      especially useful for short, simple operations:
-    </p>
-    <pre><code class="lang-javascript"><span class="hljs-comment">// Regular function</span>
+  <p>
+    Functions help avoid repeating code and make your program more organized.
+    They can take inputs (parameters) and give back outputs (return values).
+  </p>
+  <h2 id="arrow-functions">Arrow Functions</h2>
+  <p>
+    Arrow functions are a newer, shorter way to write functions. They&#39;re
+    especially useful for short, simple operations:
+  </p>
+  <pre><code class="lang-javascript"><span class="hljs-comment">// Regular function</span>
       <span class="hljs-function"><span class="hljs-keyword">function</span> <span
           class="hljs-title">double</span>(<span class="hljs-params">num</span>) </span>{
       <span class="hljs-keyword">return</span> num * <span class="hljs-number">2</span>;
@@ -186,18 +187,18 @@
       <span class="hljs-keyword">return</span> message;
       };
     </code></pre>
-    <p>
-      Arrow functions are not just shorter - they also handle the
-      <code>this</code> keyword differently, which becomes important when you
-      start working with objects and events.
-    </p>
-    <h2 id="arrays-and-objects">Arrays and Objects</h2>
-    <p>
-      Arrays and objects are two ways to organize multiple values in JavaScript.
-    </p>
-    <h3 id="arrays">Arrays</h3>
-    <p>Arrays are ordered collections of values:</p>
-    <pre><code class="lang-javascript">// Creating an<span class="hljs-built_in"> array
+  <p>
+    Arrow functions are not just shorter - they also handle the
+    <code>this</code> keyword differently, which becomes important when you
+    start working with objects and events.
+  </p>
+  <h2 id="arrays-and-objects">Arrays and Objects</h2>
+  <p>
+    Arrays and objects are two ways to organize multiple values in JavaScript.
+  </p>
+  <h3 id="arrays">Arrays</h3>
+  <p>Arrays are ordered collections of values:</p>
+  <pre><code class="lang-javascript">// Creating an<span class="hljs-built_in"> array
       </span>const fruits = ['apple', 'banana', 'orange'];
 
       // Accessing items (starting from zero)
@@ -221,9 +222,9 @@
         const </span>evenNumbers = numbers.filter((num) =&gt; num % 2 === 0);
       console.log(evenNumbers); // Output: [2, 4]
     </code></pre>
-    <h3 id="objects">Objects</h3>
-    <p>Objects store data in key-value pairs:</p>
-    <pre><code class="lang-javascript"><span class="hljs-regexp">//</span> Creating an object
+  <h3 id="objects">Objects</h3>
+  <p>Objects store data in key-value pairs:</p>
+  <pre><code class="lang-javascript"><span class="hljs-regexp">//</span> Creating an object
       const person = {
       name: <span class="hljs-string">'Emma'</span>,
       age: <span class="hljs-number">28</span>,
@@ -246,17 +247,17 @@
         class="hljs-string">"reading"</span>, <span class="hljs-string">"hiking"</span>], job: <span
         class="hljs-string">"Developer"</span>}
     </code></pre>
-    <p>
-      Objects are everywhere in JavaScript. They&#39;re used for storing related
-      data and creating more complex data structures.
-    </p>
-    <h2 id="destructuring">Destructuring</h2>
-    <p>
-      Destructuring is a convenient way to extract values from arrays or
-      objects:
-    </p>
-    <h3 id="array-destructuring">Array Destructuring</h3>
-    <pre><code class="lang-javascript"><span class="hljs-keyword">const</span> colors = [<span
+  <p>
+    Objects are everywhere in JavaScript. They&#39;re used for storing related
+    data and creating more complex data structures.
+  </p>
+  <h2 id="destructuring">Destructuring</h2>
+  <p>
+    Destructuring is a convenient way to extract values from arrays or
+    objects:
+  </p>
+  <h3 id="array-destructuring">Array Destructuring</h3>
+  <pre><code class="lang-javascript"><span class="hljs-keyword">const</span> colors = [<span
         class="hljs-string">'red'</span>, <span class="hljs-string">'green'</span>, <span
         class="hljs-string">'blue'</span>];
 
@@ -282,8 +283,8 @@
       console.<span class="hljs-built_in">log</span>(three); <span class="hljs-comment">// Output: 3</span>
       console.<span class="hljs-built_in">log</span>(rest); <span class="hljs-comment">// Output: [4, 5]</span>
     </code></pre>
-    <h3 id="object-destructuring">Object Destructuring</h3>
-    <pre><code class="lang-javascript">const user = {
+  <h3 id="object-destructuring">Object Destructuring</h3>
+  <pre><code class="lang-javascript">const user = {
       <span class="hljs-built_in">name</span>: <span class="hljs-string">"Alex"</span>,
       age: <span class="hljs-number">32</span>,
       <span class="hljs-built_in">location</span>: <span class="hljs-string">"Tokyo"</span>,
@@ -312,15 +313,15 @@
       console.<span class="hljs-built_in">log</span>(country); <span class="hljs-comment">// Output: "Unknown" (since it
         doesn't exist in the object)</span>
     </code></pre>
-    <p>
-      Destructuring makes your code cleaner and more readable, especially when
-      working with complex data.
-    </p>
-    <h2 id="template-literals">Template Literals</h2>
-    <p>
-      Template literals are a better way to work with strings in JavaScript:
-    </p>
-    <pre><code class="lang-javascript"><span class="hljs-keyword">const</span> <span class="hljs-keyword">name</span> =
+  <p>
+    Destructuring makes your code cleaner and more readable, especially when
+    working with complex data.
+  </p>
+  <h2 id="template-literals">Template Literals</h2>
+  <p>
+    Template literals are a better way to work with strings in JavaScript:
+  </p>
+  <pre><code class="lang-javascript"><span class="hljs-keyword">const</span> <span class="hljs-keyword">name</span> =
       <span class="hljs-string">'Maria'</span>;
       <span class="hljs-keyword">const</span> age = <span class="hljs-number">30</span>;
 
@@ -358,13 +359,13 @@
       <span class="hljs-comment">// This is line two.</span>
       <span class="hljs-comment">// This is line three.</span>
     </code></pre>
-    <p>
-      Template literals make string formatting much easier and more readable
-      than the old way of concatenating strings with <code>+</code>.
-    </p>
-    <h2 id="conditional-logic">Conditional Logic</h2>
-    <p>Conditionals let your code make decisions:</p>
-    <pre><code class="lang-javascript"><span class="hljs-keyword">const</span> age = <span class="hljs-number">20</span>;
+  <p>
+    Template literals make string formatting much easier and more readable
+    than the old way of concatenating strings with <code>+</code>.
+  </p>
+  <h2 id="conditional-logic">Conditional Logic</h2>
+  <p>Conditionals let your code make decisions:</p>
+  <pre><code class="lang-javascript"><span class="hljs-keyword">const</span> age = <span class="hljs-number">20</span>;
 
       <span class="hljs-comment">// Basic if statement</span>
       <span class="hljs-keyword">if</span> (age &gt;= <span class="hljs-number">18</span>) {
@@ -403,9 +404,9 @@
       <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'You can access this content'</span>);
       }
     </code></pre>
-    <h2 id="ternary-operator">Ternary Operator</h2>
-    <p>The ternary operator is a shorthand for simple if/else statements:</p>
-    <pre><code class="lang-javascript">const <span class="hljs-attr">age</span> = <span class="hljs-number">20</span>;
+  <h2 id="ternary-operator">Ternary Operator</h2>
+  <p>The ternary operator is a shorthand for simple if/else statements:</p>
+  <pre><code class="lang-javascript">const <span class="hljs-attr">age</span> = <span class="hljs-number">20</span>;
 
       // Traditional <span class="hljs-keyword">if</span>/<span class="hljs-keyword">else</span>
       <span class="hljs-keyword">let</span> message;
@@ -429,18 +430,18 @@
 
       console.log(greeting); // Output: <span class="hljs-string">"Welcome, Administrator"</span>
     </code></pre>
-    <p>
-      The ternary operator is great for simple conditions, but for more complex
-      logic, traditional if/else statements are often clearer.
-    </p>
-    <h2 id="rest-spread-operator">Rest/Spread Operator</h2>
-    <p>
-      The <code>...</code> operator is one of the most versatile features in
-      modern JavaScript:
-    </p>
-    <h3 id="rest-operator">Rest Operator</h3>
-    <p>The rest operator collects multiple elements into a single array:</p>
-    <pre><code class="lang-javascript"><span class="hljs-comment">// Rest in function parameters</span>
+  <p>
+    The ternary operator is great for simple conditions, but for more complex
+    logic, traditional if/else statements are often clearer.
+  </p>
+  <h2 id="rest-spread-operator">Rest/Spread Operator</h2>
+  <p>
+    The <code>...</code> operator is one of the most versatile features in
+    modern JavaScript:
+  </p>
+  <h3 id="rest-operator">Rest Operator</h3>
+  <p>The rest operator collects multiple elements into a single array:</p>
+  <pre><code class="lang-javascript"><span class="hljs-comment">// Rest in function parameters</span>
       <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">sum</span><span
           class="hljs-params">(<span class="hljs-rest_arg">...numbers</span>)</span> </span>{
       <span class="hljs-keyword">return</span> numbers.reduce((total, num) =&gt; total + num, <span
@@ -471,9 +472,9 @@
       console.log(name); <span class="hljs-comment">// Output: "Alex"</span>
       console.log(otherDetails); <span class="hljs-comment">// Output: { city: "Paris", job: "Developer" }</span>
     </code></pre>
-    <h3 id="spread-operator">Spread Operator</h3>
-    <p>The spread operator expands arrays or objects:</p>
-    <pre><code class="lang-javascript"><span class="hljs-comment">// Spreading arrays</span>
+  <h3 id="spread-operator">Spread Operator</h3>
+  <p>The spread operator expands arrays or objects:</p>
+  <pre><code class="lang-javascript"><span class="hljs-comment">// Spreading arrays</span>
       <span class="hljs-keyword">const</span> numbers1 = [<span class="hljs-number">1</span>, <span
         class="hljs-number">2</span>, <span class="hljs-number">3</span>];
       <span class="hljs-keyword">const</span> numbers2 = [<span class="hljs-number">4</span>, <span
@@ -505,16 +506,16 @@
       console.<span class="hljs-built_in">log</span>(settings);
       <span class="hljs-comment">// Output: { theme: "dark", fontSize: 12, cache: true, notifications: false }</span>
     </code></pre>
-    <p>
-      The spread operator is especially useful in React when you need to create
-      new arrays or objects without modifying the originals.
-    </p>
-    <h2 id="optional-chaining">Optional Chaining</h2>
-    <p>
-      Optional chaining helps prevent errors when accessing nested properties
-      that might not exist:
-    </p>
-    <pre><code class="lang-javascript"><span class="hljs-keyword">const</span> user = {
+  <p>
+    The spread operator is especially useful in React when you need to create
+    new arrays or objects without modifying the originals.
+  </p>
+  <h2 id="optional-chaining">Optional Chaining</h2>
+  <p>
+    Optional chaining helps prevent errors when accessing nested properties
+    that might not exist:
+  </p>
+  <pre><code class="lang-javascript"><span class="hljs-keyword">const</span> user = {
       <span class="hljs-attr">name</span>: <span class="hljs-string">'Alex'</span>,
       <span class="hljs-attr">details</span>: {
       <span class="hljs-attr">age</span>: <span class="hljs-number">30</span>,
@@ -556,5 +557,6 @@
       <span class="hljs-built_in">console</span>.log(getData?.().value); <span class="hljs-comment">// Output: 42</span>
       <span class="hljs-comment">// console.log(noData?.().value); // Output: undefined (no error)</span>
     </code></pre>
-  </body>
+</body>
+
 </html>

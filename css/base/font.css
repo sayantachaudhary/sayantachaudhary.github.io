@@ -38,7 +38,7 @@ h6 {
 
 p {
   line-height: 1.6;
-  color: var(--neutral-600);
+  color: var(--neutral-500);
 }
 
 .prose {
@@ -59,8 +59,7 @@ p {
   margin-bottom: 0;
 }
 
-/* intro/subtitle paragraph */
 .lead {
   font-size: var(--text-lg);
-  color: var(--neutral-600);
+  color: var(--neutral-500);
 }
