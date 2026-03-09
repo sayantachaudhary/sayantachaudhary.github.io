@@ -1,5 +1,6 @@
 /* Line-height and font size are inversely proportinal */
 /* Bigger text needs less line-height, smaller text needs more */
+
 h1 {
   font-size: var(--text-4xl);
   line-height: 1.1;
@@ -38,7 +39,7 @@ h6 {
 
 p {
   line-height: 1.6;
-  color: var(--neutral-700);
+  color: var(--neutral-600);
 }
 
 .prose {
@@ -47,7 +48,7 @@ p {
 
   a {
     text-decoration: underline;
-    font-weight: 500;
+    /* font-weight: 600; */
   }
 }
 
@@ -61,5 +62,6 @@ p {
 
 .lead {
   font-size: var(--text-lg);
-  color: var(--neutral-500);
+  line-height: 1.6;
+  color: var(--neutral-600);
 }

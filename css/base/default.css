@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: var(--font-sans);
   font-size: 1rem;
@@ -5,7 +9,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: var(--color-white);
+  background-color: var(--neutral-100);
   background-image: url("../../assets/bg.svg");
   color: var(--neutral-900);
   -webkit-font-smoothing: antialiased;
@@ -16,44 +20,6 @@ main {
   flex: 1;
 }
 
-/* Layout Primitives */
-.container {
-  max-width: 768px;
-  margin-inline: auto;
-  padding-inline: 1.25rem;
-}
-
-.container-wide {
-  max-width: 1024px;
-  margin-inline: auto;
-  padding-inline: 1.25rem;
-}
-
-/* .stack { */
-/*   display: flex; */
-/*   flex-direction: column; */
-/*   gap: 1rem; */
-/* } */
-
-/* .cluster { */
-/*   display: flex; */
-/*   flex-wrap: wrap; */
-/*   gap: 1rem; */
-/* } */
-
-/* .grid { */
-/*   display: grid; */
-/*   gap: 1rem; */
-/*   grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)); */
-/* } */
-
-/* .center { */
-/*   display: flex; */
-/*   align-items: center; */
-/*   justify-content: center; */
-/*   min-height: 100vh; */
-/* } */
-
 hr {
   border: none;
   border-top: 1px solid var(--neutral-300);
@@ -61,13 +27,12 @@ hr {
 
 /* Accessibility */
 *:focus {
-  outline: none;
+  /* outline: none; */
 }
 
 *:focus-visible {
-  outline: 2px solid var(--primary-500);
-  outline-offset: 2px;
-  border-radius: var(--radius-lg);
+  /* outline: 2px solid var(--primary-500); */
+  /* border-radius: var(--radius-sm); */
 }
 
 /* Avoid text overflows */
@@ -95,7 +60,6 @@ h6 {
   text-wrap: balance;
 }
 
-
 ::-webkit-scrollbar {
   width: 2em;
   height: 4px;
@@ -117,13 +81,13 @@ h6 {
 /*   border-radius: var(--radius-lg); */
 /* } */
 
-::-webkit-scrollbar-track:horizontal {
-  background-color: transparent;
-  margin: 1rem;
-}
-
-::-webkit-scrollbar-thumb:horizontal {
-  background-color: var(--neutral-300);
-  border-radius: var(--radius-lg);
-  margin: 1rem;
-}
+/* ::-webkit-scrollbar-track:horizontal { */
+/*   background-color: transparent; */
+/*   margin: 1rem; */
+/* } */
+/**/
+/* ::-webkit-scrollbar-thumb:horizontal { */
+/*   background-color: var(--neutral-300); */
+/*   border-radius: var(--radius-lg); */
+/*   margin: 1rem; */
+/* } */

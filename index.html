@@ -19,13 +19,18 @@
     <meta property="og:description" content="Description Here" />
     <meta property="og:site_name" content="Site Name" />
     <!-- External CSS -->
-    <link rel="preconnect" href="https://rsms.me/" />
-    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+    <!-- <link rel="preconnect" href="https://rsms.me/" /> -->
+    <!-- <link rel="stylesheet" href="https://rsms.me/inter/inter.css" /> -->
+    <!-- <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/montserrat" /> -->
+    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/geist" />
+    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/geist-mono" />
     <!-- Base Style -->
     <link rel="stylesheet" href="./css/base/preflight.css" />
     <link rel="stylesheet" href="./css/base/theme.css" />
     <link rel="stylesheet" href="./css/base/font.css" />
     <link rel="stylesheet" href="./css/base/default.css" />
+    <link rel="stylesheet" href="./css/base/utilities.css" />
+    <link rel="stylesheet" href="./css/base/state.css" />
     <!-- Layout -->
     <link rel="stylesheet" href="./css/layout/layout.css" />
     <!-- Components -->
@@ -63,18 +68,17 @@
       </nav>
     </header>
 
-    <!-- <button type="button" class="btn btn-primary">Save</button> -->
-    <!-- <button type="button" class="btn btn-secondary">Cancel</button> -->
-    <!-- <button type="button" class="btn btn-outline">Learn more</button> -->
-    <!-- <button type="button" class="btn btn-ghost">Skip</button> -->
-    <!-- <button type="button" class="btn btn-link">View details</button> -->
-    <!-- <button type="button" class="btn btn-disabled" disabled>Saving</button> -->
-    <!-- <button type="button" class="btn btn-error">Error</button> -->
-    <!-- <button type="button" class="btn btn-warning">Warning</button> -->
-    <!-- <button type="button" class="btn btn-success">Success</button> -->
-    <!-- <button type="button" class="btn btn-info">Hint</button> -->
-
     <main class="container">
+      <!-- <button type="button" class="btn btn-primary is-visible">Save</button> -->
+      <!-- <button type="button" class="btn btn-secondary">Cancel</button> -->
+      <!-- <button type="button" class="btn btn-outline">Learn more</button> -->
+      <!-- <button type="button" class="btn btn-ghost">Skip</button> -->
+      <!-- <button type="button" class="btn btn-link">View details</button> -->
+      <!-- <button type="button" class="btn btn-disabled" disabled>Saving</button> -->
+      <!-- <button type="button" class="btn btn-error">Error</button> -->
+      <!-- <button type="button" class="btn btn-warning">Warning</button> -->
+      <!-- <button type="button" class="btn btn-success">Success</button> -->
+      <!-- <button type="button" class="btn btn-info">Hint</button> -->
       <section id="about" class="hero">
         <h1>Sayanta Chaudhary</h1>
         <p class="lead">
@@ -82,13 +86,14 @@
           build complete web apps — from frontend to backend — with focus on
           simplicity, performance, and maintainable code.
         </p>
-        <div class="hero-tech">
-          <p class="inline-flex">
-            <strong>Stack:</strong> TypeScript, React, Node.js, PostgreSQL
+        <div class="hero-meta">
+          <p class="meta-item">
+            <span class="meta-label">Stack:</span> TypeScript, React, Node.js,
+            PostgreSQL
           </p>
-          <p class="inline-flex">
-            <strong>Interests:</strong> Developer Tooling, System Design,
-            Machine Learning
+          <p class="meta-item">
+            <span class="meta-label">Interests:</span> Developer Tooling, System
+            Design, Machine Learning
           </p>
         </div>
       </section>
@@ -139,19 +144,13 @@
         <h2>Projects</h2>
         <div class="cards">
           <article class="card">
-            <img
-              class="card-img"
-              src="https://devantitsolutions.com/public/storage/blogs/June2025/Copilot_20250603_151250.png"
-              alt="Project Name"
-            />
             <header class="card-header">
               <h3 class="card-title">Trueschool</h3>
               <p class="card-subtitle">HTML · CSS · JS · Bootstarp</p>
             </header>
-
             <div class="card-body">
               <p class="card-text">
-                A School Management Software for Modern Day Schools
+                A School Management Software for Modern Day Schools.
               </p>
             </div>
             <footer class="card-footer">
@@ -166,23 +165,16 @@
           </article>
 
           <article class="card">
-            <img
-              class="card-img"
-              src="https://user-images.githubusercontent.com/292349/211285846-0b7bb3bf-0462-4029-b64c-4ee1d037fc1c.png"
-              alt="Project Name"
-            />
             <header class="card-header">
               <h3 class="card-title">LazyVim</h3>
               <p class="card-subtitle">Lua · Bash</p>
             </header>
-
             <div class="card-body">
               <p class="card-text">
                 Neovim setup powered by 💤 lazy.nvim to make it easy to
-                customize and extend your config
+                customize and extend your config.
               </p>
             </div>
-
             <footer class="card-footer">
               <a
                 href="https://www.lazyvim.org/"
@@ -196,10 +188,47 @@
 
           <article class="card">
             <header class="card-header">
+              <h3 class="card-title">TPDB</h3>
+              <p class="card-subtitle">HTML · CSS · TypeScript</p>
+            </header>
+            <div class="card-body">
+              <p class="card-text">The Pokémon Database.</p>
+            </div>
+            <footer class="card-footer">
+              <a
+                href="https://github.com/sayanta-chaudhary/pokepedia"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-outline card-link"
+                >GitHub</a
+              >
+            </footer>
+          </article>
+
+          <article class="card">
+            <header class="card-header">
+              <h3 class="card-title">how old am i</h3>
+              <p class="card-subtitle">HTML · CSS · TypeScript</p>
+            </header>
+            <div class="card-body">
+              <p class="card-text">Age calculator with realtime run-up.</p>
+            </div>
+            <footer class="card-footer">
+              <a
+                href="https://github.com/sayanta-chaudhary/how-old-am-i"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-outline card-link"
+                >GitHub</a
+              >
+            </footer>
+          </article>
+
+          <article class="card">
+            <header class="card-header">
               <h3 class="card-title">Tor</h3>
               <p class="card-subtitle">Bash</p>
             </header>
-
             <div class="card-body">
               <p class="card-text">
                 Bash script to web scrape 1337x.to for torrents.
@@ -221,7 +250,6 @@
               <h3 class="card-title">MyYT</h3>
               <p class="card-subtitle">Bash</p>
             </header>
-
             <div class="card-body">
               <p class="card-text">
                 Script to search youtube with command line easily.
@@ -240,10 +268,10 @@
         </div>
       </section>
 
-      <section id="life">
-        <h2>Life</h2>
-        <div class="life-cards">
-          <article class="life-card">
+      <section id="personal">
+        <h2>Personal</h2>
+        <div class="personal-cards">
+          <article class="personal-card">
             <a href="./books.html">
               <div class="icon">📚</div>
               <div class="content">
@@ -253,17 +281,17 @@
             </a>
           </article>
 
-          <article class="life-card">
+          <article class="personal-card">
             <a href="./movies.html">
               <div class="icon">🎬</div>
               <div class="content">
                 <h3>Movies</h3>
-                <p>Movies & shows that have inspired, entertained me.</p>
+                <p>Films & shows that have inspired, entertained me.</p>
               </div>
             </a>
           </article>
 
-          <article class="life-card">
+          <article class="personal-card">
             <a href="./blogs.html">
               <div class="icon">📝</div>
               <div class="content">
@@ -302,7 +330,7 @@
     <hr />
 
     <footer class="site-footer container">
-      <p>&copy; 2026 · Design &amp; Developed by Sayanta Chaudhary</p>
+      <p>&copy; 2026 · Design &amp; Developed by Sayanta</p>
     </footer>
     <script>
       lucide.createIcons();

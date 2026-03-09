@@ -1,0 +1,42 @@
+/* Separate the component from the state. */
+/* Reusable state */
+
+/* list all the state that is present in css like */
+
+.is-active {
+  background-color: var(--primary-500);
+  color: var(--neutral-100);
+}
+
+.is-selected {}
+
+/* Visibility */
+.is-hidden {
+  display: none !important;
+}
+
+/* Feedback */
+.is-loading {
+  opacity: 0.7;
+  cursor: wait;
+  pointer-events: none;
+}
+
+.is-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* .is-focused {} */
+/* .is-error {} */
+/* .is-success {} */
+
+/* Some of These Should NOT Be Global State Classes? */
+/* Why? */
+/* Because they assume a specific layout behavior. */
+
+/* Layout */
+/* .is-open {} */
+/* .is-expanded {} */
+/* .is-collapsed {} */

@@ -1,113 +1,114 @@
 <!doctype html>
 <html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Blogs · Sayanta</title>
+    <meta name="description" content="Blogs" />
+    <!-- External CSS -->
+    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/geist" />
+    <!-- Base Style -->
+    <link rel="stylesheet" href="./css/base/preflight.css" />
+    <link rel="stylesheet" href="./css/base/theme.css" />
+    <link rel="stylesheet" href="./css/base/font.css" />
+    <link rel="stylesheet" href="./css/base/default.css" />
+    <!-- Layout -->
+    <link rel="stylesheet" href="./css/layout/layout.css" />
+    <!-- Components -->
+    <link rel="stylesheet" href="./css/components/button.css" />
+    <link rel="stylesheet" href="./css/components/navbar.css" />
+    <link rel="stylesheet" href="./css/components/card.css" />
+    <!-- JS -->
+    <script src="./js/navbar.js" defer></script>
+    <script src="./js/script.js" defer></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Blogs · Sayanta</title>
-  <meta name="description" content="Blogs" />
-  <!-- External CSS -->
-  <link rel="preconnect" href="https://rsms.me/" />
-  <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
-  <!-- Base Style -->
-  <link rel="stylesheet" href="./css/base/preflight.css" />
-  <link rel="stylesheet" href="./css/base/theme.css" />
-  <link rel="stylesheet" href="./css/base/font.css" />
-  <link rel="stylesheet" href="./css/base/default.css" />
-  <!-- Layout -->
-  <link rel="stylesheet" href="./css/layout/layout.css" />
-  <!-- Components -->
-  <link rel="stylesheet" href="./css/components/button.css" />
-  <link rel="stylesheet" href="./css/components/navbar.css" />
-  <link rel="stylesheet" href="./css/components/card.css" />
-  <!-- JS -->
-  <script src="./js/navbar.js" defer></script>
-  <script src="./js/script.js" defer></script>
-  <script src="https://unpkg.com/lucide@latest"></script>
-</head>
+  <body>
+    <header class="page-header">
+      <h1>Blogs</h1>
+      <p class="lead">Thoughts, tutorials, and insights on programming.</p>
+    </header>
 
-<body>
-  <header class="page-header">
-    <h1>Blogs</h1>
-    <p class="lead">Thoughts, tutorials, and insights on programming.</p>
-  </header>
+    <main class="container">
+      <div class="cards">
+        <article class="card">
+          <header class="card-header">
+            <h3 class="card-title">Why I Switched from VS Code to Neovim</h3>
+            <p class="card-subtitle">Feb 21, 2026 · 5 min read</p>
+          </header>
+          <div class="card-body">
+            <p class="card-text">
+              After years of using VS Code, I made the switch to Neovim. Here's
+              what I learned and why i'm not going back.
+            </p>
+          </div>
+          <footer class="card-footer">
+            <a href="./posts/post/neovim-switch.html" class="btn btn-outline"
+              >Read more</a
+            >
+          </footer>
+        </article>
 
-  <main class="container">
-    <div class="cards">
-      <article class="card">
-        <header class="card-header">
-          <h3 class="card-title">Why I Switched from VS Code to Neovim</h3>
-          <p class="card-subtitle">Feb 21, 2026 · 5 min read</p>
-        </header>
-        <div class="card-body">
-          <p class="card-text">
-            After years of using VS Code, I made the switch to Neovim. Here's
-            what I learned and why i'm not going back.
-          </p>
-        </div>
-        <footer class="card-footer">
-          <a href="./posts/post/neovim-switch.html" class="btn btn-outline">Read more</a>
-        </footer>
-      </article>
+        <article class="card">
+          <header class="card-header">
+            <h3 class="card-title">
+              JavaScript for Frontend Development: A Beginner's Guide
+            </h3>
+            <p class="card-subtitle">Feb 13, 2026 · 20 min read</p>
+          </header>
+          <div class="card-body">
+            <p class="card-text">
+              A guide to JavaScript for frontend development for beginners
+            </p>
+          </div>
+          <footer class="card-footer">
+            <a href="./posts/post/js-for-frontend.html" class="btn btn-outline"
+              >Read more</a
+            >
+          </footer>
+        </article>
 
-      <article class="card">
-        <header class="card-header">
-          <h3 class="card-title">
-            JavaScript for Frontend Development: A Beginner's Guide
-          </h3>
-          <p class="card-subtitle">Feb 13, 2026 · 20 min read</p>
-        </header>
-        <div class="card-body">
-          <p class="card-text">
-            A guide to JavaScript for frontend development for beginners
-          </p>
-        </div>
-        <footer class="card-footer">
-          <a href="./posts/post/js-for-frontend.html" class="btn btn-outline">Read more</a>
-        </footer>
-      </article>
+        <!-- <article class="card"> -->
+        <!--   <header class="card-header"> -->
+        <!--     <h3 class="card-title">Getting Started with Machine Learning</h3> -->
+        <!--     <p class="card-subtitle">Jan 13, 2026 · 8 min read</p> -->
+        <!--   </header> -->
+        <!--   <div class="card-body"> -->
+        <!--     <p class="card-text"> -->
+        <!--       A beginner-friendly guide to understanding the core concepts of -->
+        <!--       machine learning without the math jargon. -->
+        <!--     </p> -->
+        <!--   </div> -->
+        <!--   <footer class="card-footer"> -->
+        <!--     <a href="#" class="btn btn-outline">Read more</a> -->
+        <!--   </footer> -->
+        <!-- </article> -->
 
-      <!-- <article class="card"> -->
-      <!--   <header class="card-header"> -->
-      <!--     <h3 class="card-title">Getting Started with Machine Learning</h3> -->
-      <!--     <p class="card-subtitle">Jan 13, 2026 · 8 min read</p> -->
-      <!--   </header> -->
-      <!--   <div class="card-body"> -->
-      <!--     <p class="card-text"> -->
-      <!--       A beginner-friendly guide to understanding the core concepts of -->
-      <!--       machine learning without the math jargon. -->
-      <!--     </p> -->
-      <!--   </div> -->
-      <!--   <footer class="card-footer"> -->
-      <!--     <a href="#" class="btn btn-outline">Read more</a> -->
-      <!--   </footer> -->
-      <!-- </article> -->
+        <!-- <article class="card"> -->
+        <!--   <header class="card-header"> -->
+        <!--     <h2 class="card-title">My Trip to Mukteshwar 🌄</h2> -->
+        <!--     <p class="card-subtitle">March 02, 2025 · 8 min read</p> -->
+        <!--   </header> -->
+        <!--   <div class="card-body"> -->
+        <!--     <p class="card-text"> -->
+        <!--       After spending more than a year in a dark room, I decided to -->
+        <!--       visit mountains first time in my life. -->
+        <!--     </p> -->
+        <!--   </div> -->
+        <!--   <footer class="card-footer"> -->
+        <!--     <a href="./blogs/post/mukteshwar.html" class="btn btn-outline" -->
+        <!--       >Read more</a -->
+        <!--     > -->
+        <!--   </footer> -->
+        <!-- </article> -->
+      </div>
+    </main>
 
-      <!-- <article class="card"> -->
-      <!--   <header class="card-header"> -->
-      <!--     <h2 class="card-title">My Trip to Mukteshwar 🌄</h2> -->
-      <!--     <p class="card-subtitle">March 02, 2025 · 8 min read</p> -->
-      <!--   </header> -->
-      <!--   <div class="card-body"> -->
-      <!--     <p class="card-text"> -->
-      <!--       After spending more than a year in a dark room, I decided to -->
-      <!--       visit mountains first time in my life. -->
-      <!--     </p> -->
-      <!--   </div> -->
-      <!--   <footer class="card-footer"> -->
-      <!--     <a href="./blogs/post/mukteshwar.html" class="btn btn-outline" -->
-      <!--       >Read more</a -->
-      <!--     > -->
-      <!--   </footer> -->
-      <!-- </article> -->
-    </div>
-  </main>
+    <hr />
 
-  <hr />
-
-  <footer class="site-footer container">
-    <p>&copy; 2026 · Design &amp; Developed by Sayanta Chaudhary</p>
-  </footer>
-</body>
-
+    <footer class="site-footer container">
+      <p>&copy; 2026 · Design &amp; Developed by Sayanta Chaudhary</p>
+    </footer>
+  </body>
 </html>

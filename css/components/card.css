@@ -7,18 +7,16 @@
 .card {
   display: flex;
   flex-direction: column;
-
-  border: 1px solid var(--neutral-200);
+  border: 1px solid var(--neutral-300);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-lg);
   width: 100%;
-  padding: calc(var(--spacing) * 4) 0;
-  overflow: hidden;
+  /* overflow: hidden; */
   background-color: var(--neutral-100);
-  transition: box-shadow 200ms ease;
+  transition: box-shadow 300ms ease;
 
   &:hover {
-    box-shadow: 4px 4px var(--primary-500);
+    /* box-shadow: 4px 4px var(--primary-500); */
     box-shadow: var(--shadow-lg);
   }
 
@@ -31,14 +29,12 @@
     height: 200px;
     object-fit: cover;
 
-    &:hover {
-      /* filter: blur(1px); */
-    }
+    /* &:hover { filter: blur(1px) } */
   }
 
   .card-header {
-    margin: calc(var(--spacing) * 4) 0;
-    padding: 0 calc(var(--spacing) * 4);
+    margin-block: calc(var(--spacing) * 4);
+    padding-inline: calc(var(--spacing) * 4);
 
     .card-title {
       font-size: var(--text-xl);
@@ -54,13 +50,12 @@
     flex: 1;
 
     .card-text {
-      padding: 0 calc(var(--spacing) * 4);
-      color: var(--neutral-600);
+      padding-inline: calc(var(--spacing) * 4);
     }
   }
 
   .card-footer {
-    padding: calc(var(--spacing) * 4) calc(var(--spacing) * 4);
+    padding: calc(var(--spacing) * 4);
 
     a {
       font-size: var(--text-sm);
