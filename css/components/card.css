@@ -7,20 +7,20 @@
 .card {
   display: flex;
   flex-direction: column;
-  border: 1px solid var(--neutral-300);
+  border: 1px solid var(--neutral-200);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-lg);
   width: 100%;
   /* overflow: hidden; */
   background-color: var(--neutral-100);
-  transition: box-shadow 300ms ease;
+  transition: transform 300ms ease;
 
   &:hover {
-    /* box-shadow: 4px 4px var(--primary-500); */
-    box-shadow: var(--shadow-lg);
+    transform: translateY(-4px);
   }
 
-  @media (min-width: 640px) {
+  /* Desktop */
+  @media (width >= 640px) {
     width: calc(50% - 0.5rem);
   }
 
@@ -42,7 +42,7 @@
     }
 
     .card-subtitle {
-      color: var(--neutral-500);
+      color: var(--neutral-600);
     }
   }
 

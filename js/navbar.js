@@ -1,3 +1,4 @@
+// Theme
 document.documentElement.classList.toggle(
   "dark",
   localStorage.theme === "dark" ||
@@ -11,45 +12,44 @@ themeBtn.addEventListener("click", () => {
   localStorage.theme = isDark ? "dark" : "light";
 });
 
-// ---------------------------------------------------------
-
-// function openSidebar() {
-//   sidebar.classList.add("open");
-//   burger.textContent = "x";
-//   document.body.style.overflow = "hidden"; // Prevent scrolling when the sidebar is open
-// }
-//
-// function closeSidebar() {
-//   sidebar.classList.remove("open");
-//   burger.textContent = "=";
-//   document.body.style.removeProperty("overflow"); // document.body.style.overflow = "";
-// }
-//
-// burger.addEventListener("click", () => {
-//   sidebar.classList.contains("open") ? closeSidebar() : openSidebar();
-// });
-
+// Navbar
 const burger = document.querySelector(".burger");
 const navList = document.querySelector(".nav-list");
-
 burger.addEventListener("click", () => {
   // if div doesn't have class "open" then add it, or if it does, then remove it
-  const isOpen = navList.classList.toggle("open");
+  const isOpen = navList.classList.toggle("is-open");
   burger.setAttribute("aria-expanded", isOpen);
 });
 
 // Close when link clicked
 document.querySelectorAll(".nav-list a").forEach((link) => {
   link.addEventListener("click", () => {
-    navList.classList.remove("open");
+    navList.classList.remove("is-open");
     burger.setAttribute("aria-expanded", false);
   });
 });
 
-// Escape key to close the sidebar
+// Escape key to close the navbar
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") {
-    navList.classList.remove("open");
+    navList.classList.remove("is-open");
     burger.setAttribute("aria-expanded", false);
   }
+});
+
+// Click outside to close the navbar
+document.addEventListener("click", (e) => {
+  if (!navList.contains(e.target) && !burger.contains(e.target)) {
+    navList.classList.remove("is-open");
+    burger.setAttribute("aria-expanded", false);
+  }
+});
+
+// Style the active link
+const navLink = document.querySelectorAll(".nav-list a");
+navLink.forEach((link) => {
+  link.addEventListener("click", () => {
+    navLink.forEach((l) => l.classList.remove("is-active"));
+    link.classList.add("is-active");
+  });
 });

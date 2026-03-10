@@ -38,13 +38,19 @@ h6 {
 }
 
 p {
+  font-size: var(--text-base);
   line-height: 1.6;
   color: var(--neutral-600);
 }
 
+small {
+  font-size: var(--text-sm);
+  line-height: 1.6;
+}
+
 .prose {
-  line-height: 1.75;
   max-width: 65ch;
+  line-height: 1.75;
 
   a {
     text-decoration: underline;
@@ -63,5 +69,4 @@ p {
 .lead {
   font-size: var(--text-lg);
   line-height: 1.6;
-  color: var(--neutral-600);
 }

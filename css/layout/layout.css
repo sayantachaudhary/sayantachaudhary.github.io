@@ -1,4 +1,5 @@
 /* Layout Primitives */
+
 .container,
 .container-lg {
   margin-inline: auto;
@@ -13,6 +14,7 @@
   max-width: 1024px;
 }
 
+/* Almost every ui is just combinations of: */
 /* .stack { */
 /*   display: flex; */
 /*   flex-direction: column; */

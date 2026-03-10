@@ -1,7 +1,5 @@
-/* Change style of active link */
 /* Click outside to close */
 /* Sticky navbar inside container */
-/* Components should not control page layout */
 
 .site-header {
   position: sticky;
@@ -15,8 +13,8 @@
 .navbar {
   position: relative;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   padding: calc(var(--spacing) * 4);
 }
 
@@ -24,6 +22,7 @@
   width: auto;
   height: 56px;
   border-radius: 50%;
+  padding-inline: calc(var(--spacing) * 2);
   transition: transform 300ms ease;
 
   &:hover {
@@ -43,6 +42,10 @@
 
   a {
     color: var(--neutral-600);
+
+    &.is-active {
+      color: var(--neutral-900);
+    }
   }
 }
 
@@ -55,7 +58,8 @@
   display: none;
 }
 
-@media (max-width: 640px) {
+/* Mobile */
+@media (width <=640px) {
   .burger {
     display: block;
   }
@@ -67,17 +71,17 @@
     right: 0;
 
     display: flex;
-    /* display: none; */
     flex-direction: column;
     align-items: center;
     gap: calc(var(--spacing) * 8);
+
     border: 1px solid var(--neutral-300);
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-lg);
     margin-inline: calc(var(--spacing) * 4);
     padding-block: calc(var(--spacing) * 8);
-    background-color: var(--neutral-100);
     font-size: var(--text-2xl);
+    background-color: var(--neutral-100);
 
     transform: translateY(-10px);
     opacity: 0;
@@ -86,13 +90,12 @@
       transform 300ms ease,
       opacity 300ms ease,
       visibility 300ms ease;
-  }
 
-  .nav-list.open {
-    display: flex;
-    transform: translateY(0);
-    opacity: 1;
-    visibility: visible;
+    &.is-open {
+      transform: translateY(0);
+      opacity: 1;
+      visibility: visible;
+    }
   }
 }
 
