@@ -9,7 +9,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: var(--neutral-100);
+  background-color: var(--neutral-50);
   background-image: url("../../assets/bg.svg");
   color: var(--neutral-900);
   -webkit-font-smoothing: antialiased;

@@ -51,7 +51,9 @@
 }
 
 .site-footer {
-  text-align: center;
-  font-size: var(--text-sm);
-  padding-block: calc(var(--spacing) * 16);
+  p {
+    text-align: center;
+    font-size: var(--text-sm);
+    padding-block: calc(var(--spacing) * 16);
+  }
 }

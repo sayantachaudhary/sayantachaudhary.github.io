@@ -17,10 +17,10 @@
   text-align: center;
   gap: calc(var(--spacing) * 4);
 
-  border: 1px solid var(--neutral-300);
+  border: 1px solid var(--neutral-200);
   border-radius: var(--radius-lg);
   padding: calc(var(--spacing) * 4);
-  background-color: var(--neutral-200);
+  background-color: var(--neutral-100);
 
   .media-img {
     width: 200px;
@@ -35,7 +35,7 @@
     }
 
     .media-text {
-      color: var(--neutral-600);
+      color: var(--neutral-500);
     }
   }
 
