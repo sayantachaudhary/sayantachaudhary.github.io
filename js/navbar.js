@@ -6,6 +6,7 @@ document.documentElement.classList.toggle(
     window.matchMedia("(prefers-color-scheme: dark)").matches),
 );
 
+// Toggling dark mode manually
 const themeBtn = document.querySelector(".theme");
 themeBtn.addEventListener("click", () => {
   const isDark = document.documentElement.classList.toggle("dark");

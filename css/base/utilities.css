@@ -5,3 +5,16 @@
 /*     margin-bottom: calc(var(--spacing) * 8); */
 /*   } */
 /* } */
+
+/* list most used utility classes of tailwind */
+/* what is the most used utility class that i should create */
+
+.wrapper {
+  margin-inline: auto;
+  padding-inline: 1rem;
+  max-width: 60rem;
+}
+
+.text-center {
+  text-align: center;
+}

@@ -1,5 +1,5 @@
 /* https://smacss.com/book/type-state/ */
-/* Separate the component from the state. */
+/* Separate the component from the state */
 
 /* Global State */
 /* Visibility */
@@ -21,7 +21,6 @@
 }
 
 /* .is-error {} */
-
 /* .is-success {} */
 
 /* Some of the state should NOT be global  */

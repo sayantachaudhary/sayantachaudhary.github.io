@@ -7,11 +7,10 @@
 .card {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  padding-inline: calc(var(--spacing) * 4);
   border: 1px solid var(--neutral-200);
   border-radius: var(--radius-lg);
-  box-shadow: var(--inset-shadow-sm);
-  width: 100%;
-  /* overflow: hidden; */
   background-color: var(--neutral-100);
   transition: transform 300ms ease;
 
@@ -29,16 +28,17 @@
     height: 200px;
     object-fit: cover;
 
-    /* &:hover { filter: blur(1px) } */
+    &:hover {
+      filter: blur(1px);
+    }
   }
 
   .card-header {
     margin-block: calc(var(--spacing) * 4);
-    padding-inline: calc(var(--spacing) * 4);
 
     .card-title {
+      margin-bottom: var(--spacing);
       font-size: var(--text-lg);
-      margin-bottom: calc(var(--spacing) * 1);
     }
 
     .card-subtitle {
@@ -49,13 +49,11 @@
   .card-body {
     flex: 1;
 
-    .card-text {
-      padding-inline: calc(var(--spacing) * 4);
-    }
+    /* .card-text {} */
   }
 
   .card-footer {
-    padding: calc(var(--spacing) * 4);
+    margin-block: calc(var(--spacing) * 4);
 
     a {
       font-size: var(--text-sm);

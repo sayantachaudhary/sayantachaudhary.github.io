@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" dir="ltr">
+<html lang="en" dir="ltr" class="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -7,9 +7,9 @@
     <meta name="description" content="Portfolio" />
     <meta name="author" content="Sayanta Chaudhary" />
     <!-- Favicon -->
-    <link rel="icon" href="./assets/images/favicon/favicon.ico" />
-    <!-- <link rel="icon" type="image/png" sizes="96x96" href="./assets/images/favicon/favicon-96x96.png" /> -->
-    <!-- <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/favicon/apple-touch-icon.png" /> -->
+    <link rel="icon" href="/public/images/favicon/favicon.ico" />
+    <!-- <link rel="icon" type="image/png" sizes="96x96" href="/public/images/favicon/favicon-96x96.png" /> -->
+    <!-- <link rel="apple-touch-icon" sizes="180x180" href="/public/images/favicon/apple-touch-icon.png" /> -->
     <link rel="manifest" href="./site.webmanifest" />
     <!-- Social Meta -->
     <meta property="og:type" content="website" />
@@ -17,44 +17,62 @@
     <meta property="og:title" content="Content Title" />
     <meta property="og:image" content="https://example.com/image.jpg" />
     <meta property="og:description" content="Description Here" />
-    <meta property="og:site_name" content="Site Name" />
+    <meta property="og:site_name" content="Sayanta Chaudhary" />
     <!-- External CSS -->
-    <link rel="preconnect" href="https://rsms.me/" />
+    <!-- <link rel="preconnect" href="https://rsms.me/" /> -->
     <!-- <link rel="stylesheet" href="https://rsms.me/inter/inter.css" /> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+    />
     <!-- <link rel="preconnect" href="https://fonts.cdnfonts.com/" /> -->
-    <!-- <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/geist" /> -->
-    <!-- <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/geist-mono" /> -->
-    <link href="https://fonts.cdnfonts.com/css/wotfard" rel="stylesheet">
-    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <!-- <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/wotfard" /> -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/duotone/style.css"
+    />
     <!-- Base Style -->
-    <link rel="stylesheet" href="./css/base/preflight.css" />
-    <link rel="stylesheet" href="./css/base/theme.css" />
-    <link rel="stylesheet" href="./css/base/font.css" />
-    <link rel="stylesheet" href="./css/base/default.css" />
-    <link rel="stylesheet" href="./css/base/utilities.css" />
-    <link rel="stylesheet" href="./css/base/state.css" />
+    <link rel="stylesheet" href="/css/base/preflight.css" />
+    <link rel="stylesheet" href="/css/base/theme.css" />
+    <link rel="stylesheet" href="/css/base/font.css" />
+    <link rel="stylesheet" href="/css/base/default.css" />
+    <link rel="stylesheet" href="/css/base/utilities.css" />
+    <link rel="stylesheet" href="/css/base/state.css" />
     <!-- Layout -->
-    <link rel="stylesheet" href="./css/layout/layout.css" />
+    <link rel="stylesheet" href="/css/layout/layout.css" />
     <!-- Components -->
-    <link rel="stylesheet" href="./css/components/button.css" />
-    <link rel="stylesheet" href="./css/components/navbar.css" />
-    <link rel="stylesheet" href="./css/components/card.css" />
+    <link rel="stylesheet" href="/css/components/button.css" />
+    <link rel="stylesheet" href="/css/components/navbar.css" />
+    <link rel="stylesheet" href="/css/components/card.css" />
     <!-- Page Specific -->
-    <link rel="stylesheet" href="./css/pages/index.css" />
+    <link rel="stylesheet" href="/css/pages/index.css" />
     <!-- JS -->
-    <script src="./js/navbar.js" defer></script>
-    <script src="./js/script.js" defer></script>
+    <script src="/js/navbar.js" defer></script>
+    <script src="/js/script.js" defer></script>
     <script src="https://unpkg.com/lucide@latest"></script>
   </head>
 
   <body>
     <header class="site-header">
-      <nav class="navbar container">
+      <nav class="navbar container-md">
         <a href="#top" class="nav-logo">
-          <img src="./assets/images/logo.png" alt="logo" />
+          <img src="/public/images/logo.png" alt="logo" />
         </a>
         <ul class="nav-list">
-          <li><a href="#top">About</a></li>
+          <li><a href="#about">About</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -70,7 +88,7 @@
       </nav>
     </header>
 
-    <main class="container">
+    <main class="container-md">
       <section id="about" class="hero">
         <!-- <button type="button" class="btn btn-primary is-visible">Save</button> -->
         <!-- <button type="button" class="btn btn-secondary">Cancel</button> -->
@@ -90,8 +108,9 @@
         </p>
         <div class="hero-meta">
           <div class="meta-item">
-            <!-- <div class="meta-label">Technologies & Tools</div> -->
-            <!-- React, TypeScript, Node.js, PostgreSQL -->
+            <!-- <div class="meta-label"> -->
+            <!--   Technologies & Tools: React, TypeScript, Node.js, PostgreSQL -->
+            <!-- </div> -->
             <!-- <div class="meta-tech"> -->
             <!--   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg" /> -->
             <!--   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" /> -->
@@ -115,7 +134,7 @@
             <header class="card-header">
               <h3 class="card-title">Frontend</h3>
               <p class="card-subtitle">
-                React · Next.js · TanStack Query · Redux <br>
+                React · Next.js · TanStack Query · Redux <br />
                 Tailwind CSS · Figma
                 <!-- Architected and developed the complete frontend infrastructure for the platform. -->
               </p>
@@ -281,7 +300,7 @@
         <h2>Personal</h2>
         <div class="personal-cards">
           <article class="personal-card">
-            <a href="./books.html">
+            <a href="/books.html">
               <div class="icon">📚</div>
               <div class="content">
                 <h3>Books</h3>
@@ -291,7 +310,7 @@
           </article>
 
           <article class="personal-card">
-            <a href="./movies.html">
+            <a href="/movies.html">
               <div class="icon">🎬</div>
               <div class="content">
                 <h3>Movies</h3>
@@ -301,7 +320,7 @@
           </article>
 
           <article class="personal-card">
-            <a href="./blogs.html">
+            <a href="#">
               <div class="icon">📝</div>
               <div class="content">
                 <h3>Blogs</h3>
@@ -331,6 +350,7 @@
             rel="noopener noreferrer"
             class="btn btn-link"
           >
+            <i class="ph-duotone ph-github-logo"></i>
             GitHub
           </a>
 
@@ -340,6 +360,7 @@
             rel="noopener noreferrer"
             class="btn btn-link"
           >
+            <i class="ph-duotone ph-envelope-simple"></i>
             Mail
           </a>
         </address>
@@ -348,8 +369,11 @@
 
     <hr />
 
-    <footer class="site-footer container">
-      <p>&copy; 2026 · Design &amp; Developed by Sayanta Chaudhary</p>
+    <footer class="site-footer container-md">
+      <p>
+        &copy; 2026 · Some Rights Reserved. Design &amp; Developed by Sayanta
+        Chaudhary
+      </p>
     </footer>
     <script>
       lucide.createIcons();
