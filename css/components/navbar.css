@@ -17,7 +17,7 @@
 
 .nav-logo img {
   width: auto;
-  height: 52px;
+  height: 56px;
   border-radius: 50%;
   padding-inline: calc(var(--spacing) * 2);
   transition: transform 300ms ease;
@@ -52,7 +52,7 @@
 
 .nav-action {
   display: flex;
-  gap: calc(var(--spacing) * 1);
+  gap: var(--spacing);
 }
 
 .burger {

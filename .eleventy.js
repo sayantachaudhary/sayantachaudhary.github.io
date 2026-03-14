@@ -5,7 +5,7 @@ export default function (eleventyConfig) {
 
   return {
     dir: {
-      input: "./posts/",
+      input: "./blog/posts/",
       output: "./_site",
       layouts: "../_layouts",
     },

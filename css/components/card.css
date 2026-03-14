@@ -43,6 +43,19 @@
 
     .card-subtitle {
       color: var(--neutral-500);
+      display: flex;
+      gap: calc(var(--spacing) * 2);
+
+      /* img { */
+      /*   width: 20px; */
+      /*   height: 16px; */
+      /*   object-fit: contain; */
+      /*   padding: calc(var(--spacing) * 2); */
+      /*   box-sizing: content-box; */
+      /*   background-color: var(--neutral-100); */
+      /*   border: 1px dashed var(--neutral-200); */
+      /*   border-radius: var(--radius-md); */
+      /* } */
     }
   }
 
