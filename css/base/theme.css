@@ -27,19 +27,18 @@
   /* Dark mode shadow  */
   --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  --shadow-lg:
-    0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   --inset-shadow-sm: inset 0 2px 4px rgb(0 0 0 / 0.05);
 
   --z-hide: -1;
   --z-base: 0;
   --z-dropdown: 111;
   --z-sticky: 222;
-  --z-overlay: 555;
-  --z-modal: 666;
-  --z-popover: 777;
-  --z-toast: 888;
-  --z-tooltip: 999;
+  --z-overlay: 400;
+  --z-modal: 555;
+  --z-popover: 666;
+  --z-toast: 777;
+  --z-tooltip: 888;
 
   --primary-100: oklch(93% 0.034 272.788);
   --primary-200: oklch(87% 0.065 274.039);

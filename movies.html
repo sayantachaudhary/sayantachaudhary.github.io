@@ -1,112 +1,142 @@
 <!doctype html>
 <html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Favorite Movies</title>
+    <meta name="description" content="Movies" />
+    <!-- External CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" />
+    <!-- Base Style -->
+    <link rel="stylesheet" href="/css/base/preflight.css" />
+    <link rel="stylesheet" href="/css/base/theme.css" />
+    <link rel="stylesheet" href="/css/base/font.css" />
+    <link rel="stylesheet" href="/css/base/default.css" />
+    <!-- Layout -->
+    <link rel="stylesheet" href="/css/layout/layout.css" />
+    <!-- Components -->
+    <link rel="stylesheet" href="/css/components/media.css" />
+    <!-- JS -->
+    <script src="/js/navbar.js" defer></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Favorite Movies</title>
-  <meta name="description" content="Movies" />
-  <!-- External CSS -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" <!-- Base
-    Style -->
-  <link rel="stylesheet" href="/css/base/preflight.css" />
-  <link rel="stylesheet" href="/css/base/theme.css" />
-  <link rel="stylesheet" href="/css/base/font.css" />
-  <link rel="stylesheet" href="/css/base/default.css" />
-  <!-- Layout -->
-  <link rel="stylesheet" href="/css/layout/layout.css" />
-  <!-- Components -->
-  <link rel="stylesheet" href="/css/components/media.css" />
-  <!-- JS -->
-  <script src="/js/navbar.js" defer></script>
-</head>
+  <body>
+    <header class="page-header">
+      <h1>Movies</h1>
+      <p>Films & shows that have inspired and entertained me.</p>
+    </header>
 
-<body>
-  <header class="page-header">
-    <h1>Movies</h1>
-    <p class="lead">
-      Movies and shows that have inspired and entertained me.
-    </p>
-  </header>
+    <main class="container-lg">
+      <div class="media-list">
+        <article class="media">
+          <img
+            class="media-img"
+            src="/public/movies/little-forest-2018.jpg"
+            alt="little forest"
+            loading="lazy"
+          />
+          <div class="media-body">
+            <h3 class="media-title">Little Forest (2018)</h3>
+            <p class="media-text">
+              A young woman grows tired of life in the city and returns to her
+              hometown in the countryside.
+            </p>
+          </div>
+        </article>
 
-  <main class="container-lg">
-    <div class="media-list">
-      <article class="media">
-        <img class="media-img" src="/public/movies/little-forest-2018.jpg" alt="little forest" loading="lazy" />
-        <div class="media-body">
-          <h3 class="media-title">Little Forest (2018)</h3>
-          <p class="media-text">
-            A young woman grows tired of life in the city and returns to her
-            hometown in the countryside.
-          </p>
-        </div>
-      </article>
+        <article class="media">
+          <img
+            class="media-img"
+            src="/public/movies/the-wind-rises-2013.jpg"
+            alt="the wind rises"
+            loading="lazy"
+          />
+          <div class="media-body">
+            <h3 class="media-title">The Wind Rises (2013)</h3>
+            <p class="media-text">
+              An extraordinarily beautiful story from Miyazaki.
+            </p>
+          </div>
+        </article>
 
-      <article class="media">
-        <img class="media-img" src="/public/movies/the-wind-rises-2013.jpg" alt="the wind rises" loading="lazy" />
-        <div class="media-body">
-          <h3 class="media-title">The Wind Rises (2013)</h3>
-          <p class="media-text">
-            An extraordinarily beautiful story from Miyazaki.
-          </p>
-        </div>
-      </article>
+        <article class="media">
+          <img
+            class="media-img"
+            src="/public/movies/life-is-beautiful-1997.jpg"
+            alt="life is beautiful"
+            loading="lazy"
+          />
+          <div class="media-body">
+            <h3 class="media-title">Life is Beautiful (1997)</h3>
+            <p class="media-text">
+              This movie truely teaches us how human spirit is beautiful, and
+              also how the Holocaust can be a place teaching a kid about love.
+            </p>
+          </div>
+        </article>
 
-      <article class="media">
-        <img class="media-img" src="/public/movies/life-is-beautiful-1997.jpg" alt="life is beautiful" loading="lazy" />
-        <div class="media-body">
-          <h3 class="media-title">Life is Beautiful (1997)</h3>
-          <p class="media-text">
-            This movie truely teaches us how human spirit is beautiful, and
-            also how the Holocaust can be a place teaching a kid about love.
-          </p>
-        </div>
-      </article>
+        <article class="media">
+          <img
+            class="media-img"
+            src="/public/movies/fight-club-1999.jpg"
+            alt="fight club"
+            loading="lazy"
+          />
+          <div class="media-body">
+            <h3 class="media-title">Fight Club (1999)</h3>
+            <p class="media-text">
+              Self improvement is masturbation. Now self-destruction.
+            </p>
+          </div>
+        </article>
 
-      <article class="media">
-        <img class="media-img" src="/public/movies/fight-club-1999.jpg" alt="fight club" loading="lazy" />
-        <div class="media-body">
-          <h3 class="media-title">Fight Club (1999)</h3>
-          <p class="media-text">
-            Self improvement is masturbation. Now self-destruction.
-          </p>
-        </div>
-      </article>
+        <article class="media">
+          <img
+            class="media-img"
+            src="/public/movies/better-call-saul-2015.jpg"
+            alt="better call saul"
+            loading="lazy"
+          />
+          <div class="media-body">
+            <h3 class="media-title">Better Call Saul (2015)</h3>
+            <p class="media-text">The winner takes it all. But at what cost.</p>
+          </div>
+        </article>
 
-      <article class="media">
-        <img class="media-img" src="/public/movies/better-call-saul-2015.jpg" alt="better call saul" loading="lazy" />
-        <div class="media-body">
-          <h3 class="media-title">Better Call Saul (2015)</h3>
-          <p class="media-text">The winner takes it all. But at what cost.</p>
-        </div>
-      </article>
+        <article class="media">
+          <img
+            class="media-img"
+            src="/public/movies/the-mind-explained-2019.jpg"
+            alt="the mind explained"
+            loading="lazy"
+          />
+          <div class="media-body">
+            <h3 class="media-title">The Mind Explained (2019)</h3>
+            <p class="media-text">
+              From dreaming to anxiety disorders, exploring what's happening
+              inside the brain.
+            </p>
+          </div>
+        </article>
 
-      <article class="media">
-        <img class="media-img" src="/public/movies/the-mind-explained-2019.jpg" alt="the mind explained"
-          loading="lazy" />
-        <div class="media-body">
-          <h3 class="media-title">The Mind Explained (2019)</h3>
-          <p class="media-text">
-            From dreaming to anxiety disorders, exploring what's happening
-            inside the brain.
-          </p>
-        </div>
-      </article>
-
-      <article class="media">
-        <img class="media-img" src="/public/movies/gladiator-2000.jpg" alt="gladiator" loading="lazy" />
-        <div class="media-body">
-          <h3 class="media-title">Gladiator (2000)</h3>
-          <p class="media-text">
-            One of the most perfect movie. Simple and focused... hits the
-            right spots and emotions.
-          </p>
-        </div>
-      </article>
-    </div>
-  </main>
-</body>
-
+        <article class="media">
+          <img
+            class="media-img"
+            src="/public/movies/gladiator-2000.jpg"
+            alt="gladiator"
+            loading="lazy"
+          />
+          <div class="media-body">
+            <h3 class="media-title">Gladiator (2000)</h3>
+            <p class="media-text">
+              One of the most perfect movie. Simple and focused... hits the
+              right spots and emotions.
+            </p>
+          </div>
+        </article>
+      </div>
+    </main>
+  </body>
 </html>

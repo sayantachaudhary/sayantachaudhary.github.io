@@ -48,6 +48,15 @@
 /*   max-width: 60ch; */
 /* } */
 
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-sticky);
+  background-color: color-mix(in oklch, var(--neutral-100), transparent);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
 .page-header {
   text-align: center;
   margin-top: calc(var(--spacing) * 8);
@@ -58,6 +67,6 @@
   p {
     text-align: center;
     font-size: var(--text-sm);
-    padding-block: calc(var(--spacing) * 16);
+    padding-block: calc(var(--spacing) * 8);
   }
 }

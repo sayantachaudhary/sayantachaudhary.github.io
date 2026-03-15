@@ -3,10 +3,10 @@ const hljsTheme = document.querySelector(".hljs-theme");
 function updateHljsTheme() {
   if (document.documentElement.classList.contains("dark")) {
     hljsTheme.href =
-      "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/github-dark.min.css";
+      "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/atom-one-dark.css";
   } else {
     hljsTheme.href =
-      "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/github.min.css";
+      "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/atom-one-light.css";
   }
 }
 
