@@ -12,9 +12,8 @@
   <meta property="og:image" content="{{ image }}" />
   <meta property="og:description" content="{{ description }}" />
   <!-- External CSS -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" />
+  <link rel="preconnect" href="https://rsms.me/" />
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
   <!-- Base Style -->
   <link rel="stylesheet" href="/css/base/preflight.css" />
   <link rel="stylesheet" href="/css/base/theme.css" />
@@ -28,8 +27,7 @@
   <script src="/js/navbar.js" defer></script>
   <script src="/js/script.js" defer></script>
   <!-- Highlight.js -->
-  <link class="hljs-theme" rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/github.min.css" />
+  <link class="hljs-theme" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/github.min.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
 </head>
 
@@ -39,16 +37,13 @@
       <header class="post-header">
         <h1>{{ title }}</h1>
         <div class="post-meta">
-          <time datetime="{{ date }}">{{ date }}</time>
+          <time datetime="{{ date }}">{{ date | readableDate }}</time>
         </div>
       </header>
       {{ content | safe }}
     </article>
   </main>
 
-  <footer class="site-footer container-md">
-    <p>&copy; 2026 · Design &amp; Developed by Sayanta Chaudhary</p>
-  </footer>
   <script>
     hljs.highlightAll();
   </script>

@@ -30,14 +30,15 @@
 
   a {
     color: var(--neutral-600);
+    transition: color 150ms ease;
 
     &:hover {
       color: var(--neutral-900);
     }
 
-    &.is-active {
-      color: var(--neutral-900);
-    }
+    /* &.is-active { */
+    /*   color: var(--neutral-900); */
+    /* } */
   }
 }
 

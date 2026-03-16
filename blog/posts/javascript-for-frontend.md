@@ -1,16 +1,16 @@
 ---
 title: "JavaScript for Frontend Development: A Beginner's Guide"
-description: "A guide to JavaScript for frontend development for beginners part 1"
+description: "A guide to JavaScript for frontend development for beginners."
 layout: "post.njk"
 image: "/assets/cover.png"
 tags: ["post", "frontend", "development", "javascript"]
-date: "Apr 29, 2025"
+date: "2025-04-13"
 isPublished: true
 ---
 
 # JavaScript for Frontend Development: A Beginner's Guide
 
-Hello there! lets start with basic to advanced JavaScript concepts. This is just a guide not a tutorial to learn JavaScript. You can use this as a reference to learn JavaScript. This is the first part of the series.
+Hello there! lets start with basic to advanced JavaScript concepts. This is just a guide not a tutorial to learn JavaScript. You can use this as a reference to learn JavaScript.
 
 ## Table of Contents
 
@@ -465,6 +465,6 @@ Optional chaining (introduced in ES2020) helps make your code more resilient and
 
 ---
 
-And that's it for this first part of our JavaScript journey! We've covered the essential foundations you need to know before diving into React or other JavaScript frameworks. In the next part, we'll explore more advanced concepts and start building real components.
+We've covered the essential foundations you need to know before diving into React or other JavaScript frameworks.
 
 Remember, the best way to learn is by practicing. Try to experiment with these concepts in your browser's console or in a CodePen project. Happy coding!

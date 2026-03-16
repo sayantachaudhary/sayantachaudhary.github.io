@@ -1,14 +1,44 @@
 body {
-  background-color: var(--neutral-100);
-}
-
-.container-md {
-  background-color: var(--neutral-100);
+  background-image: none;
 }
 
 .post {
-  background-color: var(--neutral-100);
-  padding-inline: 1.25rem;
+  background-color: var(--neutral-50);
+  /* background-color: #100f0f; */
+
+  h1 {
+    font-size: var(--text-3xl);
+    margin-bottom: calc(var(--spacing) * 4);
+
+    &:first-of-type {
+      padding-top: calc(var(--spacing) * 12);
+    }
+  }
+
+  h2 {
+    font-size: var(--text-2xl);
+    margin-top: calc(var(--spacing) * 8);
+    margin-bottom: calc(var(--spacing) * 4);
+  }
+
+  h3 {
+    font-size: var(--text-xl);
+    margin-top: calc(var(--spacing) * 6);
+    margin-bottom: calc(var(--spacing) * 2);
+  }
+
+  p {
+    line-height: 1.875;
+    margin-bottom: calc(var(--spacing) * 4);
+  }
+
+  code {
+    font-family: var(--font-mono);
+    border-radius: var(--radius-sm);
+    background-color: var(--neutral-100);
+    color: var(--neutral-800);
+    padding: 2px 4px;
+  }
 }
 
 .post-meta {
@@ -16,45 +46,12 @@ body {
   margin-bottom: calc(var(--spacing) * 8);
 }
 
-.post h1 {
-  font-size: var(--text-3xl);
-  margin-bottom: calc(var(--spacing) * 2);
-
-  &:first-of-type {
-    padding-top: calc(var(--spacing) * 12);
-  }
-}
-
-.post h2 {
-  font-size: var(--text-2xl);
-  margin-top: calc(var(--spacing) * 8);
-  margin-bottom: calc(var(--spacing) * 4);
-}
-
-.post h3 {
-  font-size: var(--text-xl);
-  margin-top: calc(var(--spacing) * 6);
-  margin-bottom: calc(var(--spacing) * 2);
-}
-
-.post p {
-  line-height: 1.875;
-  font-weight: 300;
-  margin-bottom: calc(var(--spacing) * 4);
-
-  code {
-    font-family: var(--font-mono);
-    border-radius: var(--radius-sm);
-    background-color: var(--neutral-200);
-    padding-inline: 4px;
-  }
-}
-
 .post ul {
-  padding-block: calc(var(--spacing) * 6);
-  padding-inline: calc(var(--spacing) * 4);
   border: 1px solid var(--neutral-200);
   border-radius: var(--radius-lg);
+  padding-block: calc(var(--spacing) * 6);
+  padding-inline: calc(var(--spacing) * 4);
+  font-size: var(--text-sm);
   background-color: var(--neutral-100);
   color: var(--neutral-600);
 
@@ -81,20 +78,24 @@ body {
 
 pre {
   border-radius: var(--radius-lg);
-  background-color: var(--neutral-50);
-  overflow-x: auto;
-  white-space: pre;
-  /* bleed layout */
-  /* max-width: calc(100% + 2.5rem); */
   margin-block: calc(var(--spacing) * 6);
-  margin-inline: -1.25rem;
+  margin-inline: 0;
   padding-block: calc(var(--spacing) * 6);
   padding-inline: calc(var(--spacing) * 6);
+  background-color: var(--neutral-100);
+  overflow-x: auto;
+  white-space: pre;
+
+  /* Desktop */
+  @media (width >=640px) {
+    /* bleed layout */
+    margin-inline: -1.25rem;
+  }
 }
 
 pre code {
   font-family: var(--font-mono);
-  /* font-size: var(--text-sm); */
+  font-size: var(--text-sm);
 }
 
 pre code.hljs {

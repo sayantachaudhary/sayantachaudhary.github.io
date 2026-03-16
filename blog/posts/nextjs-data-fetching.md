@@ -4,7 +4,7 @@ description: "A guide to Next.js data fetching mistakes & security vulnerabiliti
 layout: "post.njk"
 image: "/blog/nextjs-data-fetching.png"
 tags: ["post", "frontend", "development", "nextjs"]
-date: "Mar 16, 2025"
+date: "2025-07-05"
 isPublished: true
 ---
 

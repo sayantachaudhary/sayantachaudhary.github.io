@@ -47,10 +47,10 @@ document.addEventListener("click", (e) => {
 });
 
 // Style the active link
-const navLink = document.querySelectorAll(".nav-list a");
-navLink.forEach((link) => {
-  link.addEventListener("click", () => {
-    navLink.forEach((l) => l.classList.remove("is-active"));
-    link.classList.add("is-active");
-  });
-});
+// const navLink = document.querySelectorAll(".nav-list a");
+// navLink.forEach((link) => {
+//   link.addEventListener("click", () => {
+//     navLink.forEach((l) => l.classList.remove("is-active"));
+//     link.classList.add("is-active");
+//   });
+// });

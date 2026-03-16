@@ -36,7 +36,7 @@
       <article class="card">
         <header class="card-header">
           <h3 class="card-title">{{ post.data.title }}</h3>
-          <p class="card-subtitle">{{ post.data.date }} </p>
+          <p class="card-subtitle">{{ post.data.date | readableDate }}</p>
         </header>
         <div class="card-body">
           <p class="card-text">{{ post.data.description }}</p>

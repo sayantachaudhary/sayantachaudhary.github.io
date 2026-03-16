@@ -81,7 +81,7 @@ h6 {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--neutral-400);
+  background-color: var(--neutral-300);
   border: 3px solid transparent;
   border-radius: var(--radius-sm);
   background-clip: padding-box;
