@@ -8,8 +8,17 @@
     <meta name="author" content="Sayanta Chaudhary" />
     <!-- Favicon -->
     <link rel="icon" href="/public/images/favicon/favicon.ico" />
-    <link rel="icon" type="image/png" sizes="96x96" href="/public/images/favicon/favicon-96x96.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/public/images/favicon/apple-touch-icon.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="/public/images/favicon/favicon-96x96.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/public/images/favicon/apple-touch-icon.png"
+    />
     <link rel="manifest" href="./site.webmanifest" />
     <!-- Social Meta -->
     <meta property="og:type" content="website" />
@@ -24,11 +33,7 @@
     <!-- <link rel="preconnect" href="https://fonts.googleapis.com" /> -->
     <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /> -->
     <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" /> -->
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
-    />
+    <!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" /> -->
     <link
       rel="stylesheet"
       type="text/css"
@@ -42,8 +47,8 @@
     <!-- Base Style -->
     <link rel="stylesheet" href="/css/base/preflight.css" />
     <link rel="stylesheet" href="/css/base/theme.css" />
-    <link rel="stylesheet" href="/css/base/font.css" />
     <link rel="stylesheet" href="/css/base/default.css" />
+    <link rel="stylesheet" href="/css/base/font.css" />
     <link rel="stylesheet" href="/css/base/utilities.css" />
     <link rel="stylesheet" href="/css/base/state.css" />
     <!-- Layout -->
@@ -57,7 +62,7 @@
     <!-- JS -->
     <script src="/js/navbar.js" defer></script>
     <script src="/js/script.js" defer></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="/js/fetch.js" defer></script>
   </head>
 
   <body>
@@ -73,11 +78,55 @@
         </ul>
         <div class="nav-action">
           <button class="btn btn-ghost theme">
-            <i data-lucide="moon" class="icon-moon"></i>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16px"
+              height="16px"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-moon-icon lucide-moon"
+            >
+              <path
+                d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"
+              />
+            </svg>
           </button>
           <button class="btn btn-ghost burger">
-            <i data-lucide="menu" class="icon-menu"></i>
-            <i data-lucide="x" class="icon-x"></i>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16px"
+              height="16px"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-menu-icon lucide-menu"
+            >
+              <path d="M4 5h16" />
+              <path d="M4 12h16" />
+              <path d="M4 19h16" />
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-x-icon lucide-x"
+            >
+              <path d="M18 6 6 18" />
+              <path d="m6 6 12 12" />
+            </svg>
           </button>
         </div>
       </nav>
@@ -128,7 +177,7 @@
           <article class="card">
             <header class="card-header">
               <h3 class="card-title">Frontend</h3>
-              <p class="card-subtitle">
+              <p class="card-text">
                 Next.js · React · TanStack Query · Redux <br />
                 Tailwind CSS · Figma
                 <!-- Architected and developed the complete frontend infrastructure for the platform. -->
@@ -139,7 +188,7 @@
           <article class="card">
             <header class="card-header">
               <h3 class="card-title">Backend</h3>
-              <p class="card-subtitle">
+              <p class="card-text">
                 Node.js · Express · PostgreSQL · MongoDB
               </p>
             </header>
@@ -148,7 +197,7 @@
           <article class="card">
             <header class="card-header">
               <h3 class="card-title">DevOps</h3>
-              <p class="card-subtitle">
+              <p class="card-text">
                 Linux · Docker · GitHub Actions · Vercel
               </p>
             </header>
@@ -157,7 +206,7 @@
           <article class="card">
             <header class="card-header">
               <h3 class="card-title">Tools</h3>
-              <p class="card-subtitle">Neovim · Vite · Bun · HTTPie</p>
+              <p class="card-text">Neovim · Vite · Bun · HTTPie</p>
             </header>
           </article>
         </div>
@@ -306,6 +355,8 @@
                 <h3>Books</h3>
                 <p>Books that have influenced my thinking.</p>
               </div>
+              <!-- <span class="arrow">→</span> -->
+              <span class="arrow">›</span>
             </a>
           </article>
 
@@ -316,6 +367,7 @@
                 <h3>Movies</h3>
                 <p>Films & shows that have inspired, entertained me.</p>
               </div>
+              <span class="arrow">›</span>
             </a>
           </article>
 
@@ -326,6 +378,7 @@
                 <h3>Blogs</h3>
                 <p>Thoughts, tutorials, and insights on programming.</p>
               </div>
+              <span class="arrow">›</span>
             </a>
           </article>
         </div>
@@ -355,6 +408,16 @@
           </a>
         </address>
       </section>
+
+      <!-- <section id="quotes"> -->
+      <!--   <h3>Thinking is the capital, Enterprise is the way, Hard Work is the solution.</h1> -->
+      <!--     <p>Abdul Kalam</p> -->
+      <!--   <button type="button" class="btn btn-outline btn-quote"> -->
+      <!--     New Quote -->
+      <!--   </button> -->
+      <!-- </section> -->
+
+      <!-- <section id="cart-list"></section> -->
     </main>
 
     <hr />
@@ -362,8 +425,5 @@
     <footer class="site-footer container-md">
       <p>&copy; 2026 · Sayanta Chaudhary</p>
     </footer>
-    <script>
-      lucide.createIcons();
-    </script>
   </body>
 </html>

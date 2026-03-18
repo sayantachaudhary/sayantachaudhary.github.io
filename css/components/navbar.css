@@ -8,7 +8,7 @@
 
 .nav-logo img {
   width: auto;
-  height: 56px;
+  height: 48px;
   border-radius: 50%;
   padding-inline: calc(var(--spacing) * 2);
   transition: transform 300ms ease;
@@ -92,14 +92,14 @@
   }
 }
 
-.icon-x {
+.lucide-x {
   display: none;
 }
 
-.burger[aria-expanded="true"] .icon-menu {
+.burger[aria-expanded="true"] .lucide-menu {
   display: none;
 }
 
-.burger[aria-expanded="true"] .icon-x {
+.burger[aria-expanded="true"] .lucide-x {
   display: block;
 }

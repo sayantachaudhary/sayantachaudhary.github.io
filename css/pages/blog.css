@@ -4,7 +4,6 @@ body {
 
 .post {
   background-color: var(--neutral-50);
-  /* background-color: #100f0f; */
 
   h1 {
     font-size: var(--text-3xl);
