@@ -3,25 +3,20 @@ body {
 }
 
 .post {
-  background-color: var(--neutral-50);
-
   h1 {
-    font-size: var(--text-3xl);
     margin-bottom: calc(var(--spacing) * 4);
 
     &:first-of-type {
-      padding-top: calc(var(--spacing) * 12);
+      margin-top: calc(var(--spacing) * 8);
     }
   }
 
   h2 {
-    font-size: var(--text-2xl);
     margin-top: calc(var(--spacing) * 8);
     margin-bottom: calc(var(--spacing) * 4);
   }
 
   h3 {
-    font-size: var(--text-xl);
     margin-top: calc(var(--spacing) * 6);
     margin-bottom: calc(var(--spacing) * 2);
   }
@@ -34,7 +29,7 @@ body {
   code {
     font-family: var(--font-mono);
     border-radius: var(--radius-sm);
-    background-color: var(--neutral-100);
+    background-color: var(--neutral-200);
     color: var(--neutral-800);
     padding: 2px 4px;
   }
@@ -48,16 +43,15 @@ body {
 .post ul {
   border: 1px solid var(--neutral-200);
   border-radius: var(--radius-lg);
-  padding-block: calc(var(--spacing) * 6);
+  padding-block: calc(var(--spacing) * 4);
   padding-inline: calc(var(--spacing) * 4);
-  font-size: var(--text-sm);
   background-color: var(--neutral-100);
-  color: var(--neutral-600);
+  color: var(--neutral-700);
 
   li {
     line-height: 1.875;
     list-style: disc inside;
-    padding-left: calc(var(--spacing) * 4);
+    padding-left: calc(var(--spacing) * 2);
 
     &::marker {
       color: var(--neutral-900);
@@ -67,10 +61,10 @@ body {
   a {
     color: var(--neutral-900);
     border-bottom: 1px solid var(--neutral-500);
-    transition: border 0.2s ease-in-out;
+    transition: border-color 0.2s ease-in-out;
 
     &:hover {
-      border-bottom: 1px solid var(--neutral-800);
+      border-bottom: 1px solid var(--neutral-900);
     }
   }
 }
@@ -85,9 +79,8 @@ pre {
   overflow-x: auto;
   white-space: pre;
 
-  /* Desktop */
-  @media (width >=640px) {
-    /* bleed layout */
+  /* Bleed on Desktop */
+  @media (width >=768px) {
     margin-inline: -1.25rem;
   }
 }
@@ -100,4 +93,10 @@ pre code {
 pre code.hljs {
   padding: 0 !important;
   background: none !important;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--neutral-300);
+  margin-block: calc(var(--spacing) * 8);
 }

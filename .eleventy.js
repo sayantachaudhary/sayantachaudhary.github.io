@@ -1,7 +1,7 @@
 export default function (eleventyConfig) {
-  // eleventyConfig.addPassthroughCopy("css");
-  // eleventyConfig.addPassthroughCopy("js");
-  // eleventyConfig.addPassthroughCopy("assets");
+  eleventyConfig.addPassthroughCopy("css");
+  eleventyConfig.addPassthroughCopy("js");
+  eleventyConfig.addPassthroughCopy("public");
   eleventyConfig.addFilter("readableDate", (date) => {
     return new Date(date).toLocaleDateString("en-US", {
       year: "numeric",
@@ -12,9 +12,9 @@ export default function (eleventyConfig) {
 
   return {
     dir: {
-      input: "./blog/posts",
+      input: ".",
       output: "./_site",
-      layouts: "../_layouts",
+      layouts: "blog/_layouts",
     },
   };
 }

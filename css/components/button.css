@@ -36,25 +36,31 @@
 }
 
 .btn-secondary {
-  background-color: var(--neutral-100);
-  color: var(--neutral-800);
+  background-color: var(--neutral-200);
+  color: var(--neutral-900);
 }
 
 .btn-outline {
   border: 1px solid var(--neutral-200);
   background-color: var(--neutral-100);
   box-shadow: var(--inset-shadow-sm);
+
+  @media (hover: hover) {
+    &:hover:not(:disabled) {
+      background-color: var(--neutral-200);
+    }
+  }
 }
 
 .btn-ghost {
   background-color: transparent;
   color: var(--neutral-900);
 
-  /* @media (hover: hover) { */
-  /*   &:hover:not(:disabled) { */
-  /*     background-color: var(--neutral-200); */
-  /*   } */
-  /* } */
+  @media (hover: hover) {
+    &:hover:not(:disabled) {
+      background-color: var(--neutral-200);
+    }
+  }
 }
 
 .btn-link {

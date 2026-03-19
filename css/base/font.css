@@ -43,16 +43,15 @@ h6 {
 p {
   font-size: var(--text-base);
   line-height: 1.6;
-  letter-spacing: 0.025em;
-  color: var(--neutral-600);
+  color: var(--neutral-700);
 
   a {
-    color: var(--neutral-800);
-    border-bottom: 2px solid var(--neutral-500);
-    transition: border 0.3s ease-in-out;
+    color: var(--neutral-900);
+    border-bottom: 1px solid var(--neutral-500);
+    transition: border-color 0.2s ease-in-out;
 
     &:hover {
-      border-bottom: 2px solid var(--neutral-100);
+      border-bottom: 1px solid var(--neutral-900);
     }
   }
 }
@@ -63,7 +62,7 @@ small {
 }
 
 .lead {
-  font-size: var(--text-lg);
+  /* font-size: var(--text-lg); */
 }
 
 .prose {
@@ -71,10 +70,10 @@ small {
   line-height: 1.75;
 }
 
-.prose > :first-child {
+.prose> :first-child {
   margin-top: 0;
 }
 
-.prose > :last-child {
+.prose> :last-child {
   margin-bottom: 0;
 }

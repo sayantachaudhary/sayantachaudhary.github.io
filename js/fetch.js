@@ -49,27 +49,44 @@
 //
 // getProduct();
 
-async function getProduct() {
-  const response = await fetch("https://dummyjson.com/carts/1");
-  const data = await response.json();
+// async function getProduct() {
+//   const response = await fetch("https://dummyjson.com/carts/1");
+//   const data = await response.json();
+//
+//   const cart_list = document.querySelector("#cart-list");
+//
+//   cart_list.textContent = data.products
+//     .map(
+//       (product) => `
+//     <div class="cart">
+//       <h3>${product.title}</h3>
+//       <p>Price: ${product.price}</p>
+//       <img src="${product.thumbnail}" alt="${product.title}" />
+//       <div class="cart-btn">
+//         <button type="button" class="btn btn-primary">Buy</button>
+//         <button type="button" class="btn btn-outline">Add to Cart</button>
+//       </div>
+//     </div>
+//   `,
+//     )
+//     .join("");
+// }
 
-  const cart_list = document.querySelector("#cart-list");
+// getProduct();
 
-  cart_list.innerHTML = data.products
-    .map(
-      (product) => `
-    <div class="cart">
-      <h3>${product.title}</h3>
-      <p>Price: ${product.price}</p>
-      <img src="${product.thumbnail}" alt="${product.title}" />
-      <div class="cart-btn">
-        <button type="button" class="btn btn-primary">Buy</button>
-        <button type="button" class="btn btn-outline">Add to Cart</button>
-      </div>
+const url = "https://dummyjson.com/quotes";
+
+async function getQuote() {
+  const res = await fetch(url);
+  const data = await res.json();
+  const quote_list = document.querySelector("#quotes");
+  
+  quote_list.innerHTML = data.quotes.map(quote => `
+    <div class="quote">
+      <h3>${quote.quote}</h3>
+      <p>${quote.author}</p>
     </div>
-  `,
-    )
-    .join("");
+  `).join('');
 }
 
-getProduct();
+getQuote();

@@ -96,6 +96,9 @@
   /* --sidebar-accent-foreground: oklch(0.205 0 0); // 3 */
   /* --sidebar-border: oklch(0.922 0 0); // 7 */
   /* --sidebar-ring: oklch(0.708 0 0); // 8 */
+
+  --color-black: #000;
+  --color-white: #fff;
 }
 
 .dark {
@@ -111,6 +114,9 @@
   --neutral-800: oklch(92% 0.004 286.32);
   --neutral-900: oklch(96.7% 0.001 286.375);
   --neutral-950: oklch(98.5% 0 0);
+
+  --color-black: #fff;
+  --color-white: #000;
 }
 
 /* Use vite/ESModules to reduce bundle size, lucide is built to be fully tree-shakable */

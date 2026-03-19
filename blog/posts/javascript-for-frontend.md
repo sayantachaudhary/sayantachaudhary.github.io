@@ -8,8 +8,6 @@ date: "2025-04-13"
 isPublished: true
 ---
 
-# JavaScript for Frontend Development: A Beginner's Guide
-
 Hello there! lets start with basic to advanced JavaScript concepts. This is just a guide not a tutorial to learn JavaScript. You can use this as a reference to learn JavaScript.
 
 ## Table of Contents
