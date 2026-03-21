@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Statements vs Expressions </title>
+  <meta name="description" content="One of the most foundational things to understand about JavaScript." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://sayanta.is-a-fullstack.dev/expressions-vs-statements/" />
+  <meta property="og:title" content="Statements vs Expressions" />
+  <meta property="og:image" content="/blog/assets/expressions-vs-statments.png" />
+  <meta property="og:description" content="One of the most foundational things to understand about JavaScript." />
+  <!-- External CSS -->
+  <link rel="preconnect" href="https://rsms.me/" />
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+  <!-- Base Style -->
+  <link rel="stylesheet" href="/css/base/preflight.css" />
+  <link rel="stylesheet" href="/css/base/theme.css" />
+  <link rel="stylesheet" href="/css/base/font.css" />
+  <link rel="stylesheet" href="/css/base/default.css" />
+  <!-- Layout -->
+  <link rel="stylesheet" href="/css/layout/layout.css" />
+  <!-- Page Specific -->
+  <link rel="stylesheet" href="/css/pages/blog.css" />
+  <!-- JS -->
+  <script src="/js/navbar.js" defer></script>
+  <script src="/js/script.js" defer></script>
+  <!-- Highlight.js -->
+  <link rel="stylesheet" class="hljs-theme"
+    href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/atom-one-light.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+</head>
+
+<body>
+  <main class="container-md">
+    <article class="post">
+      <header class="post-header">
+        <h1>Statements vs Expressions</h1>
+        <div class="post-meta">
+          <time datetime="2025-01-16">Jan 16, 2025</time>
+        </div>
+      </header>
+      <p>So what's the difference between a “statement” and an “expression” in JavaScript?</p>
+<p>It's a load-bearing concrete pillar that will help support a ton of JavaScript knowledge.<br/>
+This is especially true for React developers. Most of those JSX rules you've had to memorize, and always forget to follow, are the result of this statement/expression duality.</p>
+<h2>Expressions</h2>
+<p>At its core, an expression is a bit of JavaScript code that produces a value.</p>
+<p>For example, these are all expressions:</p>
+<ul>
+<li><code>1</code> — produces <code>1</code></li>
+<li><code>&quot;hello&quot;</code> — produces <code>&quot;hello&quot;</code></li>
+<li><code>5 * 10</code> — produces <code>50</code></li>
+<li><code>num &gt; 100</code> — produces either <code>true</code> or <code>false</code></li>
+<li><code>isHappy ? &quot;😃&quot; : &quot;☹️&quot;</code> — produces an emoji</li>
+<li><code>[1, 2, 3].pop()</code> — produces the number <code>3</code></li>
+</ul>
+<p>Expressions can contain expressions. For example, how many expressions do you count in this chunk of JS code? <code>(5 + 1) * 2</code></p>
+<ul>
+<li><code>(5 + 1) * 2</code> This chunk of code is itself an expression, producing the number “12”.</li>
+<li><code>(5 + 1)</code> This sub-expression evaluates first, because of the parens, and resolves to “6”.</li>
+<li><code>5</code> Individual numbers are themselves expressions, since they produce a value. This expression resolves to “5”.</li>
+<li><code>1</code> By the same logic, this number is also an expression, producing the number “1”.</li>
+<li><code>2</code> This number forms the final expression, which resolves to “2”.</li>
+</ul>
+<h2>Statements</h2>
+<p>A JavaScript program is a sequence of statements. Each statement is an instruction for the computer to do something.</p>
+<p>Here are some examples of statements in JavaScript:</p>
+<pre><code class="language-javascript">let hi = 5;
+</code></pre>
+<pre><code class="language-javascript">if (hi &gt; 10) {
+  // More statements here
+}
+</code></pre>
+<pre><code class="language-javascript">throw new Error(&quot;Something exploded!&quot;);
+</code></pre>
+<p>Here's how I like to think about this: statements are the rigid structure that holds our program together, while expressions fill in the details.</p>
+<p>Statements often have &quot;slots&quot; for expressions, We can put any expression we like into those slots.</p>
+<p>For example, declaring a variable has an expression slot:</p>
+<pre><code class="language-javascript">let hi = /* some epxressions */;
+</code></pre>
+<p>We can use any of the expressions we saw earlier in tht slot:</p>
+<pre><code class="language-javascript">let hi = 1;
+let hi = &quot;hello&quot;;
+let hi = 5 * 10;
+let hi = num &gt; 100;
+let hi = isHappy ? &quot;😃&quot; : &quot;☹️&quot;;
+let hi = [1, 2, 3].pop();
+</code></pre>
+<p>In terms of valid syntax, expressions are interchangebale, If a statement has an expression slot, we can put any expression there, and the code will run. We won't get a syntax error.</p>
+<p>That said, we can still run into other issues. For example, the following code is syntactically valid, but we'll crash the browser tab if we try to run it, since it causes an infinite loop.</p>
+<pre><code class="language-javascript">while (&quot;hello&quot;) {
+  // Because “hello” never changes, this loop will
+  // run over and over until the script crashes.
+  // Syntactically valid, but still problematic.
+}
+</code></pre>
+<h3>A handy trick</h3>
+<p>Want to know whether a chunk of JS is an expression or a statement? Try to log it out!</p>
+<pre><code class="language-javascript">console.log(/* Some chunk of JS here */);
+</code></pre>
+<p>If it runs, the code is an expression. If you get an error, it's a statement (or, possibly, invalid JS).</p>
+<p>As a bonus, we can even see what the expression resolves to, since it'll be printed in the browser console!</p>
+<p>This works because all function arguments must be expressions. Expressions produce a value, and that value will be passed into the function. Statements don't produce a value, and so they can't be used as function arguments.</p>
+<p>I rely a ton on console.log. It's a wonderfully versatile tool!</p>
+<h2>Expressions as statements</h2>
+<p>Here is an expression: <code>1 + 2 + 3.</code></p>
+<p>What happens if we create a JS file that includes only this expression? Let's imagine we save the following content as <code>test.js</code>:</p>
+<pre><code class="language-javascript">1 + 2 + 3;
+</code></pre>
+<p>How many statements does this file have? Zero or one?</p>
+<p>Here's the deal: expressions can't exist on their own. They're always part of a statement. And so in this case, we have a statement that looks like this:</p>
+<pre><code class="language-javascript">/* expression slot */
+</code></pre>
+<p>The statement is essentially empty aside from its expression slot. Our expression <code>1 + 2 + 3</code> fills this slot, and our statement is complete.</p>
+<p>In other words, all of the following lines are valid statements:</p>
+<pre><code class="language-javascript">// Statement 1:
+let hi = /* expression slot */;
+
+// Statement 2:
+return /* expression slot */;
+
+// Statement 3:
+if (/* expression slot */) { }
+
+// Statement 4:
+/* expression slot */;
+</code></pre>
+<p>Often, tutorials will falsely state that expressions are statements, but this isn't quite right. Expressions and statements are distinct things. But it's possible for a statement to wrap around an expression without providing any additional characters. Think of it like wrapping a sandwich in clear shrink wrap.</p>
+<p>Statements typically end in a semi-colon, which marks the end of the statement. The semi-colon isn't necessary for certain statements, like <code>if</code> statements, <code>while</code> loops, and function declarations.</p>
+<h2>Practical implications in React</h2>
+<p>If you've worked with React before, you're probably aware that squiggly brackets ({ and }) allow us to embed bits of JavaScript within our JSX, like this:</p>
+<pre><code class="language-javascript">function CountdownClock({ secondsRemaining }) {
+  return (
+    &lt;div&gt;
+      Time left:
+      {Math.round(secondsRemaining / 60)} minutes!
+    &lt;/div&gt;
+  );
+}
+</code></pre>
+<p>This is part of what makes React so magical; we have the full power of JavaScript available to us.</p>
+<p>But there's a catch — we can't put any JavaScript inside the curly brackets. Specifically, we can only include expressions, not statements. The squiggly brackets essentially create an expression slot within our JSX.</p>
+<p>If we try to embed a statement here, like an if/else statement, we'll get an error:</p>
+<pre><code class="language-javascript">function CountdownClock({ secondsRemaining }) {
+  return (
+    // 🚫 Throws a SyntaxError
+    &lt;div&gt;
+      {if (secondsRemaining &gt; 0) {
+        `${secondsRemaining} seconds left`
+      } else {
+        &quot;Time expired!&quot;
+      }}
+    &lt;/div&gt;
+  );
+}
+</code></pre>
+<p>This blows up because statements don't produce a value, only expressions produce a value. If we want to embed if/else logic in our JSX, we need to use a ternary operator expression:</p>
+<pre><code class="language-javascript">function CountdownClock({ secondsRemaining }) {
+  return (
+    // ✅ No problemo
+    &lt;div&gt;
+      {secondsRemaining &gt; 0
+        ? `${secondsRemaining} seconds left`
+        : &quot;Time expired!&quot;}
+    &lt;/div&gt;
+  );
+}
+</code></pre>
+<p>This might seem like a weird JSX/React limitation, but it's actually a JavaScript limitation.</p>
+<p>I think we often blame React for seemingly arbitrary rules, like how components must return a single top-level element. But more often than not, React is just warning us about a JavaScript limitation.</p>
+<p>Understanding the difference between statements and expressions is an important first step towards demystifying a whole category of React warnings and bugs. We also need to learn about how JSX compiles into JavaScript, and how React's reconciliation and render cycle works… but, alas, those topics are beyond the scope of this blog post!</p>
+<hr>
+<h2>In summary</h2>
+<p>A JavaScript program consists of a sequence of statements. Each statement is an instruction to do something, like create a variable, run an if/else condition, or start a loop.</p>
+<p>Expressions produce a value, and these values are slotted into statements, like a Super Nintendo cartridge that changes what the Super Nintendo does.</p>
+<p>Expressions are always part of a statement, even if that statement is otherwise empty. For example, the code below runs a loop without using a for statement, but it still includes an “empty wrapper” statement:</p>
+<pre><code class="language-javascript">data.forEach((item) =&gt; console.log(item));
+</code></pre>
+<p>It can take a while for this distinction to become intuitive, but hopefully this blog post has clarified a few things!</p>
+
+    </article>
+  </main>
+
+  <script>
+    hljs.highlightAll();
+  </script>
+</body>
+
+</html>
