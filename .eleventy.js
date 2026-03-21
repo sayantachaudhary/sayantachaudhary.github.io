@@ -2,6 +2,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("css");
   eleventyConfig.addPassthroughCopy("js");
   eleventyConfig.addPassthroughCopy("public");
+  eleventyConfig.addPassthroughCopy("CNAME");
   eleventyConfig.addFilter("readableDate", (date) => {
     return new Date(date).toLocaleDateString("en-US", {
       year: "numeric",
