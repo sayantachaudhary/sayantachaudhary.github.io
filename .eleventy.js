@@ -16,6 +16,7 @@ export default function (eleventyConfig) {
       input: ".",
       output: "./_site",
       layouts: "./blog/_layouts/",
+      templateFormats: ["html", "md", "njk"],
     },
   };
 }
