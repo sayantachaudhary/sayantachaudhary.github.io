@@ -4,7 +4,7 @@ body {
 
 .post {
   h1 {
-    margin-bottom: calc(var(--spacing) * 4);
+    margin-bottom: calc(var(--spacing) * 2);
 
     &:first-of-type {
       margin-top: calc(var(--spacing) * 8);
@@ -28,10 +28,15 @@ body {
 
   code {
     font-family: var(--font-mono);
+    font-size: var(--text-sm);
     border-radius: var(--radius-sm);
     background-color: var(--neutral-200);
     color: var(--neutral-800);
     padding: 2px 4px;
+  }
+
+  pre code {
+    border-radius: 0;
   }
 }
 
@@ -41,26 +46,20 @@ body {
 }
 
 .post ul {
-  border: 1px solid var(--neutral-200);
-  border-radius: var(--radius-lg);
-  padding-block: calc(var(--spacing) * 4);
-  padding-inline: calc(var(--spacing) * 4);
-  background-color: var(--neutral-100);
   color: var(--neutral-700);
+  margin-bottom: calc(var(--spacing) * 8);
 
   li {
     line-height: 1.875;
     list-style: disc inside;
-    padding-left: calc(var(--spacing) * 2);
+    margin-bottom: var(--spacing);
 
-    &::marker {
-      color: var(--neutral-900);
-    }
+    /* &::marker {} */
   }
 
   a {
     color: var(--neutral-900);
-    border-bottom: 1px solid var(--neutral-500);
+    border-bottom: 1px solid var(--neutral-400);
     transition: border-color 0.2s ease-in-out;
 
     &:hover {
@@ -70,8 +69,8 @@ body {
 }
 
 pre {
-  border-radius: var(--radius-lg);
-  margin-block: calc(var(--spacing) * 6);
+  border-radius: var(--radius-md);
+  margin-block: calc(var(--spacing) * 8);
   margin-inline: 0;
   padding-block: calc(var(--spacing) * 6);
   padding-inline: calc(var(--spacing) * 6);
@@ -79,20 +78,20 @@ pre {
   overflow-x: auto;
   white-space: pre;
 
+  code {
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+  }
+
+  code.hljs {
+    padding: 0 !important;
+    background: none !important;
+  }
+
   /* Bleed on Desktop */
   @media (width >=768px) {
     margin-inline: -1.25rem;
   }
-}
-
-pre code {
-  font-family: var(--font-mono);
-  font-size: var(--text-sm);
-}
-
-pre code.hljs {
-  padding: 0 !important;
-  background: none !important;
 }
 
 hr {

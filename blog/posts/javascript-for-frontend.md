@@ -1,10 +1,9 @@
 ---
 title: "JavaScript for Frontend Development: A Beginner's Guide"
 description: "A guide to JavaScript for frontend development for beginners."
-layout: "post.njk"
-image: "/assets/cover.png"
-tags: ["post", "frontend", "development", "javascript"]
-date: "2025-04-13"
+image: "/blog/javascript-for-frontend.png"
+tags: ["frontend", "development", "javascript"]
+date: "2025-04-09"
 isPublished: true
 ---
 

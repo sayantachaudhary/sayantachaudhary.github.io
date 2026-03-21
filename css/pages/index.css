@@ -23,7 +23,9 @@
   gap: calc(var(--spacing) * 2);
   color: var(--neutral-700);
 
-  /* .meta-item {} */
+  .meta-item {
+    font-size: var(--text-sm);
+  }
 
   .meta-label {
     font-weight: 500;

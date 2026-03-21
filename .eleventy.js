@@ -14,7 +14,7 @@ export default function (eleventyConfig) {
     dir: {
       input: ".",
       output: "./_site",
-      layouts: "blog/_layouts",
+      layouts: "./blog/_layouts/",
     },
   };
 }

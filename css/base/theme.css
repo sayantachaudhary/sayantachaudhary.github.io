@@ -1,7 +1,7 @@
 :root {
-  --font-sans: "inter", "Poppins", sans-serif;
+  --font-sans: "inter", sans-serif;
   --font-serif: serif;
-  --font-mono: "Geist Mono", monospace;
+  --font-mono: monospace;
 
   --text-sm: 0.875rem;
   --text-base: 1rem;
@@ -27,8 +27,7 @@
   /* Dark mode shadow  */
   --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  --shadow-lg:
-    0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   --inset-shadow-sm: inset 0 2px 4px rgb(0 0 0 / 0.05);
 
   --z-hide: -1;
@@ -96,27 +95,20 @@
   /* --sidebar-accent-foreground: oklch(0.205 0 0); // 3 */
   /* --sidebar-border: oklch(0.922 0 0); // 7 */
   /* --sidebar-ring: oklch(0.708 0 0); // 8 */
-
-  --color-black: #000;
-  --color-white: #fff;
 }
 
 .dark {
-  /* --neutral-50: oklch(14.1% 0.005 285.823); */
-  --neutral-50: #100f0f;
-  --neutral-100: oklch(21% 0.006 285.885);
-  --neutral-200: oklch(1 0 0 / 10%);
-  --neutral-300: oklch(37% 0.013 285.805);
-  --neutral-400: oklch(44.2% 0.017 285.786);
-  --neutral-500: oklch(55.2% 0.016 285.938);
-  --neutral-600: oklch(70.5% 0.015 286.067);
-  --neutral-700: oklch(87.1% 0.006 286.286);
-  --neutral-800: oklch(92% 0.004 286.32);
-  --neutral-900: oklch(96.7% 0.001 286.375);
   --neutral-950: oklch(98.5% 0 0);
-
-  --color-black: #fff;
-  --color-white: #000;
+  --neutral-900: oklch(96.7% 0.001 286.375);
+  --neutral-800: oklch(92% 0.004 286.32);
+  --neutral-700: oklch(87.1% 0.006 286.286);
+  --neutral-600: oklch(70.5% 0.015 286.067);
+  --neutral-500: oklch(55.2% 0.016 285.938);
+  --neutral-400: oklch(44.2% 0.017 285.786);
+  --neutral-300: oklch(37% 0.013 285.805);
+  --neutral-200: oklch(27.4% 0.006 286.033);
+  --neutral-100: oklch(21% 0.006 285.885);
+  --neutral-50: oklch(14.1% 0.005 285.823);
 }
 
 /* Use vite/ESModules to reduce bundle size, lucide is built to be fully tree-shakable */

@@ -29,7 +29,7 @@
   list-style: none;
 
   a {
-    color: var(--neutral-600);
+    color: var(--neutral-500);
     transition: color 150ms ease;
 
     &:hover {

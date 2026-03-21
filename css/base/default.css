@@ -11,7 +11,7 @@ body {
   flex-direction: column;
   background-image: url("/public/bg.svg");
   background-color: var(--neutral-50);
-  color: var(--neutral-900);
+  color: var(--neutral-950);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;

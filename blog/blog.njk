@@ -1,3 +1,7 @@
+---
+permalink: /blog/
+---
+
 <!doctype html>
 <html lang="en" dir="ltr">
 
@@ -33,6 +37,7 @@
   <main class="container-md">
     <div class="cards">
       {% for post in collections.post | reverse %}
+      {% if post.data.isPublished %}
       <article class="card">
         <header class="card-header">
           <h3 class="card-title">{{ post.data.title }}</h3>
@@ -45,6 +50,7 @@
           <a href="{{ post.url }}" class="btn btn-outline">Read more</a>
         </footer>
       </article>
+      {% endif %}
       {% endfor %}
     </div>
   </main>
