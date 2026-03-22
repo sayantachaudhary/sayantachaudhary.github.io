@@ -1,5 +1,3 @@
-/* <btn class="bg-sky-500 hover:bg-sty-600 focus:outline-2 focus:outline-offset-2 focus:outline-sky-500 active:bg-sky-700 ..."> Button </btn> */
-
 .btn {
   display: inline-flex;
   justify-content: center;

@@ -74,19 +74,19 @@
 
 // getProduct();
 
-const url = "https://dummyjson.com/quotes";
-
-async function getQuote() {
-  const res = await fetch(url);
-  const data = await res.json();
-  const quote_list = document.querySelector("#quotes");
-  
-  quote_list.innerHTML = data.quotes.map(quote => `
-    <div class="quote">
-      <h3>${quote.quote}</h3>
-      <p>${quote.author}</p>
-    </div>
-  `).join('');
-}
-
-getQuote();
+// const url = "https://dummyjson.com/quotes";
+//
+// async function getQuote() {
+//   const res = await fetch(url);
+//   const data = await res.json();
+//   const quote_list = document.querySelector("#quotes");
+//
+//   quote_list.innerHTML = data.quotes.map(quote => `
+//     <div class="quote">
+//       <h3>${quote.quote}</h3>
+//       <p>${quote.author}</p>
+//     </div>
+//   `).join('');
+// }
+//
+// getQuote();
