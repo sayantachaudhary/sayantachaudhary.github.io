@@ -42,7 +42,7 @@
         </div>
       </header>
       <p>Hello there! lets start with basic to advanced JavaScript concepts. This is just a guide not a tutorial to learn JavaScript. You can use this as a reference to learn JavaScript.</p>
-<h2>Table of Contents</h2>
+<h2 id="table-of-contents" tabindex="-1">Table of Contents</h2>
 <ul>
 <li><a href="#javascript-basics">JavaScript Basics</a> - First things first</li>
 <li><a href="#variables-and-data-types">Variables and Data Types</a> - Storing and working with information</li>
@@ -56,7 +56,7 @@
 <li><a href="#restspread-operator">Rest/Spread Operator</a> - The versatile three dots</li>
 <li><a href="#optional-chaining">Optional Chaining</a> - Safely accessing nested properties</li>
 </ul>
-<h2>JavaScript Basics</h2>
+<h2 id="javascript-basics" tabindex="-1">JavaScript Basics</h2>
 <p>JavaScript is the language of the web. While HTML gives structure and CSS provides style, JavaScript adds behavior and interactivity to websites.</p>
 <p>Let's start with some basics:</p>
 <pre><code class="language-javascript">// This is a comment - the computer ignores this text
@@ -71,7 +71,7 @@ console.log(5 * 5); // Output: 25
 console.log(10 / 2); // Output: 5
 </code></pre>
 <p>The console is your friend - it's where you can see output from your code and test things out while learning.</p>
-<h2>Variables and Data Types</h2>
+<h2 id="variables-and-data-types" tabindex="-1">Variables and Data Types</h2>
 <p>Variables are like containers that store information. In JavaScript, we have several ways to declare them:</p>
 <pre><code class="language-javascript">// Declaring variables
 let name = &quot;Sarah&quot;; // Use let when the value might change later
@@ -88,7 +88,7 @@ const myArray = [1, 2, 3]; // Array (collection of values)
 const myObject = { name: &quot;Book&quot; }; // Object (collection of key-value pairs)
 </code></pre>
 <p>Always try to use <code>const</code> when possible, and <code>let</code> when you need to change the value later. This makes your code more predictable!</p>
-<h2>Functions</h2>
+<h2 id="functions" tabindex="-1">Functions</h2>
 <p>Functions are reusable blocks of code. Think of them as little machines that do specific tasks:</p>
 <pre><code class="language-javascript">// Basic function declaration
 function sayHello(name) {
@@ -107,7 +107,7 @@ const sum = add(5, 3);
 console.log(sum); // Output: 8
 </code></pre>
 <p>Functions help avoid repeating code and make your program more organized. They can take inputs (parameters) and give back outputs (return values).</p>
-<h2>Arrow Functions</h2>
+<h2 id="arrow-functions" tabindex="-1">Arrow Functions</h2>
 <p>Arrow functions are a newer, shorter way to write functions. They're especially useful for short, simple operations:</p>
 <pre><code class="language-javascript">// Regular function
 function double(num) {
@@ -131,9 +131,9 @@ const greet = (name) =&gt; {
 };
 </code></pre>
 <p>Arrow functions are not just shorter - they also handle the <code>this</code> keyword differently, which becomes important when you start working with objects and events.</p>
-<h2>Arrays and Objects</h2>
+<h2 id="arrays-and-objects" tabindex="-1">Arrays and Objects</h2>
 <p>Arrays and objects are two ways to organize multiple values in JavaScript.</p>
-<h3>Arrays</h3>
+<h3 id="arrays" tabindex="-1">Arrays</h3>
 <p>Arrays are ordered collections of values:</p>
 <pre><code class="language-javascript">// Creating an array
 const fruits = [&quot;apple&quot;, &quot;banana&quot;, &quot;orange&quot;];
@@ -157,7 +157,7 @@ console.log(doubled); // Output: [2, 4, 6, 8, 10]
 const evenNumbers = numbers.filter((num) =&gt; num % 2 === 0);
 console.log(evenNumbers); // Output: [2, 4]
 </code></pre>
-<h3>Objects</h3>
+<h3 id="objects" tabindex="-1">Objects</h3>
 <p>Objects store data in key-value pairs:</p>
 <pre><code class="language-javascript">// Creating an object
 const person = {
@@ -179,9 +179,9 @@ console.log(person);
 // Output: {name: &quot;Emma&quot;, age: 29, city: &quot;Berlin&quot;, hobbies: [&quot;reading&quot;, &quot;hiking&quot;], job: &quot;Developer&quot;}
 </code></pre>
 <p>Objects are everywhere in JavaScript. They're used for storing related data and creating more complex data structures.</p>
-<h2>Destructuring</h2>
+<h2 id="destructuring" tabindex="-1">Destructuring</h2>
 <p>Destructuring is a convenient way to extract values from arrays or objects:</p>
-<h3>Array Destructuring</h3>
+<h3 id="array-destructuring" tabindex="-1">Array Destructuring</h3>
 <pre><code class="language-javascript">const colors = [&quot;red&quot;, &quot;green&quot;, &quot;blue&quot;];
 
 // Without destructuring
@@ -203,7 +203,7 @@ console.log(one); // Output: 1
 console.log(three); // Output: 3
 console.log(rest); // Output: [4, 5]
 </code></pre>
-<h3>Object Destructuring</h3>
+<h3 id="object-destructuring" tabindex="-1">Object Destructuring</h3>
 <pre><code class="language-javascript">const user = {
   name: &quot;Alex&quot;,
   age: 32,
@@ -231,7 +231,7 @@ const { name, country = &quot;Unknown&quot; } = user;
 console.log(country); // Output: &quot;Unknown&quot; (since it doesn't exist in the object)
 </code></pre>
 <p>Destructuring makes your code cleaner and more readable, especially when working with complex data.</p>
-<h2>Template Literals</h2>
+<h2 id="template-literals" tabindex="-1">Template Literals</h2>
 <p>Template literals are a better way to work with strings in JavaScript:</p>
 <pre><code class="language-javascript">const name = &quot;Maria&quot;;
 const age = 30;
@@ -266,7 +266,7 @@ console.log(message);
 // This is line three.
 </code></pre>
 <p>Template literals make string formatting much easier and more readable than the old way of concatenating strings with <code>+</code>.</p>
-<h2>Conditional Logic</h2>
+<h2 id="conditional-logic" tabindex="-1">Conditional Logic</h2>
 <p>Conditionals let your code make decisions:</p>
 <pre><code class="language-javascript">const age = 20;
 
@@ -305,7 +305,7 @@ if (isMember || hasFreeTrial) {
   console.log(&quot;You can access this content&quot;);
 }
 </code></pre>
-<h2>Ternary Operator</h2>
+<h2 id="ternary-operator" tabindex="-1">Ternary Operator</h2>
 <p>The ternary operator is a shorthand for simple if/else statements:</p>
 <pre><code class="language-javascript">const age = 20;
 
@@ -330,9 +330,9 @@ const greeting =
 console.log(greeting); // Output: &quot;Welcome, Administrator&quot;
 </code></pre>
 <p>The ternary operator is great for simple conditions, but for more complex logic, traditional if/else statements are often clearer.</p>
-<h2>Rest/Spread Operator</h2>
+<h2 id="rest%2Fspread-operator" tabindex="-1">Rest/Spread Operator</h2>
 <p>The <code>...</code> operator is one of the most versatile features in modern JavaScript:</p>
-<h3>Rest Operator</h3>
+<h3 id="rest-operator" tabindex="-1">Rest Operator</h3>
 <p>The rest operator collects multiple elements into a single array:</p>
 <pre><code class="language-javascript">// Rest in function parameters
 function sum(...numbers) {
@@ -356,7 +356,7 @@ const { name, age, ...otherDetails } = person;
 console.log(name); // Output: &quot;Alex&quot;
 console.log(otherDetails); // Output: { city: &quot;Paris&quot;, job: &quot;Developer&quot; }
 </code></pre>
-<h3>Spread Operator</h3>
+<h3 id="spread-operator" tabindex="-1">Spread Operator</h3>
 <p>The spread operator expands arrays or objects:</p>
 <pre><code class="language-javascript">// Spreading arrays
 const numbers1 = [1, 2, 3];
@@ -383,7 +383,7 @@ console.log(settings);
 // Output: { theme: &quot;dark&quot;, fontSize: 12, cache: true, notifications: false }
 </code></pre>
 <p>The spread operator is especially useful in React when you need to create new arrays or objects without modifying the originals.</p>
-<h2>Optional Chaining</h2>
+<h2 id="optional-chaining" tabindex="-1">Optional Chaining</h2>
 <p>Optional chaining helps prevent errors when accessing nested properties that might not exist:</p>
 <pre><code class="language-javascript">const user = {
   name: &quot;Alex&quot;,

@@ -42,9 +42,9 @@
         </div>
       </header>
       <p>So what's the difference between a “statement” and an “expression” in JavaScript?</p>
-<p>It's a load-bearing concrete pillar that will help support a ton of JavaScript knowledge.<br/>
+<p>It's a load-bearing concrete pillar that will help support a ton of JavaScript knowledge.&lt;br/&gt;
 This is especially true for React developers. Most of those JSX rules you've had to memorize, and always forget to follow, are the result of this statement/expression duality.</p>
-<h2>Expressions</h2>
+<h2 id="expressions" tabindex="-1">Expressions</h2>
 <p>At its core, an expression is a bit of JavaScript code that produces a value.</p>
 <p>For example, these are all expressions:</p>
 <ul>
@@ -63,7 +63,7 @@ This is especially true for React developers. Most of those JSX rules you've had
 <li><code>1</code> By the same logic, this number is also an expression, producing the number “1”.</li>
 <li><code>2</code> This number forms the final expression, which resolves to “2”.</li>
 </ul>
-<h2>Statements</h2>
+<h2 id="statements" tabindex="-1">Statements</h2>
 <p>A JavaScript program is a sequence of statements. Each statement is an instruction for the computer to do something.</p>
 <p>Here are some examples of statements in JavaScript:</p>
 <pre><code class="language-javascript">let hi = 5;
@@ -95,7 +95,7 @@ let hi = [1, 2, 3].pop();
   // Syntactically valid, but still problematic.
 }
 </code></pre>
-<h3>A handy trick</h3>
+<h3 id="a-handy-trick" tabindex="-1">A handy trick</h3>
 <p>Want to know whether a chunk of JS is an expression or a statement? Try to log it out!</p>
 <pre><code class="language-javascript">console.log(/* Some chunk of JS here */);
 </code></pre>
@@ -103,7 +103,7 @@ let hi = [1, 2, 3].pop();
 <p>As a bonus, we can even see what the expression resolves to, since it'll be printed in the browser console!</p>
 <p>This works because all function arguments must be expressions. Expressions produce a value, and that value will be passed into the function. Statements don't produce a value, and so they can't be used as function arguments.</p>
 <p>I rely a ton on console.log. It's a wonderfully versatile tool!</p>
-<h2>Expressions as statements</h2>
+<h2 id="expressions-as-statements" tabindex="-1">Expressions as statements</h2>
 <p>Here is an expression: <code>1 + 2 + 3.</code></p>
 <p>What happens if we create a JS file that includes only this expression? Let's imagine we save the following content as <code>test.js</code>:</p>
 <pre><code class="language-javascript">1 + 2 + 3;
@@ -128,7 +128,7 @@ if (/* expression slot */) { }
 </code></pre>
 <p>Often, tutorials will falsely state that expressions are statements, but this isn't quite right. Expressions and statements are distinct things. But it's possible for a statement to wrap around an expression without providing any additional characters. Think of it like wrapping a sandwich in clear shrink wrap.</p>
 <p>Statements typically end in a semi-colon, which marks the end of the statement. The semi-colon isn't necessary for certain statements, like <code>if</code> statements, <code>while</code> loops, and function declarations.</p>
-<h2>Practical implications in React</h2>
+<h2 id="practical-implications-in-react" tabindex="-1">Practical implications in React</h2>
 <p>If you've worked with React before, you're probably aware that squiggly brackets ({ and }) allow us to embed bits of JavaScript within our JSX, like this:</p>
 <pre><code class="language-javascript">function CountdownClock({ secondsRemaining }) {
   return (
@@ -171,7 +171,7 @@ if (/* expression slot */) { }
 <p>I think we often blame React for seemingly arbitrary rules, like how components must return a single top-level element. But more often than not, React is just warning us about a JavaScript limitation.</p>
 <p>Understanding the difference between statements and expressions is an important first step towards demystifying a whole category of React warnings and bugs. We also need to learn about how JSX compiles into JavaScript, and how React's reconciliation and render cycle works… but, alas, those topics are beyond the scope of this blog post!</p>
 <hr>
-<h2>In summary</h2>
+<h2 id="in-summary" tabindex="-1">In summary</h2>
 <p>A JavaScript program consists of a sequence of statements. Each statement is an instruction to do something, like create a variable, run an if/else condition, or start a loop.</p>
 <p>Expressions produce a value, and these values are slotted into statements, like a Super Nintendo cartridge that changes what the Super Nintendo does.</p>
 <p>Expressions are always part of a statement, even if that statement is otherwise empty. For example, the code below runs a loop without using a for statement, but it still includes an “empty wrapper” statement:</p>

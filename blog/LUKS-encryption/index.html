@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LUKS Encryption </title>
+  <meta name="description" content="A guide to JavaScript for frontend development for beginners." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://sayanta.is-a-fullstack.dev/LUKS-encryption/" />
+  <meta property="og:title" content="LUKS Encryption" />
+  <meta property="og:image" content="/blog/javascript-for-frontend.png" />
+  <meta property="og:description" content="A guide to JavaScript for frontend development for beginners." />
+  <!-- External CSS -->
+  <link rel="preconnect" href="https://rsms.me/" />
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+  <!-- Base Style -->
+  <link rel="stylesheet" href="/css/base/preflight.css" />
+  <link rel="stylesheet" href="/css/base/theme.css" />
+  <link rel="stylesheet" href="/css/base/font.css" />
+  <link rel="stylesheet" href="/css/base/global.css" />
+  <!-- Layout -->
+  <link rel="stylesheet" href="/css/layout/layout.css" />
+  <!-- Page Specific -->
+  <link rel="stylesheet" href="/css/pages/blog.css" />
+  <!-- JS -->
+  <script src="/js/navbar.js" defer></script>
+  <script src="/js/script.js" defer></script>
+  <!-- Highlight.js -->
+  <link rel="stylesheet" class="hljs-theme"
+    href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/atom-one-light.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+</head>
+
+<body>
+  <main class="container-md">
+    <article class="post">
+      <header class="post-header">
+        <h1>LUKS Encryption</h1>
+        <div class="post-meta">
+          <time datetime="2025-09-06">Sep 6, 2025</time>
+        </div>
+      </header>
+      <p>LUKS (Linux Unified Key Setup) is a libre and free disk encryption standard which allows for the encryption of external and internal disks on Linux. Everything from an SD card to your root partition can be encrypted with LUKS, allowing you to keep your data secure.</p>
+<p>LUKS works by utilizing a master encryption key protected by a user key, which in most cases will be a password.</p>
+<h2 id="table-of-contents" tabindex="-1">Table of Contents</h2>
+<ul>
+<li><a href="#external-usb-drive">External USB Drive</a></li>
+<li><a href="#accessing-the-external-drive">Accessing the external drive</a></li>
+<li><a href="#encrypted-root-partition">Encrypted Root Partition</a></li>
+<li><a href="#partition-setup">Partition Setup</a></li>
+<li><a href="#installing-linux">Installing Linux</a></li>
+<li><a href="#mknitcpio-setup">mknitcpio Setup</a></li>
+<li><a href="#bootloader-setup">Bootloader Setup</a></li>
+</ul>
+<h2 id="external-usb-drive" tabindex="-1">External USB Drive</h2>
+<p>Suppose the device <code>/dev/sdb1</code> is a USB flash stick partition we wish to encrypt. To do so, simply run:</p>
+<pre><code class="language-bash">cryptsetup luksFormat /dev/sdb1
+</code></pre>
+<p>You will be prompted to enter a password and verify it. Make sure to pick a secure one!</p>
+<h3 id="accessing-the-external-drive" tabindex="-1">Accessing the external drive</h3>
+<p>To decrypt the partition, simply run:</p>
+<pre><code class="language-bash">cryptsetup open /dev/sdb1 cryptusb
+</code></pre>
+<p>This will make the partition device accessible in <code>/dev/mapper/cryptusb</code>. To use it properly, it must have a formatted filesystem:</p>
+<pre><code class="language-bash">mkfs.ext4 /dev/mapper/cryptusb
+</code></pre>
+<p>Now it may be mounted:</p>
+<pre><code class="language-bash">mount /dev/mapper/cryptusb /mnt
+</code></pre>
+<blockquote>
+<p>Note: A filesystem daemon like GVFS will automatically know how to handle encrypted drives and prompt you for a password when accessing them.</p>
+</blockquote>
+<h2 id="encrypted-root-partition" tabindex="-1">Encrypted Root Partition</h2>
+<p>Many Linux distributions with GUI installers like <a href="https://linuxmint.com/">Linux Mint</a> and <a href="https://artixlinux.org/">Artix</a> offer an an encrypted root partition option. Simply enable encryption and set a password in their GUI to be prompted at boot.</p>
+<p>The rest of this guide will follow all the steps necessary to set up an encrypted root partition on a manual install distribution like <a href="https://archlinux.org/">Archlinux</a> or <a href="https://www.gentoo.org/">Gentoo</a>.</p>
+<h3 id="partition-setup" tabindex="-1">Partition Setup</h3>
+<p>Begin by setting up an encrypted partition as normal:</p>
+<pre><code class="language-bash">cryptsetup luksFormat /dev/sda2
+# You will now be prompted for a password...
+
+# Make note of where you open the encrypted partition!
+cryptsetup open /dev/sda2 cryptroot
+# You will once again be prompted for a password
+
+# Format and mount the partition
+mkfs.ext4 /dev/mapper/cryptroot
+mount /dev/mapper/cryptroot /mnt
+</code></pre>
+<h3 id="installing-linux" tabindex="-1">Installing Linux</h3>
+<p>When installing Linux, make sure to install the packages containing the cryptroot and lvm2 commands.</p>
+<p>You may now install Linux to the partition mounted to /mnt as normal. However, the partition will not boot if you leave it like this! Make sure to follow these steps:</p>
+<h3 id="mknitcpio-setup" tabindex="-1">mknitcpio setup</h3>
+<p>If you are using dracut or booster for your initcpio, you can ignore this step!</p>
+<p>If you are using Archlinux or Artix, the default initcpio software included with your distribution is <code>mkinitcpio</code>. This software does not support encryption by default. This can be corrected by editing <code>/etc/mkinitcpio.conf</code> and editing the <code>HOOKS=(...</code> line to include the following:</p>
+<pre><code class="language-bash">HOOKS=(base udev autodetect modconf kms keyboard keymap consolefont block encrypt lvm2 filesystems fsck)
+</code></pre>
+<p>After modifying the config, make sure to re-generate the initcpio:</p>
+<pre><code class="language-bash">mkinitcpio -P
+</code></pre>
+<h3 id="bootloader-setup" tabindex="-1">Bootloader setup</h3>
+<p>Your bootloader needs to be aware of your encrypted partition setup, or it won’t know where to look for your root partition.</p>
+<p>Obtaining UUIDs</p>
+<p>To set up encryption, you must obtain the UUIDs for both your encrypted partition <code>(cryptdevice)</code> and your unencrypted partition (root). To see these, use the <code>blkid</code> command with some special parameters:</p>
+<pre><code class="language-bash">## Obtain the UUID for cryptdevice:
+blkid /dev/sda2 -o value -s UUID
+## In this example, we'll use f4f9f9f6-222a-4018-b45a-9b86544890e4
+
+## Obain the UUID for root:
+blkid /dev/mapper/cryptroot -o value -s UUID
+## In this example, we'll use 83276439-f9fa-4429-a2e2-91c072c02c4f
+</code></pre>
+<p>GRUB Setup</p>
+<p>Set the following in <code>/etc/default/grub</code>:</p>
+<pre><code class="language-bash">GRUB_CMDLINE_LINUX_DEFAULT=&quot;loglevel=3 quiet cryptdevice=UUID=f4f9f9f6-222a-4018-b45a-9b86544890e4:cryptroot root=UUID=83276439-f9fa-4429-a2e2-91c072c02c4f&quot;
+</code></pre>
+<p>rEFInd Setup</p>
+<p>Set the following in /boot/refind_linux.conf:</p>
+<pre><code class="language-bash">&quot;Boot with standard options&quot;    &quot;root=UUID=83276439-f9fa-4429-a2e2-91c072c02c4f ro cryptdevice=UUID=f4f9f9f6-222a-4018-b45a-9b86544890e4:cryptroot:allow-discards loglevel=3&quot;
+&quot;Boot to single-user mode&quot;      &quot;root=UUID=83276439-f9fa-4429-a2e2-91c072c02c4f ro cryptdevice=UUID=f4f9f9f6-222a-4018-b45a-9b86544890e4:cryptroot:allow-discards quiet single&quot;
+&quot;Boot with minimal options&quot;     &quot;root=UUID=83276439-f9fa-4429-a2e2-91c072c02c4f ro cryptdevice=UUID=f4f9f9f6-222a-4018-b45a-9b86544890e4:cryptroot:allow-discards
+</code></pre>
+<p>EFI Boot Stub Setup</p>
+<p>This will only work if you mounted your EFI partition to /boot.</p>
+<p>Create a shell script containing the following:</p>
+<pre><code class="language-bash">#!/bin/sh
+
+params=&quot;cryptdevice=UUID=f4f9f9f6-222a-4018-b45a-9b86544890e4:cryptroot \
+    root=UUID=83276439-f9fa-4429-a2e2-91c072c02c4f rootfstype=ext4 rw \
+    initrd=\intel-ucode.img \
+    initrd=\initramfs-linux.img \
+    loglevel=3&quot;
+
+efibootmgr --create --label &quot;Arch Linux&quot; \
+    --disk /dev/sda --part 1 \
+    --loader /vmlinuz-linux \
+    --unicode &quot;${params}&quot; \
+    --verbose
+</code></pre>
+<p>Save it as <code>bootentry.sh</code> and make it executable:</p>
+<pre><code class="language-bash">chmod +x bootentry.sh
+</code></pre>
+<p>Finally, create a boot entry by running the script:</p>
+<pre><code class="language-bash">sh bootentry.sh
+</code></pre>
+<p>Congratulations! You should now be able to reboot and run your system with LUKS encryption!</p>
+
+    </article>
+  </main>
+
+  <script>
+    hljs.highlightAll();
+  </script>
+</body>
+
+</html>
