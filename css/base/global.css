@@ -60,15 +60,15 @@ h6 {
 
 /* *:focus-visible { */
 /*   outline: 2px solid var(--primary-500); */
-/*   border-radius: var(--radius-sm); */
+/*   border-radius: var(--radius-md); */
 /* } */
 
 /* This feature is not standardized. */
 ::-webkit-scrollbar {
-  /* Vertical */
   width: 12px;
-  /* Horizontal */
+  /* Vertical */
   height: 10px;
+  /* Horizontal */
 }
 
 /* ::-webkit-scrollbar-track { */
