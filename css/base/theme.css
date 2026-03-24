@@ -1,5 +1,5 @@
 :root {
-  --font-sans: "inter", sans-serif;
+  --font-sans: "inter", system-ui, sans-serif;
   --font-serif: serif;
   --font-mono: monospace;
 

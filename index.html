@@ -17,16 +17,17 @@
     <meta property="og:url" content="https://sayanta.is-a-fullstack.dev/" />
     <meta property="og:image" content="https://sayanta.is-a-fullstack.dev/og-image.png" />
     <!-- External CSS -->
-    <link rel="preconnect" href="https://rsms.me/" />
-    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+    <script src="/js/dark-mode.js"></script>
+    <!-- <link rel="preconnect" href="https://rsms.me/" /> -->
+    <!-- <link rel="stylesheet" href="https://rsms.me/inter/inter.css" /> -->
     <link rel="preconnect" href="https://cdn.jsdelivr.net" />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/duotone/style.css" />
     <!-- Base Style -->
     <link rel="stylesheet" href="/css/base/preflight.css" />
+    <link rel="stylesheet" href="/css/base/font.css" />
     <link rel="stylesheet" href="/css/base/theme.css" />
     <link rel="stylesheet" href="/css/base/global.css" />
-    <link rel="stylesheet" href="/css/base/font.css" />
     <!-- Layout -->
     <link rel="stylesheet" href="/css/layout/layout.css" />
     <!-- Components -->
@@ -36,7 +37,7 @@
     <!-- Page Specific -->
     <link rel="stylesheet" href="/css/pages/index.css" />
     <!-- JS -->
-    <script src="/js/navbar.js"></script>
+    <script src="/js/navbar.js" defer></script>
     <script src="/js/script.js" defer></script>
     <!-- <script src="/js/fetch.js" defer></script> -->
   </head>
@@ -44,8 +45,8 @@
   <body>
     <header class="site-header">
       <nav class="navbar container-md">
-        <a href="/index.html" class="nav-logo">
-          <img src="/public/images/logo.png" alt="logo" />
+        <a href="/" class="nav-logo">
+          <img src="/public/images/logo.avif" alt="logo" fetchpriority="high" />
         </a>
         <ul class="nav-list">
           <li><a href="#about">About</a></li>
@@ -53,7 +54,11 @@
           <li><a href="#contact">Contact</a></li>
         </ul>
         <div class="nav-action">
-          <button class="btn btn-ghost theme">
+          <button
+            class="btn btn-ghost theme"
+            aria-label="Toggle dark mode"
+            aria-pressed="false"
+            >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16px"
@@ -71,7 +76,11 @@
               />
             </svg>
           </button>
-          <button class="btn btn-ghost burger">
+          <button
+            class="btn btn-ghost burger"
+            aria-expanded="false"
+            aria-controls="nav-list"
+            >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16px"

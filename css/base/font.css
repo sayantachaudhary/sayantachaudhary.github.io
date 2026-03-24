@@ -3,6 +3,13 @@
 /* Stick to two color, size, weight */
 /* Use `clamp()` for headings — they need the most scaling */
 
+@font-face {
+  font-family: "inter";
+  src: url("/public/fonts/inter-var.woff2") format("woff2");
+  font-display: swap;
+  font-weight: 100 900;
+}
+
 h1 {
   font-size: var(--text-4xl);
   /* font-size: clamp(var(--text-2xl), 5vw, var(--text-4xl)); */
@@ -71,10 +78,10 @@ small {
   line-height: 1.75;
 }
 
-.prose > :first-child {
+.prose> :first-child {
   margin-top: 0;
 }
 
-.prose > :last-child {
+.prose> :last-child {
   margin-bottom: 0;
 }

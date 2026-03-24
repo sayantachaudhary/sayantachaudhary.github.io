@@ -1,7 +1,6 @@
 const hljsTheme = document.querySelector(".hljs-theme");
 
 function updateHljsTheme() {
-
   if (!hljsTheme) return;
 
   if (document.documentElement.classList.contains("dark")) {
