@@ -1,14 +1,14 @@
-// Theme
-document.documentElement.classList.toggle(
-  "dark",
-  localStorage.theme === "dark" ||
-  (!("theme" in localStorage) &&
-    window.matchMedia("(prefers-color-scheme: dark)").matches),
-);
-
-// Toggling dark mode manually
+// Toggle dark mode manually
 const themeBtn = document.querySelector(".theme");
 themeBtn.addEventListener("click", () => {
+  const isDark = document.documentElement.classList.toggle("dark");
+  localStorage.theme = isDark ? "dark" : "light";
+});
+
+// Event delegation
+document.addEventListener("click", (e) => {
+  const themeBtn = e.target.closest(".theme");
+  if (!themeBtn) return;
   const isDark = document.documentElement.classList.toggle("dark");
   localStorage.theme = isDark ? "dark" : "light";
 });
