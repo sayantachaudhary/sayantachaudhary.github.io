@@ -44,7 +44,8 @@
 
 .nav-action {
   display: flex;
-  gap: var(--spacing);
+  /* gap: var(--spacing); */
+  gap: calc(var(--spacing) * 2);
 }
 
 .burger {
@@ -55,6 +56,7 @@
 @media (width <=640px) {
   .burger {
     display: block;
+    padding-inline: var(--spacing);
   }
 
   .nav-list {
@@ -92,14 +94,10 @@
   }
 }
 
-.lucide-x {
-  display: none;
-}
+.lucide-x { display: none; }
+.burger[aria-expanded="true"] .lucide-menu { display: none; }
+.burger[aria-expanded="true"] .lucide-x { display: block; }
 
-.burger[aria-expanded="true"] .lucide-menu {
-  display: none;
-}
-
-.burger[aria-expanded="true"] .lucide-x {
-  display: block;
-}
+.lucide-flashlight { display: none; }
+.dark .lucide-moon { display: none; }
+.dark .lucide-flashlight { display: block; }
