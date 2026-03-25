@@ -11,9 +11,8 @@
   }
 
   .lead {
-    /* font-size: var(--text-base); */
-    margin-bottom: calc(var(--spacing) * 6);
     color: var(--neutral-700);
+    margin-bottom: calc(var(--spacing) * 6);
   }
 }
 
@@ -104,11 +103,6 @@ section {
     }
   }
 }
-
-/* #contact address { */
-/*   display: flex; */
-/*   gap: var(--spacing); */
-/* } */
 
 /* #quotes { */
 /*   background-color: var(--neutral-100); */

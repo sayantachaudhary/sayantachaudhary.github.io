@@ -27,18 +27,20 @@
   /* Dark mode shadow  */
   --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-lg:
+    0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   --inset-shadow-sm: inset 0 2px 4px rgb(0 0 0 / 0.05);
 
   --z-hide: -1;
   --z-base: 0;
-  --z-dropdown: 111;
-  --z-sticky: 222;
+  --z-sticky: 100;
+  --z-fixed: 200;
+  --z-dropdown: 300;
   --z-overlay: 400;
-  --z-modal: 555;
-  --z-popover: 666;
-  --z-toast: 777;
-  --z-tooltip: 888;
+  --z-modal: 500;
+  --z-popover: 600;
+  --z-toast: 700;
+  --z-tooltip: 800;
 
   /* background, card, popover, primary-fg, sidebar */
   --neutral-50: oklch(98.5% 0 0);
@@ -88,37 +90,32 @@
 }
 
 .dark {
-  --neutral-950: oklch(98.5% 0 0);
-  --neutral-900: oklch(96.7% 0.001 286.375);
-  --neutral-800: oklch(92% 0.004 286.32);
-  --neutral-700: oklch(87.1% 0.006 286.286);
-  --neutral-600: oklch(70.5% 0.015 286.067);
-  --neutral-500: oklch(55.2% 0.016 285.938);
-  --neutral-400: oklch(44.2% 0.017 285.786);
-  --neutral-300: oklch(37% 0.013 285.805);
-  --neutral-200: oklch(27.4% 0.006 286.033);
-  --neutral-100: oklch(21% 0.006 285.885);
   --neutral-50: oklch(14.1% 0.005 285.823);
+  --neutral-100: oklch(21% 0.006 285.885);
+  --neutral-200: oklch(27.4% 0.006 286.033);
+  --neutral-300: oklch(37% 0.013 285.805);
+  --neutral-400: oklch(44.2% 0.017 285.786);
+  --neutral-500: oklch(55.2% 0.016 285.938);
+  --neutral-600: oklch(70.5% 0.015 286.067);
+  --neutral-700: oklch(87.1% 0.006 286.286);
+  --neutral-800: oklch(92% 0.004 286.32);
+  --neutral-900: oklch(96.7% 0.001 286.375);
+  --neutral-950: oklch(98.5% 0 0);
 }
 
 /* Use vite/ESModules to reduce bundle size, lucide is built to be fully tree-shakable */
-/* [data-lucide] { */
-/*   width: 1em; */
-/*   height: 1em; */
-/*   stroke-width: 2px; */
-/*   stroke: currentColor; */
-/* } */
-
+/* [data-lucide] */
 .lucide {
-  width: 1em;
-  height: 1em;
-  stroke-width: 2px;
+  width: 1.25em;
+  height: 1.25em;
+  stroke-width: 1px;
   stroke: currentColor;
 }
 
 .ph,
 [class^="ph-"],
 [class*=" ph-"] {
-  font-size: 1em;
-  color: currentColor;
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
 }
