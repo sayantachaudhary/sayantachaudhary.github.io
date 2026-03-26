@@ -17,7 +17,7 @@
 
   --spacing: 0.25rem;
   /* 1 = 0.25rem = 4px */
-  /* 2 = 0.5rem = 8px */
+  /* 2 = 0.5rem = 8px - mb */ 
   /* 4 = 1rem = 16px */
   /* 6 = 1.5rem = 24px */
   /* 8 = 2rem = 32px */
@@ -27,8 +27,7 @@
   /* Dark mode shadow  */
   --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  --shadow-lg:
-    0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   --inset-shadow-sm: inset 0 2px 4px rgb(0 0 0 / 0.05);
 
   --z-hide: -1;
@@ -41,6 +40,18 @@
   --z-popover: 600;
   --z-toast: 700;
   --z-tooltip: 800;
+
+  --yellow-50: oklch(98.7% 0.026 102.212);
+  --yellow-100: oklch(97.3% 0.071 103.193);
+  --yellow-200: oklch(94.5% 0.129 101.54);
+  --yellow-300: oklch(90.5% 0.182 98.111);
+  --yellow-400: oklch(85.2% 0.199 91.936);
+  --yellow-500: oklch(79.5% 0.184 86.047);
+  --yellow-600: oklch(68.1% 0.162 75.834);
+  --yellow-700: oklch(55.4% 0.135 66.442);
+  --yellow-800: oklch(47.6% 0.114 61.907);
+  --yellow-900: oklch(42.1% 0.095 57.708);
+  --yellow-950: oklch(28.6% 0.066 53.813);
 
   /* background, card, popover, primary-fg, sidebar */
   --neutral-50: oklch(98.5% 0 0);

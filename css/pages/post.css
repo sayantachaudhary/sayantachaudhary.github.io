@@ -99,3 +99,7 @@ pre {
     font-size: var(--text-sm);
   }
 }
+
+.post-footer {
+  margin-top: calc(var(--spacing) * 8);
+}

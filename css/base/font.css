@@ -3,12 +3,12 @@
 /* Stick to two color, size, weight */
 /* Use `clamp()` for headings — they need the most scaling */
 
-@font-face {
-  font-family: "inter";
-  src: url("/public/fonts/inter-var.woff2") format("woff2");
-  font-display: swap;
-  font-weight: 300 600;
-}
+/* @font-face { */
+/*   font-family: "inter"; */
+/*   src: url("/public/fonts/inter-var.woff2") format("woff2"); */
+/*   font-display: swap; */
+/*   font-weight: 300 600; */
+/* } */
 
 h1 {
   font-size: var(--text-4xl);
