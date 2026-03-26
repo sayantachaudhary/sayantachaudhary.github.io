@@ -1,479 +1,342 @@
 <!doctype html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Sayanta's Portfolio</title>
-    <meta name="description" content="Portfolio" />
-    <meta name="author" content="Sayanta Chaudhary" />
-    <!-- Favicon -->
-    <link rel="icon" href="/public/favicon/favicon.ico" />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="96x96"
-      href="/public/favicon/favicon-96x96.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="/public/favicon/apple-touch-icon.png"
-    />
-    <link rel="manifest" href="/public/site.webmanifest" />
-    <!-- Social Meta -->
-    <meta
-      property="og:title"
-      content="Sayanta Chaudhary · Full Stack Developer"
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://sayanta.is-a-fullstack.dev/" />
-    <meta
-      property="og:image"
-      content="https://sayanta.is-a-fullstack.dev/og-image.png"
-    />
-    <!-- External CSS -->
-    <!-- <link rel="preconnect" href="https://rsms.me/" /> -->
-    <!-- <link rel="stylesheet" href="https://rsms.me/inter/inter.css" /> -->
-    <!-- Base Style -->
-    <link rel="stylesheet" href="/css/base/preflight.css" />
-    <link rel="stylesheet" href="/css/base/font.css" />
-    <link rel="stylesheet" href="/css/base/theme.css" />
-    <link rel="stylesheet" href="/css/base/global.css" />
-    <!-- Layout -->
-    <link rel="stylesheet" href="/css/layout/layout.css" />
-    <!-- Components -->
-    <link rel="stylesheet" href="/css/components/button.css" />
-    <link rel="stylesheet" href="/css/components/navbar.css" />
-    <link rel="stylesheet" href="/css/components/card.css" />
-    <!-- Page Specific -->
-    <link rel="stylesheet" href="/css/pages/index.css" />
-    <!-- JS -->
-    <script src="/js/dark-mode.js"></script>
-    <script src="/js/navbar.js" defer></script>
-    <script src="/js/script.js" defer></script>
-    <!-- <script src="/js/fetch.js" defer></script> -->
-  </head>
 
-  <body>
-    <header class="site-header">
-      <nav class="navbar container-md">
-        <a href="/" class="nav-logo">
-          <img src="/public/images/logo.avif" alt="logo" fetchpriority="high" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sayanta's Portfolio</title>
+  <meta name="description" content="Portfolio" />
+  <meta name="author" content="Sayanta Chaudhary" />
+  <!-- Favicon -->
+  <link rel="icon" href="/public/favicon/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="96x96" href="/public/favicon/favicon-96x96.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/public/favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="/public/site.webmanifest" />
+  <!-- Social Meta -->
+  <meta property="og:title" content="Sayanta Chaudhary · Full Stack Developer" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://sayanta.is-a-fullstack.dev/" />
+  <meta property="og:image" content="https://sayanta.is-a-fullstack.dev/og-image.png" />
+  <!-- External CSS -->
+  <!-- <link rel="preconnect" href="https://rsms.me/" /> -->
+  <!-- <link rel="stylesheet" href="https://rsms.me/inter/inter.css" /> -->
+  <!-- Base Style -->
+  <link rel="stylesheet" href="/css/base/preflight.css" />
+  <link rel="stylesheet" href="/css/base/font.css" />
+  <link rel="stylesheet" href="/css/base/theme.css" />
+  <link rel="stylesheet" href="/css/base/global.css" />
+  <!-- Layout -->
+  <link rel="stylesheet" href="/css/layout/layout.css" />
+  <!-- Components -->
+  <link rel="stylesheet" href="/css/components/button.css" />
+  <link rel="stylesheet" href="/css/components/navbar.css" />
+  <link rel="stylesheet" href="/css/components/card.css" />
+  <!-- Page Specific -->
+  <link rel="stylesheet" href="/css/pages/index.css" />
+  <!-- JS -->
+  <script src="/js/dark-mode.js"></script>
+  <script src="/js/navbar.js" defer></script>
+  <script src="/js/script.js" defer></script>
+  <!-- <script src="/js/fetch.js" defer></script> -->
+</head>
+
+<body>
+  <header class="site-header">
+    <nav class="navbar container-md">
+      <a href="/" class="nav-logo">
+        <img src="/public/images/logo.avif" alt="logo" fetchpriority="high" />
+      </a>
+      <ul class="nav-list">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-action">
+        <button class="btn theme" aria-label="Toggle dark mode" aria-pressed="false">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="lucide lucide-contrast-icon lucide-contrast">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M12 18a6 6 0 0 0 0-12v12z" />
+          </svg>
+        </button>
+        <button class="btn burger" aria-expanded="false" aria-controls="nav-list">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="lucide lucide-menu-icon lucide-menu">
+            <path d="M4 5h16" />
+            <path d="M4 12h16" />
+            <path d="M4 19h16" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="lucide lucide-x-icon lucide-x">
+            <path d="M18 6 6 18" />
+            <path d="m6 6 12 12" />
+          </svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container-md">
+    <!-- <button type="button" class="btn btn-primary">Save</button> -->
+    <!-- <button type="button" class="btn btn-secondary">Cancel</button> -->
+    <!-- <button type="button" class="btn btn-outline">Learn more</button> -->
+    <!-- <button type="button" class="btn btn-ghost">Skip</button> -->
+    <!-- <button type="button" class="btn btn-link">View details</button> -->
+    <!-- <button type="button" class="btn btn-disabled" disabled>Saving</button> -->
+    <!-- <button type="button" class="btn btn-error">Error</button> -->
+    <!-- <button type="button" class="btn btn-warning">Warning</button> -->
+    <!-- <button type="button" class="btn btn-success">Success</button> -->
+    <!-- <button type="button" class="btn btn-info">Hint</button> -->
+    <section id="about" class="hero">
+      <h1>Sayanta Chaudhary</h1>
+      <p class="lead">
+        Full stack developer specializing in the modern JavaScript stack. I
+        build complete web apps — from frontend to backend — with focus on
+        simplicity, performance, and maintainable code.
+      </p>
+      <div class="hero-meta">
+        <div class="meta-item">
+          <strong>Stack:</strong> React, TypeScript, Node.js, PostgreSQL
+        </div>
+        <div class="meta-item">
+          <strong>Interests:</strong> Developer Tooling, Design System,
+          Machine Learning
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="cards">
+        <article class="card">
+          <header class="card-header">
+            <h3 class="card-title">Frontend</h3>
+            <p class="card-text">
+              Next.js · React · TanStack Query · Redux · Tailwind CSS · Figma
+              <!-- Architect and developed the complete frontend infrastructure for the platform. -->
+            </p>
+          </header>
+        </article>
+
+        <article class="card">
+          <header class="card-header">
+            <h3 class="card-title">Backend</h3>
+            <p class="card-text">Node.js · Express · PostgreSQL · MongoDB</p>
+          </header>
+        </article>
+
+        <article class="card">
+          <header class="card-header">
+            <h3 class="card-title">DevOps</h3>
+            <p class="card-text">Linux · Docker · GitHub Actions · Vercel</p>
+          </header>
+        </article>
+
+        <article class="card">
+          <header class="card-header">
+            <h3 class="card-title">Tools</h3>
+            <p class="card-text">Neovim · Vite · Bun · HTTPie</p>
+          </header>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="cards">
+        <article class="card">
+          <header class="card-header">
+            <h3 class="card-title">Trueschool</h3>
+            <p class="card-subtitle">HTML · CSS · JS · Bootstarp</p>
+          </header>
+          <div class="card-body">
+            <p class="card-text">
+              A School Management Software for Modern Day Schools.
+            </p>
+          </div>
+          <footer class="card-footer">
+            <a href="https://trueschool.xenonepal.com/" target="_blank" rel="noopener noreferrer"
+              class="btn btn-outline">Website</a>
+          </footer>
+        </article>
+
+        <article class="card">
+          <header class="card-header">
+            <h3 class="card-title">LazyVim</h3>
+            <p class="card-subtitle">Lua · Bash</p>
+          </header>
+          <div class="card-body">
+            <p class="card-text">
+              Neovim setup powered by 💤 lazy.nvim to make it easy to
+              customize and extend your config.
+            </p>
+          </div>
+          <footer class="card-footer">
+            <a href="https://www.lazyvim.org/" target="_blank" rel="noopener noreferrer"
+              class="btn btn-outline">GitHub</a>
+          </footer>
+        </article>
+
+        <article class="card">
+          <header class="card-header">
+            <h3 class="card-title">TPDB</h3>
+            <p class="card-subtitle">HTML · CSS · TypeScript</p>
+          </header>
+          <div class="card-body">
+            <p class="card-text">The Pokémon Database.</p>
+          </div>
+          <footer class="card-footer">
+            <a href="https://github.com/sayanta-chaudhary/pokepedia" target="_blank" rel="noopener noreferrer"
+              class="btn btn-outline">GitHub</a>
+          </footer>
+        </article>
+
+        <article class="card">
+          <header class="card-header">
+            <h3 class="card-title">How old am i?</h3>
+            <p class="card-subtitle">HTML · CSS · TypeScript</p>
+          </header>
+          <div class="card-body">
+            <p class="card-text">Age calculator with realtime run-up.</p>
+          </div>
+          <footer class="card-footer">
+            <a href="https://github.com/sayanta-chaudhary/how-old-am-i" target="_blank" rel="noopener noreferrer"
+              class="btn btn-outline">GitHub</a>
+          </footer>
+        </article>
+
+        <article class="card">
+          <header class="card-header">
+            <h3 class="card-title">Tor</h3>
+            <p class="card-subtitle">Bash</p>
+          </header>
+          <div class="card-body">
+            <p class="card-text">
+              Bash script to web scrape 1337x.to for torrents.
+            </p>
+          </div>
+          <footer class="card-footer">
+            <a href="https://github.com/sayanta-chaudhary/torkit" target="_blank" rel="noopener noreferrer"
+              class="btn btn-outline">GitHub</a>
+          </footer>
+        </article>
+
+        <article class="card">
+          <header class="card-header">
+            <h3 class="card-title">MyYT</h3>
+            <p class="card-subtitle">Bash</p>
+          </header>
+          <div class="card-body">
+            <p class="card-text">
+              Script to search youtube with command line easily.
+            </p>
+          </div>
+          <footer class="card-footer">
+            <a href="https://github.com/sayanta-chaudhary/yt" target="_blank" rel="noopener noreferrer"
+              class="btn btn-outline">GitHub</a>
+          </footer>
+        </article>
+      </div>
+    </section>
+
+    <section id="personal">
+      <h2>Personal</h2>
+      <div class="personal-cards">
+        <article class="personal-card">
+          <a href="/books/">
+            <div class="icon">📚</div>
+            <div class="content">
+              <h3>Books</h3>
+              <p>Books that have influenced my thinking.</p>
+            </div>
+            <span class="arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 256 256">
+                <path
+                  d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z">
+                </path>
+              </svg>
+            </span>
+          </a>
+        </article>
+
+        <article class="personal-card">
+          <a href="/movies/">
+            <div class="icon">🎬</div>
+            <div class="content">
+              <h3>Movies</h3>
+              <p>Films & shows that have inspired, entertained me.</p>
+            </div>
+            <span class="arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 256 256">
+                <path
+                  d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z">
+                </path>
+              </svg>
+            </span>
+          </a>
+        </article>
+
+        <article class="personal-card">
+          <a href="/blog/">
+            <div class="icon">📝</div>
+            <div class="content">
+              <h3>Blogs</h3>
+              <p>Thoughts, tutorials, and insights on programming.</p>
+            </div>
+            <span class="arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 256 256">
+                <path
+                  d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z">
+                </path>
+              </svg>
+            </span>
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <address>
+        <a href="https://github.com/sayanta-chaudhary" target="_blank" rel="noopener noreferrer"
+          class="btn btn-outline">
+          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 256 256"
+            class="ph-icon">
+            <path
+              d="M208,104v8a48,48,0,0,1-48,48H136a32,32,0,0,1,32,32v40H104V192a32,32,0,0,1,32-32H112a48,48,0,0,1-48-48v-8a49.28,49.28,0,0,1,8.51-27.3A51.92,51.92,0,0,1,76,32a52,52,0,0,1,43.83,24h32.34A52,52,0,0,1,196,32a51.92,51.92,0,0,1,3.49,44.7A49.28,49.28,0,0,1,208,104Z"
+              opacity="0.2"></path>
+            <path
+              d="M208.3,75.68A59.74,59.74,0,0,0,202.93,28,8,8,0,0,0,196,24a59.75,59.75,0,0,0-48,24H124A59.75,59.75,0,0,0,76,24a8,8,0,0,0-6.93,4,59.78,59.78,0,0,0-5.38,47.68A58.14,58.14,0,0,0,56,104v8a56.06,56.06,0,0,0,48.44,55.47A39.8,39.8,0,0,0,96,192v8H72a24,24,0,0,1-24-24A40,40,0,0,0,8,136a8,8,0,0,0,0,16,24,24,0,0,1,24,24,40,40,0,0,0,40,40H96v16a8,8,0,0,0,16,0V192a24,24,0,0,1,48,0v40a8,8,0,0,0,16,0V192a39.8,39.8,0,0,0-8.44-24.53A56.06,56.06,0,0,0,216,112v-8A58,58,0,0,0,208.3,75.68ZM200,112a40,40,0,0,1-40,40H112a40,40,0,0,1-40-40v-8a41.74,41.74,0,0,1,6.9-22.48A8,8,0,0,0,80,73.83a43.81,43.81,0,0,1,.79-33.58,43.88,43.88,0,0,1,32.32,20.06A8,8,0,0,0,119.82,64h32.35a8,8,0,0,0,6.74-3.69,43.87,43.87,0,0,1,32.32-20.06A43.81,43.81,0,0,1,192,73.83a8.09,8.09,0,0,0,1,7.65A41.76,41.76,0,0,1,200,104Z">
+            </path>
+          </svg>
+          GitHub
         </a>
-        <ul class="nav-list">
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-        <div class="nav-action">
-          <button
-            class="btn theme"
-            aria-label="Toggle dark mode"
-            aria-pressed="false"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="lucide lucide-moon-icon lucide-moon"
-            >
-              <path
-                d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"
-              />
-            </svg>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="lucide lucide-flashlight-icon lucide-flashlight"
-            >
-              <path
-                d="M17 2a1 1 0 0 1 1 1v4a3 3 0 0 1-.6 1.8l-.6.8A4 4 0 0 0 16 12v8a2 2 0 0 1-2 2H10a2 2 0 0 1-2-2v-8a4 4 0 0 0-.8-2.4l-.6-.8A3 3 0 0 1 6 7V3a1 1 0 0 1 1-1z"
-              />
-              <path d="M6 6h12" />
-            </svg>
-          </button>
-          <button
-            class="btn burger"
-            aria-expanded="false"
-            aria-controls="nav-list"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="lucide lucide-menu-icon lucide-menu"
-            >
-              <path d="M4 5h16" />
-              <path d="M4 12h16" />
-              <path d="M4 19h16" />
-            </svg>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="lucide lucide-x-icon lucide-x"
-            >
-              <path d="M18 6 6 18" />
-              <path d="m6 6 12 12" />
-            </svg>
-          </button>
-        </div>
-      </nav>
-    </header>
 
-    <main class="container-md">
-      <!-- <button type="button" class="btn btn-primary">Save</button> -->
-      <!-- <button type="button" class="btn btn-secondary">Cancel</button> -->
-      <!-- <button type="button" class="btn btn-outline">Learn more</button> -->
-      <!-- <button type="button" class="btn btn-ghost">Skip</button> -->
-      <!-- <button type="button" class="btn btn-link">View details</button> -->
-      <!-- <button type="button" class="btn btn-disabled" disabled>Saving</button> -->
-      <!-- <button type="button" class="btn btn-error">Error</button> -->
-      <!-- <button type="button" class="btn btn-warning">Warning</button> -->
-      <!-- <button type="button" class="btn btn-success">Success</button> -->
-      <!-- <button type="button" class="btn btn-info">Hint</button> -->
-      <section id="about" class="hero">
-        <h1>Sayanta Chaudhary</h1>
-        <p class="lead">
-          Full stack developer specializing in the modern JavaScript stack. I
-          build complete web apps — from frontend to backend — with focus on
-          simplicity, performance, and maintainable code.
-        </p>
-        <div class="hero-meta">
-          <div class="meta-item">
-            <strong>Stack:</strong> React, TypeScript, Node.js, PostgreSQL
-          </div>
-          <div class="meta-item">
-            <strong>Interests:</strong> Developer Tooling, Design System,
-            Machine Learning
-          </div>
-        </div>
-      </section>
+        <a href="mailto:sayanta-chaudhary@gamil.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 256 256"
+            class="ph-icon">
+            <path d="M224,56l-96,88L32,56Z" opacity="0.2"></path>
+            <path
+              d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM203.43,64,128,133.15,52.57,64ZM216,192H40V74.19l82.59,75.71a8,8,0,0,0,10.82,0L216,74.19V192Z">
+            </path>
+          </svg>
+          Mail
+        </a>
+      </address>
+    </section>
 
-      <section id="skills">
-        <h2>Skills</h2>
-        <div class="cards">
-          <article class="card">
-            <header class="card-header">
-              <h3 class="card-title">Frontend</h3>
-              <p class="card-text">
-                Next.js · React · TanStack Query · Redux <br />
-                Tailwind CSS · Figma
-                <!-- Architect and developed the complete frontend infrastructure for the platform. -->
-              </p>
-            </header>
-          </article>
+    <!-- <section id="quotes"></section> -->
+    <!-- <section id="cart-list"></section> -->
+  </main>
 
-          <article class="card">
-            <header class="card-header">
-              <h3 class="card-title">Backend</h3>
-              <p class="card-text">Node.js · Express · PostgreSQL · MongoDB</p>
-            </header>
-          </article>
+  <hr />
 
-          <article class="card">
-            <header class="card-header">
-              <h3 class="card-title">DevOps</h3>
-              <p class="card-text">Linux · Docker · GitHub Actions · Vercel</p>
-            </header>
-          </article>
+  <footer class="site-footer container-md">
+    <p>©️ 2026 · Sayanta Chaudhary</p>
+  </footer>
+</body>
 
-          <article class="card">
-            <header class="card-header">
-              <h3 class="card-title">Tools</h3>
-              <p class="card-text">Neovim · Vite · Bun · HTTPie</p>
-            </header>
-          </article>
-        </div>
-      </section>
-
-      <section id="projects">
-        <h2>Projects</h2>
-        <div class="cards">
-          <article class="card">
-            <header class="card-header">
-              <h3 class="card-title">Trueschool</h3>
-              <p class="card-subtitle">HTML · CSS · JS · Bootstarp</p>
-            </header>
-            <div class="card-body">
-              <p class="card-text">
-                A School Management Software for Modern Day Schools.
-              </p>
-            </div>
-            <footer class="card-footer">
-              <a
-                href="https://trueschool.xenonepal.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn btn-outline"
-                >Website</a
-              >
-            </footer>
-          </article>
-
-          <article class="card">
-            <header class="card-header">
-              <h3 class="card-title">LazyVim</h3>
-              <p class="card-subtitle">Lua · Bash</p>
-            </header>
-            <div class="card-body">
-              <p class="card-text">
-                Neovim setup powered by 💤 lazy.nvim to make it easy to
-                customize and extend your config.
-              </p>
-            </div>
-            <footer class="card-footer">
-              <a
-                href="https://www.lazyvim.org/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn btn-outline"
-                >GitHub</a
-              >
-            </footer>
-          </article>
-
-          <article class="card">
-            <header class="card-header">
-              <h3 class="card-title">TPDB</h3>
-              <p class="card-subtitle">HTML · CSS · TypeScript</p>
-            </header>
-            <div class="card-body">
-              <p class="card-text">The Pokémon Database.</p>
-            </div>
-            <footer class="card-footer">
-              <a
-                href="https://github.com/sayanta-chaudhary/pokepedia"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn btn-outline"
-                >GitHub</a
-              >
-            </footer>
-          </article>
-
-          <article class="card">
-            <header class="card-header">
-              <h3 class="card-title">How old am i?</h3>
-              <p class="card-subtitle">HTML · CSS · TypeScript</p>
-            </header>
-            <div class="card-body">
-              <p class="card-text">Age calculator with realtime run-up.</p>
-            </div>
-            <footer class="card-footer">
-              <a
-                href="https://github.com/sayanta-chaudhary/how-old-am-i"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn btn-outline"
-                >GitHub</a
-              >
-            </footer>
-          </article>
-
-          <article class="card">
-            <header class="card-header">
-              <h3 class="card-title">Tor</h3>
-              <p class="card-subtitle">Bash</p>
-            </header>
-            <div class="card-body">
-              <p class="card-text">
-                Bash script to web scrape 1337x.to for torrents.
-              </p>
-            </div>
-            <footer class="card-footer">
-              <a
-                href="https://github.com/sayanta-chaudhary/torkit"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn btn-outline"
-                >GitHub</a
-              >
-            </footer>
-          </article>
-
-          <article class="card">
-            <header class="card-header">
-              <h3 class="card-title">MyYT</h3>
-              <p class="card-subtitle">Bash</p>
-            </header>
-            <div class="card-body">
-              <p class="card-text">
-                Script to search youtube with command line easily.
-              </p>
-            </div>
-            <footer class="card-footer">
-              <a
-                href="https://github.com/sayanta-chaudhary/yt"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn btn-outline"
-                >GitHub</a
-              >
-            </footer>
-          </article>
-        </div>
-      </section>
-
-      <section id="personal">
-        <h2>Personal</h2>
-        <div class="personal-cards">
-          <article class="personal-card">
-            <a href="/books/">
-              <div class="icon">📚</div>
-              <div class="content">
-                <h3>Books</h3>
-                <p>Books that have influenced my thinking.</p>
-              </div>
-              <span class="arrow">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  viewBox="0 0 256 256"
-                >
-                  <path
-                    d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"
-                  ></path>
-                </svg>
-              </span>
-            </a>
-          </article>
-
-          <article class="personal-card">
-            <a href="/movies/">
-              <div class="icon">🎬</div>
-              <div class="content">
-                <h3>Movies</h3>
-                <p>Films & shows that have inspired, entertained me.</p>
-              </div>
-              <span class="arrow">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  viewBox="0 0 256 256"
-                >
-                  <path
-                    d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"
-                  ></path>
-                </svg>
-              </span>
-            </a>
-          </article>
-
-          <article class="personal-card">
-            <a href="/blog/">
-              <div class="icon">📝</div>
-              <div class="content">
-                <h3>Blogs</h3>
-                <p>Thoughts, tutorials, and insights on programming.</p>
-              </div>
-              <span class="arrow">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  viewBox="0 0 256 256"
-                >
-                  <path
-                    d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"
-                  ></path>
-                </svg>
-              </span>
-            </a>
-          </article>
-        </div>
-      </section>
-
-      <section id="contact">
-        <h2>Contact</h2>
-        <address>
-          <a
-            href="https://github.com/sayanta-chaudhary"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn btn-outline"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="1em"
-              height="1em"
-              fill="currentColor"
-              viewBox="0 0 256 256"
-              class="ph-icon"
-            >
-              <path
-                d="M208,104v8a48,48,0,0,1-48,48H136a32,32,0,0,1,32,32v40H104V192a32,32,0,0,1,32-32H112a48,48,0,0,1-48-48v-8a49.28,49.28,0,0,1,8.51-27.3A51.92,51.92,0,0,1,76,32a52,52,0,0,1,43.83,24h32.34A52,52,0,0,1,196,32a51.92,51.92,0,0,1,3.49,44.7A49.28,49.28,0,0,1,208,104Z"
-                opacity="0.2"
-              ></path>
-              <path
-                d="M208.3,75.68A59.74,59.74,0,0,0,202.93,28,8,8,0,0,0,196,24a59.75,59.75,0,0,0-48,24H124A59.75,59.75,0,0,0,76,24a8,8,0,0,0-6.93,4,59.78,59.78,0,0,0-5.38,47.68A58.14,58.14,0,0,0,56,104v8a56.06,56.06,0,0,0,48.44,55.47A39.8,39.8,0,0,0,96,192v8H72a24,24,0,0,1-24-24A40,40,0,0,0,8,136a8,8,0,0,0,0,16,24,24,0,0,1,24,24,40,40,0,0,0,40,40H96v16a8,8,0,0,0,16,0V192a24,24,0,0,1,48,0v40a8,8,0,0,0,16,0V192a39.8,39.8,0,0,0-8.44-24.53A56.06,56.06,0,0,0,216,112v-8A58,58,0,0,0,208.3,75.68ZM200,112a40,40,0,0,1-40,40H112a40,40,0,0,1-40-40v-8a41.74,41.74,0,0,1,6.9-22.48A8,8,0,0,0,80,73.83a43.81,43.81,0,0,1,.79-33.58,43.88,43.88,0,0,1,32.32,20.06A8,8,0,0,0,119.82,64h32.35a8,8,0,0,0,6.74-3.69,43.87,43.87,0,0,1,32.32-20.06A43.81,43.81,0,0,1,192,73.83a8.09,8.09,0,0,0,1,7.65A41.76,41.76,0,0,1,200,104Z"
-              ></path>
-            </svg>
-            GitHub
-          </a>
-
-          <a
-            href="mailto:sayanta-chaudhary@gamil.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn btn-outline"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="1em"
-              height="1em"
-              fill="currentColor"
-              viewBox="0 0 256 256"
-              class="ph-icon"
-            >
-              <path d="M224,56l-96,88L32,56Z" opacity="0.2"></path>
-              <path
-                d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM203.43,64,128,133.15,52.57,64ZM216,192H40V74.19l82.59,75.71a8,8,0,0,0,10.82,0L216,74.19V192Z"
-              ></path>
-            </svg>
-            Mail
-          </a>
-        </address>
-      </section>
-
-      <!-- <section id="quotes"></section> -->
-      <!-- <section id="cart-list"></section> -->
-    </main>
-
-    <hr />
-
-    <footer class="site-footer container-md">
-      <p>©️ 2026 · Sayanta Chaudhary</p>
-    </footer>
-  </body>
 </html>

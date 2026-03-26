@@ -37,14 +37,12 @@
     margin-block: calc(var(--spacing) * 4);
 
     .card-title {
-      margin-bottom: var(--spacing);
       font-size: var(--text-lg);
+      margin-bottom: calc(var(--spacing) * 2);
     }
 
     .card-subtitle {
       color: var(--neutral-600);
-      display: flex;
-      gap: calc(var(--spacing) * 2);
 
       /* img { */
       /*   width: 16px; */

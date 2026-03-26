@@ -5,6 +5,7 @@
   gap: var(--spacing);
   border: none;
   border-radius: var(--radius-md);
+  appearance: none;
   height: calc(var(--spacing) * 8);
   padding-inline: calc(var(--spacing) * 4);
   font: inherit;
@@ -12,10 +13,13 @@
   text-decoration: none;
   cursor: pointer;
   user-select: none;
+  -webkit-tap-highlight-color: transparent;
   transition: transform 300ms ease;
 
-  &:hover {
-    transform: scale(1.02);
+  @media (hover: hover) {
+    &:hover:not(:disabled) {
+      transform: scale(1.02);
+    }
   }
 
   &:active:not(:disabled) {
