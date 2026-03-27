@@ -1,9 +1,4 @@
-/* .inset-0 { */
-/*   top: 0; */
-/*   right: 0; */
-/*   bottom: 0; */
-/*   left: 0; */
-/* } */
+/* group & peer are the hardest — they style elements based on sibling/parent state without JS. */
 
 .truncate {
   overflow: hidden;
@@ -34,4 +29,16 @@
   white-space: normal;
 }
 
-/* group & peer are the hardest — they style elements based on sibling/parent state without JS. */
+/* .lead {} */
+/**/
+/* .prose { */
+/*   max-width: 65ch; */
+/* } */
+/**/
+/* .prose> :first-child { */
+/*   margin-top: 0; */
+/* } */
+/**/
+/* .prose> :last-child { */
+/*   margin-bottom: 0; */
+/* } */

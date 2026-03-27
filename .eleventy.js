@@ -4,6 +4,7 @@ import anchor from "markdown-it-anchor";
 export default function (eleventyConfig) {
   const mdLibrary = md().use(anchor);
   eleventyConfig.setLibrary("md", mdLibrary);
+  // Anchor links #
 
   eleventyConfig.addPassthroughCopy("css");
   eleventyConfig.addPassthroughCopy("js");
