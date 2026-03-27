@@ -1,84 +1,53 @@
-/* Line-height and font size are inversely proportinal */
-/* Bigger text needs less line-height, smaller text needs more */
-/* Stick to two color, size, weight */
+/* Line-height & font size are inversely proportinal */
+/* Stick to 2 color, size, weight */
 /* Use `clamp()` for headings — they need the most scaling */
 
 @font-face {
   font-family: "inter";
   src: url("/public/fonts/inter-var.woff2") format("woff2");
   font-display: swap;
-  font-weight: 300 600;
+  font-weight: 400 600;
 }
 
 h1 {
   font-size: var(--text-4xl);
   /* font-size: clamp(var(--text-2xl), 5vw, var(--text-4xl)); */
-  font-weight: 500;
   line-height: 1.1;
-  /* letter-spacing: -0.05em; */
+  font-weight: 600;
 }
 
 h2 {
-  font-size: var(--text-3xl);
-  font-weight: 500;
   line-height: 1.2;
+  font-size: var(--text-3xl);
+  font-weight: 600;
 }
 
 h3 {
   font-size: var(--text-2xl);
-  font-weight: 500;
   line-height: 1.3;
+  font-weight: 600;
 }
 
 h4 {
   font-size: var(--text-xl);
-  font-weight: 400;
   line-height: 1.4;
+  font-weight: 500;
 }
 
 h5 {
   font-size: var(--text-lg);
-  font-weight: 400;
   line-height: 1.5;
+  font-weight: 500;
 }
 
 h6 {
   font-size: var(--text-base);
-  font-weight: 400;
   line-height: 1.5;
+  font-weight: 500;
 }
 
 p {
   font-size: var(--text-base);
   line-height: 1.75;
   color: var(--neutral-700);
-
-  a {
-    color: var(--neutral-900);
-    border-bottom: 1px solid var(--neutral-500);
-    transition: border-color 0.2s ease-in-out;
-
-    &:hover {
-      border-bottom: 1px solid var(--neutral-900);
-    }
-  }
-}
-
-small {
-  font-size: var(--text-sm);
-  line-height: 1.6;
-}
-
-/* .lead {} */
-
-.prose {
-  max-width: 65ch;
-}
-
-.prose> :first-child {
-  margin-top: 0;
-}
-
-.prose> :last-child {
-  margin-bottom: 0;
 }

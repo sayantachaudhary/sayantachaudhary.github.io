@@ -29,8 +29,8 @@
   list-style: none;
 
   a {
-    color: var(--neutral-500);
     transition: color 150ms ease;
+    color: var(--neutral-500);
 
     &:hover {
       color: var(--neutral-900);

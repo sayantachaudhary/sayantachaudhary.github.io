@@ -2,6 +2,11 @@ body {
   background-image: none;
 }
 
+.post-meta {
+  color: var(--neutral-500);
+  margin-bottom: calc(var(--spacing) * 8);
+}
+
 .post {
   h1 {
     margin-bottom: calc(var(--spacing) * 2);
@@ -31,8 +36,7 @@ body {
     font-size: var(--text-sm);
     border-radius: var(--radius-sm);
     background-color: var(--neutral-200);
-    color: var(--neutral-800);
-    padding: 2px 4px;
+    padding: 0.1em 0.25em;
   }
 
   pre code {
@@ -40,27 +44,18 @@ body {
   }
 }
 
-.post-meta {
-  color: var(--neutral-500);
-  margin-bottom: calc(var(--spacing) * 8);
-}
-
 .post ul {
   color: var(--neutral-700);
   margin-bottom: calc(var(--spacing) * 8);
 
   li {
-    line-height: 1.875;
     list-style: disc inside;
     margin-bottom: var(--spacing);
-
-    /* &::marker {} */
   }
 
   a {
-    color: var(--neutral-900);
-    border-bottom: 1px solid var(--neutral-400);
     transition: border-color 0.2s ease-in-out;
+    border-bottom: 1px solid var(--neutral-500);
 
     &:hover {
       border-bottom: 1px solid var(--neutral-900);
@@ -80,7 +75,7 @@ pre {
 
   code {
     font-family: var(--font-mono);
-    font-size: var(--text-sm);
+    font-size: var(--text-base);
   }
 
   code.hljs {

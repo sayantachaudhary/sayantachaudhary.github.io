@@ -6,7 +6,7 @@ body {
   font-family: var(--font-sans);
   font-display: swap;
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: 1.6;
   min-height: 100dvh;
   display: flex;
   flex-direction: column;
@@ -25,11 +25,10 @@ main {
 
 hr {
   border: none;
-  border-top: 1px solid var(--neutral-200);
+  border-top: 1px solid var(--neutral-300);
   margin-block: calc(var(--spacing) * 8);
 }
 
-/* Avoid text overflows */
 p,
 h1,
 h2,
@@ -40,7 +39,6 @@ h6 {
   overflow-wrap: break-word;
 }
 
-/* Better line wrapping */
 p {
   text-wrap: pretty;
 }
@@ -66,29 +64,26 @@ h6 {
 
 /* This feature is not standardized. */
 ::-webkit-scrollbar {
-  width: 12px;
-  /* Vertical */
-  height: 10px;
-  /* Horizontal */
+  width: 14px; /* Vertical */
+  height: 6px; /* Horizontal */
 }
 
-/* ::-webkit-scrollbar-track { */
-/*   margin: 1em; */
-/* } */
-
-::-webkit-scrollbar-track:hover {
-  background-color: var(--neutral-200);
-  border-radius: var(--radius-sm);
-}
-
-::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb:vertical {
   background-color: var(--neutral-300);
   border: 3px solid transparent;
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-md);
   background-clip: padding-box;
 }
 
-::-webkit-scrollbar-thumb:hover {
+::-webkit-scrollbar-thumb:vertical:hover {
   background-color: var(--neutral-500);
-  border: 2px solid transparent;
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+  background-color: var(--neutral-300);
+  border-radius: var(--radius-sm);
+}
+
+::-webkit-scrollbar-thumb:horizontal:hover {
+  background-color: var(--neutral-500);
 }
