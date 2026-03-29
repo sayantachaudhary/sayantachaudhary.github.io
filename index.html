@@ -16,14 +16,12 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://sayanta.is-a-fullstack.dev/" />
     <meta property="og:image" content="https://sayanta.is-a-fullstack.dev/og-image.png" />
-    <!-- External CSS -->
-    <!-- <link rel="preconnect" href="https://rsms.me/" /> -->
-    <!-- <link rel="stylesheet" href="https://rsms.me/inter/inter.css" /> -->
     <!-- Base Style -->
-    <link rel="stylesheet" href="/css/base/font.css" />
     <link rel="stylesheet" href="/css/base/preflight.css" />
+    <link rel="stylesheet" href="/css/base/font.css" />
     <link rel="stylesheet" href="/css/base/theme.css" />
     <link rel="stylesheet" href="/css/base/global.css" />
+    <link rel="stylesheet" href="/css/base/utilities.css" />
     <!-- Layout -->
     <link rel="stylesheet" href="/css/layout/layout.css" />
     <!-- Components -->
@@ -132,7 +130,9 @@
           simplicity, performance, and maintainable code.
         </p>
         <ul>
-          <li><strong>Stack:</strong> React, TypeScript, Node.js, PostgreSQL</li>
+          <li>
+            <strong>Stack:</strong> React, TypeScript, Node.js, PostgreSQL
+          </li>
           <li><strong>Interests:</strong> Developer Tooling, Design System</li>
         </ul>
       </section>
@@ -257,7 +257,7 @@
             </footer>
           </article>
 
-          <article class="card">
+          <article class="card" data-hidden>
             <header class="card-header">
               <h3 class="card-title">Tor</h3>
               <p class="card-subtitle">Bash</p>
@@ -278,7 +278,7 @@
             </footer>
           </article>
 
-          <article class="card">
+          <article class="card" data-hidden>
             <header class="card-header">
               <h3 class="card-title">MyYT</h3>
               <p class="card-subtitle">Bash</p>
@@ -299,6 +299,7 @@
             </footer>
           </article>
         </div>
+        <button class="btn btn-outline show-more">Show more</button>
       </section>
 
       <section id="personal">
@@ -426,9 +427,6 @@
           </a>
         </address>
       </section>
-
-      <!-- <section id="quotes"></section> -->
-      <!-- <section id="cart-list"></section> -->
     </main>
 
     <hr />
