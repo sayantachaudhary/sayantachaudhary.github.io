@@ -64,7 +64,7 @@ h6 {
 
 /* This feature is not standardized. */
 ::-webkit-scrollbar {
-  width: 14px; /* Vertical */
+  width: 12px; /* Vertical */
   height: 6px; /* Horizontal */
 }
 

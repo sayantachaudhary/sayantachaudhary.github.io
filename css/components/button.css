@@ -95,12 +95,9 @@
 }
 
 .btn-error {
-  background-color: oklch(88.5% 0.062 18.334);
-  /* 200 */
-  color: oklch(57.7% 0.245 27.325);
-  /* 600 */
-  border: 1px solid oklch(80.8% 0.114 19.571);
-  /* 300 */
+  background-color: oklch(88.5% 0.062 18.334); /* 200 */
+  color: oklch(57.7% 0.245 27.325); /* 600 */
+  border: 1px solid oklch(80.8% 0.114 19.571); /* 300 */
 }
 
 .btn-warning {
