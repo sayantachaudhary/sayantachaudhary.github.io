@@ -1,9 +1,4 @@
 /* group & peer are the hardest — they style elements based on sibling/parent state without JS. */
-.center {
-  /* width: 100%; */
-  margin-inline: auto;
-  padding-inline: 1rem;
-}
 
 .truncate {
   overflow: hidden;

@@ -9,6 +9,13 @@
   font-weight: 400 600;
 }
 
+@font-face {
+  font-family: "JetBrainsMono";
+  src: url("/public/fonts/JetBrainsMono.ttf") format("woff2");
+  font-display: swap;
+  font-weight: 400 600;
+}
+
 h1 {
   font-size: var(--text-4xl);
   /* font-size: clamp(var(--text-2xl), 5vw, var(--text-4xl)); */
