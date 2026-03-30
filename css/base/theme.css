@@ -1,7 +1,7 @@
 :root {
   --font-sans: "inter", system-ui, sans-serif;
   --font-serif: serif;
-  --font-mono: monospace;
+  --font-mono: "JetBrainsMono", monospace;
 
   --text-sm: 0.875rem;
   --text-base: 1rem;
@@ -41,17 +41,17 @@
   --z-toast: 700;
   --z-tooltip: 800;
 
-  --yellow-50: oklch(98.7% 0.026 102.212);
-  --yellow-100: oklch(97.3% 0.071 103.193);
-  --yellow-200: oklch(94.5% 0.129 101.54);
-  --yellow-300: oklch(90.5% 0.182 98.111);
-  --yellow-400: oklch(85.2% 0.199 91.936);
-  --yellow-500: oklch(79.5% 0.184 86.047);
-  --yellow-600: oklch(68.1% 0.162 75.834);
-  --yellow-700: oklch(55.4% 0.135 66.442);
-  --yellow-800: oklch(47.6% 0.114 61.907);
-  --yellow-900: oklch(42.1% 0.095 57.708);
-  --yellow-950: oklch(28.6% 0.066 53.813);
+  --primary-50: oklch(98.7% 0.026 102.212);
+  --primary-100: oklch(97.3% 0.071 103.193);
+  --primary-200: oklch(94.5% 0.129 101.54);
+  --primary-300: oklch(90.5% 0.182 98.111);
+  --primary-400: oklch(85.2% 0.199 91.936);
+  --primary-500: oklch(79.5% 0.184 86.047);
+  --primary-600: oklch(68.1% 0.162 75.834);
+  --primary-700: oklch(55.4% 0.135 66.442);
+  --primary-800: oklch(47.6% 0.114 61.907);
+  --primary-900: oklch(42.1% 0.095 57.708);
+  --primary-950: oklch(28.6% 0.066 53.813);
 
   --neutral-50: oklch(98.5% 0 0); /* background, card, popover, primary-fg, sidebar */
   --neutral-100: oklch(96.7% 0.001 286.375); /* secondary, muted, accent, sidebar-accent */
