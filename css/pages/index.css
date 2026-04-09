@@ -19,11 +19,21 @@
     gap: calc(var(--spacing) * 2);
     font-size: var(--text-sm);
     color: var(--neutral-700);
+
+    li:last-child {
+      margin-bottom: calc(var(--spacing) * 6);
+    }
+  }
+
+  .links {
+    display: flex;
+    gap: calc(var(--spacing) * 2);
   }
 }
 
 section {
   margin-block: calc(var(--spacing) * 12);
+  scroll-margin-top: 90px;
 
   h2 {
     position: relative;
