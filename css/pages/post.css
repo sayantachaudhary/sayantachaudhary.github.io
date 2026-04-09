@@ -2,7 +2,7 @@ body {
   background-image: none;
 }
 
-.btb {
+.bb {
   margin-top: calc(var(--spacing) * 8);
 }
 
@@ -50,11 +50,12 @@ body {
 
 .post ul {
   color: var(--neutral-700);
+  padding-left: calc(var(--spacing) * 6);
   margin-bottom: calc(var(--spacing) * 8);
 
   li {
-    list-style: disc inside;
-    margin-bottom: var(--spacing);
+    list-style: disc;
+    margin-bottom: calc(var(--spacing) * 2);
   }
 
   a {
