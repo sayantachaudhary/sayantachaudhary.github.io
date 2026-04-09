@@ -29,8 +29,3 @@ if (showMoreBtn) {
     showMoreBtn.remove();
   });
 }
-
-const navbar = document.querySelector('.site-header')
-const navbarHeight = navbar.getBoundingClientRect().height
-
-console.log(navbarHeight) // exact height in px
