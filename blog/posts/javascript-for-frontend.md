@@ -9,20 +9,6 @@ isPublished: true
 
 Hello there! lets start with basic to advanced JavaScript concepts. This is just a guide not a tutorial to learn JavaScript. You can use this as a reference to learn JavaScript.
 
-## Table of Contents
-
-- [JavaScript Basics](#javascript-basics) - First things first
-- [Variables and Data Types](#variables-and-data-types) - Storing and working with information
-- [Functions](#functions) - Making reusable blocks of code
-- [Arrow Functions](#arrow-functions) - The modern way to write functions
-- [Arrays and Objects](#arrays-and-objects) - Working with collections of data
-- [Destructuring](#destructuring) - Unpacking values from arrays and objects
-- [Template Literals](#template-literals) - Better string formatting
-- [Conditional Logic](#conditional-logic) - Making decisions in your code
-- [The Ternary Operator](#ternary-operator) - Shorthand conditionals
-- [Rest/Spread Operator](#restspread-operator) - The versatile three dots
-- [Optional Chaining](#optional-chaining) - Safely accessing nested properties
-
 ## JavaScript Basics
 
 JavaScript is the language of the web. While HTML gives structure and CSS provides style, JavaScript adds behavior and interactivity to websites.
