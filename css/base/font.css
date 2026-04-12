@@ -57,4 +57,26 @@ p {
   font-size: var(--text-base);
   line-height: 1.75;
   color: var(--neutral-700);
+
+  a {
+    color: var(--neutral-900);
+    border-bottom: 1px solid var(--neutral-400);
+    transition: border-color 0.2s ease-in-out;
+
+    &:hover {
+      border-bottom: var(--neutral-900);
+    }
+  }
 }
+
+/* blockquote { */
+/*   margin-block: calc(var(--spacing) * 8); */
+/*   padding: calc(var(--spacing) * 6); */
+/*   border-left: 0.25rem solid #3366ff; */
+/*   background-color: #172436; */
+/**/
+/*   footer { */
+/*     margin-top: var(--spacing); */
+/*     color: var(--neutral-600); */
+/*   } */
+/* } */

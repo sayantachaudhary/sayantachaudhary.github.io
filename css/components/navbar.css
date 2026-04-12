@@ -4,6 +4,10 @@
   justify-content: space-between;
   align-items: center;
   padding-block: calc(var(--spacing) * 4);
+
+  a {
+    border-bottom: none;
+  }
 }
 
 .nav-logo img {
@@ -93,7 +97,14 @@
   }
 }
 
-.lucide-x { display: none; }
+.lucide-x {
+  display: none;
+}
 
-.burger[aria-expanded="true"] .lucide-menu { display: none; }
-.burger[aria-expanded="true"] .lucide-x { display: block; }
+.burger[aria-expanded="true"] .lucide-menu {
+  display: none;
+}
+
+.burger[aria-expanded="true"] .lucide-x {
+  display: block;
+}
