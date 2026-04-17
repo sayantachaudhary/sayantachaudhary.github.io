@@ -15,7 +15,7 @@
   height: 48px;
   border-radius: 50%;
   padding-inline: var(--spacing);
-  transition: transform 300ms ease;
+  transition: transform 0.3s ease;
 
   &:hover {
     transform: scale(1.02);
@@ -80,14 +80,10 @@
     padding-block: calc(var(--spacing) * 8);
     font-size: var(--text-2xl);
     background-color: var(--neutral-100);
-
     transform: translateY(-10px);
     opacity: 0;
     visibility: hidden;
-    transition:
-      transform 300ms ease,
-      opacity 300ms ease,
-      visibility 300ms ease;
+    transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
 
     &.is-open {
       transform: translateY(0);

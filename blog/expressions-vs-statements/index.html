@@ -45,13 +45,21 @@
           </svg>
           Back to Blog
         </button>
+        <!-- <nav aria-label="breadcrumb" class="breadcrumb"> -->
+        <!--   <ol> -->
+        <!--     <li><a href="/">Home</a></li> -->
+        <!--     <li><a href="/blog">Blog</a></li> -->
+        <!--     <li><span aria-current="page">Statements vs Expressions</span></li> -->
+        <!--   </ol> -->
+        <!-- </nav> -->
+
         <h1>Statements vs Expressions</h1>
         <div class="post-meta">
           <time datetime="2025-01-16">Jan 16, 2025</time>
         </div>
       </header>
       <p>So what's the difference between a “statement” and an “expression” in JavaScript?</p>
-<p>It's a load-bearing concrete pillar that will help support a ton of JavaScript knowledge.&lt;br/&gt;
+<p>It's a load-bearing concrete pillar that will help support a ton of JavaScript knowledge.
 This is especially true for React developers. Most of those JSX rules you've had to memorize, and always forget to follow, are the result of this statement/expression duality.</p>
 <h2 id="expressions" tabindex="-1">Expressions</h2>
 <p>At its core, an expression is a bit of JavaScript code that produces a value.</p>
@@ -64,7 +72,7 @@ This is especially true for React developers. Most of those JSX rules you've had
 <li><code>isHappy ? &quot;😃&quot; : &quot;☹️&quot;</code> — produces an emoji</li>
 <li><code>[1, 2, 3].pop()</code> — produces the number <code>3</code></li>
 </ul>
-<p>Expressions can contain expressions. For example, how many expressions do you count in this chunk of JS code? <code>(5 + 1) * 2</code></p>
+<p>Expressions can contain expressions. For example, how many expressions do you count in this chunk of JS code?</p>
 <ul>
 <li><code>(5 + 1) * 2</code> This chunk of code is itself an expression, producing the number “12”.</li>
 <li><code>(5 + 1)</code> This sub-expression evaluates first, because of the parens, and resolves to “6”.</li>
@@ -164,7 +172,7 @@ if (/* expression slot */) { }
   );
 }
 </code></pre>
-<p>This blows up because statements don't produce a value, only expressions produce a value. If we want to embed if/else logic in our JSX, we need to use a ternary operator expression:</p>
+<p>This blows up because statements don't produce a value, only expressions produce a value. If we want to embed if/else logic in our JSX, we need to use a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_operator">ternary operator</a> expression:</p>
 <pre><code class="language-javascript">function CountdownClock({ secondsRemaining }) {
   return (
     // ✅ No problemo
@@ -188,7 +196,6 @@ if (/* expression slot */) { }
 <p>It can take a while for this distinction to become intuitive, but hopefully this blog post has clarified a few things!</p>
 
       <footer class="post-footer">
-        <p>This is a paragraph with a <a href="https://example.com">link in the middle</a> of it.</p>
         <button title="like" class="btn btn-primary like-btn">
           <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 256 256">
             <path d="M80,104V208H32a8,8,0,0,1-8-8V112a8,8,0,0,1,8-8Z" opacity="0.2"></path>

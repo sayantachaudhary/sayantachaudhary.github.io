@@ -99,3 +99,17 @@ body {
 .post-footer {
   margin-top: calc(var(--spacing) * 8);
 }
+
+/* .breadcrumb ol { */
+/*   margin-top: calc(var(--spacing) * 8); */
+/*   font-size: var(--text-sm); */
+/**/
+/*   li { */
+/*     display: inline-block; */
+/**/
+/*     &:not(:last-child)::after { */
+/*       margin-inline: calc(var(--spacing) * 2); */
+/*       content: "·"; */
+/*     } */
+/*   } */
+/* } */
