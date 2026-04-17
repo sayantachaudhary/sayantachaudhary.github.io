@@ -9,7 +9,7 @@ isPublished: true
 
 So what's the difference between a “statement” and an “expression” in JavaScript?
 
-It's a load-bearing concrete pillar that will help support a ton of JavaScript knowledge.<br/>
+It's a load-bearing concrete pillar that will help support a ton of JavaScript knowledge.
 This is especially true for React developers. Most of those JSX rules you've had to memorize, and always forget to follow, are the result of this statement/expression duality.
 
 ## Expressions
@@ -25,7 +25,7 @@ For example, these are all expressions:
 - `isHappy ? "😃" : "☹️"` — produces an emoji
 - `[1, 2, 3].pop()` — produces the number `3`
 
-Expressions can contain expressions. For example, how many expressions do you count in this chunk of JS code? `(5 + 1) * 2`
+Expressions can contain expressions. For example, how many expressions do you count in this chunk of JS code?
 
 - `(5 + 1) * 2` This chunk of code is itself an expression, producing the number “12”.
 - `(5 + 1)` This sub-expression evaluates first, because of the parens, and resolves to “6”.
@@ -178,7 +178,7 @@ function CountdownClock({ secondsRemaining }) {
 }
 ```
 
-This blows up because statements don't produce a value, only expressions produce a value. If we want to embed if/else logic in our JSX, we need to use a ternary operator expression:
+This blows up because statements don't produce a value, only expressions produce a value. If we want to embed if/else logic in our JSX, we need to use a [ternary operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_operator) expression:
 
 ```javascript
 function CountdownClock({ secondsRemaining }) {

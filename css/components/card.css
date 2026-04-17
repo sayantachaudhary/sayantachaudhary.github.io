@@ -12,7 +12,12 @@
   border-radius: var(--radius-lg);
   padding-inline: calc(var(--spacing) * 4);
   background-color: var(--neutral-100);
-  transition: transform 300ms ease;
+  transition: opacity 0.3s, transform 0.3s ease-out;
+
+  @starting-style {
+    opacity: 0;
+    transform: translateY(10px);
+  }
 
   &:hover {
     transform: translateY(-4px);
