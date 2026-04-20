@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Routing in Next.js (App Router) </title>
+  <meta name="description" content="A guide to routing in Next.js (App Router) covering Catch-All Segments, Dynamic Routes, Nested Routes, and more." />
+  <!-- Social Meta -->
+  <meta property="og:title" content="Routing in Next.js (App Router)" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://sayanta.is-a-fullstack.dev/blog/routing-in-nextjs/" />
+  <meta property="og:image" content="https://sayanta.is-a-fullstack.dev/blog/routing-in-nextjs.png" />
+  <!-- Base Style -->
+  <link rel="stylesheet" href="/css/base/reset.css" />
+  <link rel="stylesheet" href="/css/base/global.css" />
+  <link rel="stylesheet" href="/css/theme/theme.css" />
+  <link rel="stylesheet" href="/css/theme/font.css" />
+  <!-- Layout -->
+  <link rel="stylesheet" href="/css/layout/layout.css" />
+  <!-- Components -->
+  <link rel="stylesheet" href="/css/components/button.css" />
+  <!-- Page Specific -->
+  <link rel="stylesheet" href="/css/pages/post.css" />
+  <!-- JS -->
+  <script src="/js/dark-mode.js"></script>
+  <script src="/js/navbar.js" defer></script>
+  <script src="/js/script.js" defer></script>
+  <script src="/js/blog.js"></script>
+  <!-- Highlight.js -->
+  <link rel="stylesheet" class="hljs-theme"
+    href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/atom-one-light.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+</head>
+
+<body>
+  <main class="container-md">
+    <article class="post">
+      <header class="post-header">
+        <button class="btn btn-ghost bb" onclick="navigation.back()">
+          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 256 256">
+            <path
+              d="M232,144a64.07,64.07,0,0,1-64,64H80a8,8,0,0,1,0-16h88a48,48,0,0,0,0-96H51.31l34.35,34.34a8,8,0,0,1-11.32,11.32l-48-48a8,8,0,0,1,0-11.32l48-48A8,8,0,0,1,85.66,45.66L51.31,80H168A64.07,64.07,0,0,1,232,144Z">
+            </path>
+          </svg>
+          Back to Blog
+        </button>
+        <!-- <nav aria-label="breadcrumb" class="breadcrumb"> -->
+        <!--   <ol> -->
+        <!--     <li><a href="/">Home</a></li> -->
+        <!--     <li><a href="/blog">Blog</a></li> -->
+        <!--     <li><span aria-current="page">Routing in Next.js (App Router)</span></li> -->
+        <!--   </ol> -->
+        <!-- </nav> -->
+
+        <h1>Routing in Next.js (App Router)</h1>
+        <div class="post-meta">
+          <time datetime="2025-03-12">Mar 12, 2025</time>
+        </div>
+      </header>
+      <h1 id="routing-in-next.js" tabindex="-1">Routing in Next.js</h1>
+<p>Next.js has a file-system-based routing system. The URLs you can access in your browser are determined by how you organize your files and folders within your project.</p>
+<h2 id="understanding-the-src%2Fapp-directory" tabindex="-1">Understanding the <em>src/app</em> Directory</h2>
+<p>In Next.js (when using the App Router), the <em>src/app</em> directory serves as the foundation for your application's structure. Key files inside this directory include:</p>
+<ul>
+<li><em>layout.tsx</em> – Defines the layout for your application, allowing you to persist UI elements across different pages.</li>
+<li><em>page.tsx</em> – Represents the content of a particular route.</li>
+</ul>
+<h2 id="scenario-1%3A-creating-a-homepage" tabindex="-1">Scenario 1: Creating a Homepage</h2>
+<p>Suppose you want to have a homepage accessible at:</p>
+<p><em>http://localhost:3000/</em></p>
+<p>To achieve this, ensure that a <em>page.tsx</em> file exists inside the <em>src/app</em> directory. By default, this file is created when you initialize a Next.js project.</p>
+<h2 id="scenario-2%3A-creating-additional-pages" tabindex="-1">Scenario 2: Creating Additional Pages</h2>
+<p>Now, let's say you want to create additional pages with different URLs.</p>
+<h3 id="creating-an-about-page" tabindex="-1">Creating an About Page</h3>
+<p>To create a page accessible at:</p>
+<p><em>http://localhost:3000/about</em></p>
+<p>Follow these steps:</p>
+<ol>
+<li>Inside the <em>src/app</em> directory, create a new folder named <em>about</em>.</li>
+<li>Inside <em>about</em>, create a <em>page.tsx</em> file.</li>
+<li>Add the following code:</li>
+</ol>
+<pre><code class="language-tsx">export default function About() {
+  return &lt;h1&gt;Hello from About&lt;/h1&gt;;
+}
+</code></pre>
+<h3 id="creating-a-custom-page-(e.g.%2C-ramx-page)" tabindex="-1">Creating a Custom Page (e.g., Ramx Page)</h3>
+<p>If you want a page accessible at:</p>
+<p><em>http://localhost:3000/ramx</em></p>
+<p>Follow the same steps as above:</p>
+<ol>
+<li>Inside <em>src/app</em>, create a folder named <em>ramx</em>.</li>
+<li>Inside <em>ramx</em>, create a <em>page.tsx</em> file.</li>
+<li>Add the following code:</li>
+</ol>
+<pre><code class="language-tsx">export default function Ramx() {
+  return &lt;h1&gt;Hello from Ramx&lt;/h1&gt;;
+}
+</code></pre>
+<h3 id="folder-structure-for-the-pages" tabindex="-1">Folder Structure for the Pages</h3>
+<p>After adding these pages, your <em>src/app</em> directory will look like this:</p>
+<pre><code class="language-sh">src/app/
+   layout.tsx  - Defines layout structure
+   page.tsx  - Homepage
+   about/
+      page.tsx  - About Page
+   ramx/
+      page.tsx  - Ramx Page
+</code></pre>
+<hr>
+<h1 id="nested-routes" tabindex="-1">Nested Routes</h1>
+<h2 id="scenario-3%3A-creating-blog-pages" tabindex="-1">Scenario 3: Creating Blog Pages</h2>
+<p>Suppose you want to handle the following routes:</p>
+<ul>
+<li><em>http://localhost:3000/blog</em></li>
+<li><em>http://localhost:3000/blog/first</em></li>
+<li><em>http://localhost:3000/blog/second</em></li>
+</ul>
+<h3 id="steps%3A" tabindex="-1">Steps:</h3>
+<ol>
+<li>First, create a <em>blog</em> folder inside <em>src/app</em>.</li>
+<li>Inside <em>blog</em>, create a <em>page.tsx</em> file.</li>
+</ol>
+<p>This will create the route:</p>
+<p><em>http://localhost:3000/blog</em></p>
+<h4 id="handling-%2Fblog%2Ffirst-and-%2Fblog%2Fsecond" tabindex="-1">Handling <em>/blog/first</em> and <em>/blog/second</em></h4>
+<p><strong>Brute force method</strong> (Good for small projects, but not recommended for scalability):</p>
+<p>Manually create separate folders:</p>
+<pre><code class="language-sh">src/app/blog/first/page.tsx
+src/app/blog/second/page.tsx
+</code></pre>
+<p>Each file should contain:</p>
+<pre><code class="language-tsx">export default function FirstBlog() {
+  return &lt;h1&gt;First Blog Post&lt;/h1&gt;;
+}
+</code></pre>
+<pre><code class="language-tsx">export default function SecondBlog() {
+  return &lt;h1&gt;Second Blog Post&lt;/h1&gt;;
+}
+</code></pre>
+<p><img src="https://i.postimg.cc/J7cJj49y/image.png" alt="routes"></p>
+<hr>
+<h1 id="dynamic-routing" tabindex="-1">Dynamic Routing</h1>
+<h2 id="scenario-4%3A-creating-a-product-listing-page" tabindex="-1">Scenario 4: Creating a Product Listing Page</h2>
+<p>Suppose you want to create a product listing page where:</p>
+<ul>
+<li><em>/products</em> lists all products.</li>
+<li>Individual product pages exist at <em>/products/product-1</em>, <em>/products/product-2</em>, etc.</li>
+</ul>
+<p>Each product also has a details page, such as <em>/products/1</em>.</p>
+<h3 id="brute-force-method-(not-scalable)" tabindex="-1">Brute Force Method (Not Scalable)</h3>
+<p>Manually create:</p>
+<pre><code class="language-sh">src/app/products/product-1/page.tsx
+src/app/products/product-2/page.tsx
+src/app/products/product-3/page.tsx
+</code></pre>
+<h3 id="using-dynamic-routing-(recommended-method)" tabindex="-1"><strong>Using Dynamic Routing (Recommended Method)</strong></h3>
+<p>Instead of manually creating pages for each product, use <strong>dynamic routing</strong>.</p>
+<h4 id="steps%3A-1" tabindex="-1">Steps:</h4>
+<ol>
+<li>Create a folder named <em>[productId]</em> inside <em>src/app/products/</em>.</li>
+<li>Inside <em>[productId]</em>, create a <em>page.tsx</em> file.</li>
+</ol>
+<p>Your folder structure should look like:</p>
+<pre><code class="language-sh">src/app/products/
+   page.tsx   # Product listing page
+   [productId]/
+      page.tsx  # Dynamic product page
+</code></pre>
+<h3 id="code-for-dynamic-product-page" tabindex="-1"><strong>Code for Dynamic Product Page</strong></h3>
+<pre><code class="language-tsx">export default function ProductPage({
+  params,
+}: {
+  params: { productId: string };
+}) {
+  return &lt;h1&gt;Product ID: {params.productId}&lt;/h1&gt;;
+}
+</code></pre>
+<p>Now, if you visit <em>http://localhost:3000/products/100</em>, the <em>params.productId</em> will be <em>100</em>, and it will render dynamically.</p>
+<hr>
+<h1 id="nested-dynamic-routes" tabindex="-1">Nested Dynamic Routes</h1>
+<h2 id="scenario-5%3A-category-%26-product-pages" tabindex="-1">Scenario 5: Category &amp; Product Pages</h2>
+<p>Let's say you need URLs like:</p>
+<ul>
+<li><em>http://localhost:3000/categories/electronics</em></li>
+<li><em>http://localhost:3000/categories/fashion</em></li>
+<li><em>http://localhost:3000/categories/electronics/phones</em></li>
+<li><em>http://localhost:3000/categories/fashion/shoes</em></li>
+</ul>
+<h3 id="steps-to-implement%3A" tabindex="-1"><strong>Steps to Implement:</strong></h3>
+<ol>
+<li>Create a <em>categories</em> folder inside <em>src/app</em>.</li>
+<li>Inside <em>categories</em>, create a dynamic <em>[categoryId]</em> folder.</li>
+<li>Inside <em>[categoryId]</em>, create a dynamic <em>[subCategoryId]</em> folder.</li>
+<li>Add <em>page.tsx</em> inside both folders.</li>
+</ol>
+<h4 id="folder-structure%3A" tabindex="-1"><strong>Folder Structure:</strong></h4>
+<pre><code class="language-sh">src/app/categories/
+   [categoryId]/
+      page.tsx  # Category page
+      [subCategoryId]/
+         page.tsx  # Sub-category page
+</code></pre>
+<h4 id="code-for-category-page%3A" tabindex="-1"><strong>Code for Category Page:</strong></h4>
+<pre><code class="language-tsx">export default function CategoryPage({
+  params,
+}: {
+  params: { categoryId: string };
+}) {
+  return &lt;h1&gt;Category: {params.categoryId}&lt;/h1&gt;;
+}
+</code></pre>
+<h4 id="code-for-sub-category-page%3A" tabindex="-1"><strong>Code for Sub-Category Page:</strong></h4>
+<pre><code class="language-tsx">export default function SubCategoryPage({
+  params,
+}: {
+  params: { categoryId: string; subCategoryId: string };
+}) {
+  return (
+    &lt;h1&gt;
+      {params.subCategoryId} in {params.categoryId}
+    &lt;/h1&gt;
+  );
+}
+</code></pre>
+<hr>
+<h1 id="catch-all-segments" tabindex="-1">Catch-All Segments</h1>
+<h2 id="scenario-6%3A-handling-unknown-nested-routes" tabindex="-1">Scenario 6: Handling Unknown Nested Routes</h2>
+<p>If you need to handle <strong>any level of nested paths</strong>, use a <strong>catch-all segment</strong>.</p>
+<h3 id="example-urls%3A" tabindex="-1"><strong>Example URLs:</strong></h3>
+<ul>
+<li><em>http://localhost:3000/docs</em></li>
+<li><em>http://localhost:3000/docs/getting-started</em></li>
+<li><em>http://localhost:3000/docs/api/reference</em></li>
+</ul>
+<h3 id="how-to-implement%3A" tabindex="-1"><strong>How to Implement:</strong></h3>
+<ol>
+<li>Inside <em>src/app</em>, create a <em>docs</em> folder.</li>
+<li>Inside <em>docs</em>, create a <em>[...slug]</em> folder (the three dots indicate &quot;catch-all&quot;).</li>
+<li>Inside <em>[...slug]</em>, create <em>page.tsx</em>.</li>
+</ol>
+<h4 id="folder-structure%3A-1" tabindex="-1"><strong>Folder Structure:</strong></h4>
+<pre><code class="language-sh">src/app/docs/
+   [...slug]/
+      page.tsx
+</code></pre>
+<h4 id="code-for-catch-all-route%3A" tabindex="-1"><strong>Code for Catch-All Route:</strong></h4>
+<pre><code class="language-tsx">export default function DocsPage({ params }: { params: { slug?: string[] } }) {
+  return (
+    &lt;div&gt;
+      &lt;h1&gt;Docs Page&lt;/h1&gt;
+      &lt;p&gt;Path: {params.slug ? params.slug.join(&quot; / &quot;) : &quot;Home&quot;}&lt;/p&gt;
+    &lt;/div&gt;
+  );
+}
+</code></pre>
+
+      <footer class="post-footer">
+        <button title="like" class="btn btn-primary like-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 256 256">
+            <path d="M80,104V208H32a8,8,0,0,1-8-8V112a8,8,0,0,1,8-8Z" opacity="0.2"></path>
+            <path
+              d="M234,80.12A24,24,0,0,0,216,72H160V56a40,40,0,0,0-40-40,8,8,0,0,0-7.16,4.42L75.06,96H32a16,16,0,0,0-16,16v88a16,16,0,0,0,16,16H204a24,24,0,0,0,23.82-21l12-96A24,24,0,0,0,234,80.12ZM32,112H72v88H32ZM223.94,97l-12,96a8,8,0,0,1-7.94,7H88V105.89l36.71-73.43A24,24,0,0,1,144,56V80a8,8,0,0,0,8,8h64a8,8,0,0,1,7.94,9Z">
+            </path>
+          </svg>
+          <span class="like-count">0</span>
+        </button>
+      </footer>
+    </article>
+
+    <hr />
+  </main>
+
+  <script>
+    hljs.highlightAll();
+
+    const pid = "routing-in-nextjs";
+    getLikes(pid).then((count) => {
+      document.querySelector(".like-count").textContent = count;
+    });
+    document.querySelector(".like-btn").addEventListener("click", async () => {
+      await addLike(pid);
+      const count = await getLikes(pid);
+      document.querySelector(".like-count").textContent = count;
+    });
+  </script>
+</body>
+
+</html>

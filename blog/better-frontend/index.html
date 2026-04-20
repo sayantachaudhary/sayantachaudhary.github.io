@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Better Frontend: Learn Development and Design Principles </title>
+  <meta name="description" content="A guide to better frontend development and design principles for beginners." />
+  <!-- Social Meta -->
+  <meta property="og:title" content="Better Frontend: Learn Development and Design Principles" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://sayanta.is-a-fullstack.dev/blog/better-frontend/" />
+  <meta property="og:image" content="https://sayanta.is-a-fullstack.dev/blog/frontend-part.png" />
+  <!-- Base Style -->
+  <link rel="stylesheet" href="/css/base/reset.css" />
+  <link rel="stylesheet" href="/css/base/global.css" />
+  <link rel="stylesheet" href="/css/theme/theme.css" />
+  <link rel="stylesheet" href="/css/theme/font.css" />
+  <!-- Layout -->
+  <link rel="stylesheet" href="/css/layout/layout.css" />
+  <!-- Components -->
+  <link rel="stylesheet" href="/css/components/button.css" />
+  <!-- Page Specific -->
+  <link rel="stylesheet" href="/css/pages/post.css" />
+  <!-- JS -->
+  <script src="/js/dark-mode.js"></script>
+  <script src="/js/navbar.js" defer></script>
+  <script src="/js/script.js" defer></script>
+  <script src="/js/blog.js"></script>
+  <!-- Highlight.js -->
+  <link rel="stylesheet" class="hljs-theme"
+    href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/atom-one-light.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+</head>
+
+<body>
+  <main class="container-md">
+    <article class="post">
+      <header class="post-header">
+        <button class="btn btn-ghost bb" onclick="navigation.back()">
+          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 256 256">
+            <path
+              d="M232,144a64.07,64.07,0,0,1-64,64H80a8,8,0,0,1,0-16h88a48,48,0,0,0,0-96H51.31l34.35,34.34a8,8,0,0,1-11.32,11.32l-48-48a8,8,0,0,1,0-11.32l48-48A8,8,0,0,1,85.66,45.66L51.31,80H168A64.07,64.07,0,0,1,232,144Z">
+            </path>
+          </svg>
+          Back to Blog
+        </button>
+        <!-- <nav aria-label="breadcrumb" class="breadcrumb"> -->
+        <!--   <ol> -->
+        <!--     <li><a href="/">Home</a></li> -->
+        <!--     <li><a href="/blog">Blog</a></li> -->
+        <!--     <li><span aria-current="page">Better Frontend: Learn Development and Design Principles</span></li> -->
+        <!--   </ol> -->
+        <!-- </nav> -->
+
+        <h1>Better Frontend: Learn Development and Design Principles</h1>
+        <div class="post-meta">
+          <time datetime="2025-12-24">Dec 24, 2025</time>
+        </div>
+      </header>
+      <p>This post is heavily inspired by <a href="https://refactoringui.com/">this book</a></p>
+<h2 id="introduction" tabindex="-1">Introduction</h2>
+<p>I have been working as a frontend developer for the past 2 years and have learned a lot along the way.</p>
+<p>In this blog, I will share some key principles that every frontend developer should know. So, let's get started.</p>
+<p>First of all, pardon me if I make any mistakes in this blog. I am not a native English speaker and I am an amateur blogger.</p>
+<h2 id="rule-1%3A-needs-over-design" tabindex="-1">Rule 1: Needs over design</h2>
+<p>Don't be like a typical developer</p>
+<p>opens vs code</p>
+<pre><code class="language-bash"># Open integrated terminal in VS Code
+ctrl + shift + ~
+
+# Create a new Next.js project
+npm create-next-app@latest
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
+</code></pre>
+<p>and quickly removes the template code</p>
+<p>and now you are <strong>staring</strong> at white screen figuring out if i need a top navbar
+or sidebar or a on left or right</p>
+<p>what should be the color etc.....</p>
+<p><strong>STOP</strong><br>
+<strong>STOP</strong><br>
+<strong>STOP</strong></p>
+<p>Before doing all this take a step back and think about the <strong>needs</strong> of the user
+what is the project is about</p>
+<p>First of all take a copy and pen or open notion, obsidian or any note taking app and write down the needs of the user</p>
+<ul>
+<li>what is the project about</li>
+<li>what is the main goal of the project</li>
+<li>what is the target audience</li>
+<li>what is the main feature of the project</li>
+<li>what is the main problem that the project is solving</li>
+</ul>
+<h3 id="example" tabindex="-1">Example</h3>
+<p>You're building a flight booking service. You could start
+with a feature like &quot;<strong>searching for a flight</strong>&quot;</p>
+<p>Your interface will need:</p>
+<ul>
+<li>A field for the departure city</li>
+<li>A field for the destination city</li>
+<li>A field for the departure date</li>
+<li>A field for the return date</li>
+<li>A button to perform the search</li>
+</ul>
+<p>Now just google out designs for flight booking service and you will get a lot of designs</p>
+<p>Something like these:</p>
+<p><img src="https://cdn.dribbble.com/users/563824/screenshots/4856957/drbl_2.png" alt="Flight booking"></p>
+<p>All these designs you will find are good but do you really need all these features in your project think about it as well.</p>
+<p>Remember focus on needs not design</p>
+<p>User experience matters (which includes design as well but only 30% of it)</p>
+<hr>
+<h2 id="rule-2%3A-improve-incrementally" tabindex="-1">Rule 2: Improve Incrementally</h2>
+<p>In early stage of design / development don't try to make everything perfect</p>
+<p>Don't think about:</p>
+<ul>
+<li>Typefaces to use</li>
+<li>Color schemes</li>
+<li>Animations</li>
+<li>Icons etc</li>
+</ul>
+<p>That stuff will all matter eventually, but it doesn't matter right now.</p>
+<p>Focus on creating a <strong>functional</strong> and <strong>usable</strong> product first.</p>
+<p>Once you have a <strong>functional</strong> product, you can start <strong>iterating</strong> on it.</p>
+<p>You can start by:</p>
+<ul>
+<li>Improving the design</li>
+<li>Adding animations</li>
+<li>Adding icons</li>
+<li>Adding more features</li>
+</ul>
+<hr>
+<h2 id="rule-3%3A-hierarchy-is-everything" tabindex="-1">Rule 3: Hierarchy is everything</h2>
+<p>Even if you have colors in your mind. don't just start applying them randomly</p>
+<p>first make a Grey scale design
+this will force you to focus on the <strong>hierarchy</strong> of the design</p>
+<p>like</p>
+<ul>
+<li>Padding</li>
+<li>Margins</li>
+<li>Font sizes</li>
+<li>Font weights</li>
+<li>Line heights etc</li>
+</ul>
+<p>It's a little more challenging, but you'll end up with a clearer interface with a strong hierarchy that's easy to enhance with color later.</p>
+<h3 id="grayscale-design" tabindex="-1">GRAYSCALE DESIGN</h3>
+<p><img src="https://i.pinimg.com/736x/21/ac/81/21ac8136a79a1bb78afb001387003399.jpg" alt="Grayscale design"></p>
+<hr>
+<h3 id="colorful-design" tabindex="-1">COLORFUL DESIGN</h3>
+<p><img src="https://cdn.dribbble.com/userupload/17410132/file/original-aaf038015bfe4d530bedeb143678b45f.png" alt="Colorful design"></p>
+<p>also a small tip</p>
+<blockquote>
+<p>Don't over-invest &amp; overdo things make a clutter free to the point design</p>
+</blockquote>
+<h2 id="rule-4%3A-don't-design-too-much" tabindex="-1">Rule 4: Don't design too much</h2>
+<p>You don't need to design every single feature in an app before you move on to implementation, in fact, it's better if you don't.</p>
+<p>Figuring out how every feature in a product should interact and how every
+edge case should look is really hard, especially in the abstract.</p>
+<p>How to handle unknown long errors in the form.<br>
+How will this table look if it has 2000 users.<br>
+What if this same date has 2 events how it will show it.</p>
+<p>You're setting yourself up for frustration by trying to figure this stuff out
+using only a design tool and your imagination</p>
+<p><strong>Instead work in cycles</strong></p>
+<p>Instead of designing everything upfront on paper or Figma, work in short cycles.</p>
+<p>Design a simple version and iterate over it.</p>
+<p>Once satisfied with the basic design, implement it.</p>
+<p>You'll likely encounter unexpected complexities, but it's easier to fix design problems in a real interface than to imagine every edge case in advance. Iterate on the working design until there are no more issues, then move on to the next feature.</p>
+<p>Don't get overwhelmed by abstract planning. Build the real thing as early as possible to reduce the burden on your imagination.</p>
+
+      <footer class="post-footer">
+        <button title="like" class="btn btn-primary like-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 256 256">
+            <path d="M80,104V208H32a8,8,0,0,1-8-8V112a8,8,0,0,1,8-8Z" opacity="0.2"></path>
+            <path
+              d="M234,80.12A24,24,0,0,0,216,72H160V56a40,40,0,0,0-40-40,8,8,0,0,0-7.16,4.42L75.06,96H32a16,16,0,0,0-16,16v88a16,16,0,0,0,16,16H204a24,24,0,0,0,23.82-21l12-96A24,24,0,0,0,234,80.12ZM32,112H72v88H32ZM223.94,97l-12,96a8,8,0,0,1-7.94,7H88V105.89l36.71-73.43A24,24,0,0,1,144,56V80a8,8,0,0,0,8,8h64a8,8,0,0,1,7.94,9Z">
+            </path>
+          </svg>
+          <span class="like-count">0</span>
+        </button>
+      </footer>
+    </article>
+
+    <hr />
+  </main>
+
+  <script>
+    hljs.highlightAll();
+
+    const pid = "better-frontend";
+    getLikes(pid).then((count) => {
+      document.querySelector(".like-count").textContent = count;
+    });
+    document.querySelector(".like-btn").addEventListener("click", async () => {
+      await addLike(pid);
+      const count = await getLikes(pid);
+      document.querySelector(".like-count").textContent = count;
+    });
+  </script>
+</body>
+
+</html>
