@@ -14,7 +14,7 @@
   cursor: pointer;
   user-select: none;
   -webkit-tap-highlight-color: transparent;
-  transition: transform 300ms ease;
+  transition: transform 0.3s ease-out;
 
   @media (hover: hover) {
     &:hover:not(:disabled) {

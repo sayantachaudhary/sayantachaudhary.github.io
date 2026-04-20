@@ -27,12 +27,48 @@ body {
 
   h3 {
     margin-top: calc(var(--spacing) * 6);
-    margin-bottom: calc(var(--spacing) * 2);
+    margin-bottom: calc(var(--spacing) * 4);
   }
 
   p {
     line-height: 1.875;
     margin-bottom: calc(var(--spacing) * 4);
+  }
+
+  img {
+    cursor: zoom-in;
+
+    &.fullscreen {
+      position: fixed;
+      inset: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: contain;
+      z-index: var(--z-overlay);
+      background: black;
+      cursor: zoom-out;
+    }
+  }
+
+  ul {
+    color: var(--neutral-700);
+    margin-bottom: calc(var(--spacing) * 8);
+    padding-left: calc(var(--spacing) * 6);
+
+    li {
+      list-style: disc;
+      margin-bottom: calc(var(--spacing) * 2);
+    }
+
+    a {
+      color: var(--neutral-900);
+      border-bottom: 1px solid var(--neutral-400);
+      transition: border-color 0.2s ease-in-out;
+
+      &:hover {
+        border-bottom-color: var(--neutral-900);
+      }
+    }
   }
 
   /* inline code */
@@ -55,8 +91,8 @@ body {
     overflow-x: auto;
     white-space: pre;
 
-    >code,
-    >samp {
+    > code,
+    > samp {
       border-radius: 0;
       padding: 0 !important;
       background: none;
@@ -65,27 +101,6 @@ body {
     /* Bleed on Desktop */
     @media (width >=768px) {
       margin-inline: -1.25rem;
-    }
-  }
-}
-
-.post ul {
-  color: var(--neutral-700);
-  margin-bottom: calc(var(--spacing) * 8);
-  padding-left: calc(var(--spacing) * 6);
-
-  li {
-    list-style: disc;
-    margin-bottom: calc(var(--spacing) * 2);
-  }
-
-  a {
-    color: var(--neutral-900);
-    border-bottom: 1px solid var(--neutral-400);
-    transition: border-color 0.2s ease-in-out;
-
-    &:hover {
-      border-bottom-color: var(--neutral-900);
     }
   }
 }

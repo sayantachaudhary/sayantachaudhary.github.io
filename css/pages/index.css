@@ -71,7 +71,7 @@ section {
     border-radius: var(--radius-lg);
     padding: calc(var(--spacing) * 4);
     background-color: var(--neutral-100);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease-out;
 
     &:hover {
       transform: scale(1.02);

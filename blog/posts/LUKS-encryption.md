@@ -1,10 +1,10 @@
 ---
 title: "LUKS Encryption"
-description: "A guide to JavaScript for frontend development for beginners."
+description: "Encrypt external and internal disks on Linux."
 image: "/blog/javascript-for-frontend.png"
 tags: ["frontend", "development", "javascript"]
-date: "2025-09-06"
-isPublished: false
+date: "2025-06-06"
+isPublished: true
 ---
 
 LUKS (Linux Unified Key Setup) is a libre and free disk encryption standard which allows for the encryption of external and internal disks on Linux. Everything from an SD card to your root partition can be encrypted with LUKS, allowing you to keep your data secure.

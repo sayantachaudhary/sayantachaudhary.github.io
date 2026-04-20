@@ -3,7 +3,7 @@ title: "JavaScript for Frontend Development: A Beginner's Guide"
 description: "A guide to JavaScript for frontend development for beginners."
 image: "/blog/javascript-for-frontend.png"
 tags: ["frontend", "development", "javascript"]
-date: "2025-04-09"
+date: "2025-11-09"
 isPublished: true
 ---
 
