@@ -84,8 +84,6 @@ Remember focus on needs not design
 
 User experience matters (which includes design as well but only 30% of it)
 
----
-
 ## Rule 2: Improve Incrementally
 
 In early stage of design / development don't try to make everything perfect
@@ -110,8 +108,6 @@ You can start by:
 - Adding icons
 - Adding more features
 
----
-
 ## Rule 3: Hierarchy is everything
 
 Even if you have colors in your mind. don't just start applying them randomly
@@ -132,8 +128,6 @@ It's a little more challenging, but you'll end up with a clearer interface with 
 ### GRAYSCALE DESIGN
 
 ![Grayscale design](https://i.pinimg.com/736x/21/ac/81/21ac8136a79a1bb78afb001387003399.jpg)
-
----
 
 ### COLORFUL DESIGN
 
