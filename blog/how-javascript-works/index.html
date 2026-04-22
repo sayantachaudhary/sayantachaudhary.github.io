@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>How JavaScript Works? </title>
+  <meta name="description" content="Understanding how JavaScript works behind the scenes." />
+  <!-- Social Meta -->
+  <meta property="og:title" content="How JavaScript Works?" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://sayanta.is-a-fullstack.dev/blog/how-javascript-works/" />
+  <meta property="og:image" content="https://sayanta.is-a-fullstack.dev/blog/assets/.png" />
+  <!-- Base Style -->
+  <link rel="stylesheet" href="/css/base/reset.css" />
+  <link rel="stylesheet" href="/css/base/global.css" />
+  <link rel="stylesheet" href="/css/theme/theme.css" />
+  <link rel="stylesheet" href="/css/theme/font.css" />
+  <!-- Layout -->
+  <link rel="stylesheet" href="/css/layout/layout.css" />
+  <!-- Components -->
+  <link rel="stylesheet" href="/css/components/button.css" />
+  <!-- Page Specific -->
+  <link rel="stylesheet" href="/css/pages/post.css" />
+  <!-- JS -->
+  <script src="/js/dark-mode.js"></script>
+  <script src="/js/navbar.js" defer></script>
+  <script src="/js/script.js" defer></script>
+  <script src="/js/blog.js"></script>
+  <!-- Highlight.js -->
+  <link rel="stylesheet" class="hljs-theme"
+    href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/atom-one-light.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+</head>
+
+<body>
+  <main class="container-md">
+    <article class="post">
+      <header class="post-header">
+        <button class="btn btn-ghost bb" onclick="navigation.back()">
+          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 256 256">
+            <path
+              d="M232,144a64.07,64.07,0,0,1-64,64H80a8,8,0,0,1,0-16h88a48,48,0,0,0,0-96H51.31l34.35,34.34a8,8,0,0,1-11.32,11.32l-48-48a8,8,0,0,1,0-11.32l48-48A8,8,0,0,1,85.66,45.66L51.31,80H168A64.07,64.07,0,0,1,232,144Z">
+            </path>
+          </svg>
+          Back to Blog
+        </button>
+        <!-- <nav aria-label="breadcrumb" class="breadcrumb"> -->
+        <!--   <ol> -->
+        <!--     <li><a href="/">Home</a></li> -->
+        <!--     <li><a href="/blog">Blog</a></li> -->
+        <!--     <li><span aria-current="page">How JavaScript Works?</span></li> -->
+        <!--   </ol> -->
+        <!-- </nav> -->
+
+        <h1>How JavaScript Works?</h1>
+        <div class="post-meta">
+          <time datetime="2026-02-02">Feb 2, 2026</time>
+        </div>
+      </header>
+      <p>After you complete this article, you will have a solid understanding of:</p>
+<ul>
+<li>How JavaScript executes code in a single thread</li>
+<li>What the Call Stack is and how it manages execution</li>
+<li>How Web APIs help with asynchronous operations</li>
+<li>The difference between Task Queue and Microtask Queue</li>
+<li>How the Event Loop coordinates all these components</li>
+</ul>
+<p>As we all know JavaScript runs on just one thread, so it can only do one thing at a time. But somehow it handles many things at once. How does that work? It's like trying to text friends, make coffee, and watch Instagram reels, all with just one hand. If you've ever asked yourself how JavaScript does so many things without freezing even though it's <strong>single threaded</strong>, you're not alone. So let's take a closer look at how this actually happens behind the scenes, and how the <strong>JS engine</strong> manages to pull off this kind of 'multi-tasking'.</p>
+<p>Let's do it step by step. First of all, JavaScript is not a &quot;compiled&quot; language so it doesn't directly translate to machine code like C, C++, or Go. We have to take the JavaScript file as an input, and we have to put it in some kind of machine that can understand that file and &quot;interprets&quot; it to machine code. As you probably know, that's what &quot;interpreted languages&quot; means. There are some upsides and downsides of being an interpreted language, but I'm not going into so much detail here so we don't get lost.</p>
+<p>Some kind of machine in this context will be <strong>V8 Engine</strong> which Google Chrome or NodeJS uses (there are some other engines that can do the same job too). So basically, V8 Engine is a runtime that can take a JavaScript file as input and turn it into something computers can understand.</p>
+<p>But like we said at the beginning, it runs on one thread. Why is that though?</p>
+<p>So, this engine has mainly 2 parts called <strong>Heap</strong>, and <strong>Call Stack</strong>.</p>
+<p>Heap part is the memory area where objects and variables are stored. Reference types (objects, arrays, functions etc.) are also stored in the heap. So this part is mainly for storage. Not to get too confused, let's forget this part for right now and let's focus on why JavaScript runs only on one thread.</p>
+<p>The <strong>Call Stack</strong>, on the other hand, is the part that manages the execution of our program, and it's also what makes JavaScript single-threaded. Let's walk through a code example, step by step.</p>
+<p>Let's say we have the following code to run;</p>
+<pre><code class="language-javascript">console.log(&quot;First&quot;);
+console.log(&quot;Second&quot;);
+</code></pre>
+<p>For the first console.log function, something called execution context is created(you can nevermind it for right now), pushed into the call stack, logged in the console then popped out from the call stack. For the second console.log it's the same story. A new execution context is created, pushed into the call stack, logged in the console and popped out from the call stack... Just like we said, everything happens one by one in the call stack. Single task at a time!</p>
+<blockquote>
+<p>Note: For functions, the execution context means that every time a function is called, a new environment is created to handle that specific call. This environment stores: the function's local variables, arguments passed to the function, the value of the this keyword (basically, what this keyword points to in that context), and a reference to its outer (parent) scope for closure access. So basically, each function call runs in its own little 'box' with its own data. And we call that box the <strong>execution context</strong> to make it sound a bit cooler.</p>
+</blockquote>
+<p>But what if we don't just have simple console.logs, but some heavy operations going on? For example:</p>
+<pre><code class="language-javascript">function veryHeavyOperation() {
+  for (let i = 0; i &lt; 100_000_000_000; i++) {
+    console.log(
+      &quot;there’s some heavy operation happening at the moment… can you be quiet?&quot;,
+    );
+  }
+}
+function veryImportantTask() {
+  console.log(&quot;This is a very important console.log!&quot;);
+}
+veryHeavyOperation();
+veryImportantTask();
+</code></pre>
+<p>Now, before our important task works, we have to wait for the call stack to be available. Because there's a really huge for loop, and it just doesn't finish. In the meantime, our program is completely frozen. The reason? like we said 100 times-sorry but I think I'll probably keep saying it...-, <strong>javascript is single threaded</strong>.</p>
+<p>But this is not actually what we want. In real world applications, we often do network requests, handle files operations, we wait for user inputs, we wait for timers and so on... We definitely can't block our call stack for all these operations.</p>
+<p>Pending...</p>
+
+      <footer class="post-footer">
+        <button title="like" class="btn btn-primary like-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 256 256">
+            <path d="M80,104V208H32a8,8,0,0,1-8-8V112a8,8,0,0,1,8-8Z" opacity="0.2"></path>
+            <path
+              d="M234,80.12A24,24,0,0,0,216,72H160V56a40,40,0,0,0-40-40,8,8,0,0,0-7.16,4.42L75.06,96H32a16,16,0,0,0-16,16v88a16,16,0,0,0,16,16H204a24,24,0,0,0,23.82-21l12-96A24,24,0,0,0,234,80.12ZM32,112H72v88H32ZM223.94,97l-12,96a8,8,0,0,1-7.94,7H88V105.89l36.71-73.43A24,24,0,0,1,144,56V80a8,8,0,0,0,8,8h64a8,8,0,0,1,7.94,9Z">
+            </path>
+          </svg>
+          <span class="like-count">0</span>
+        </button>
+      </footer>
+    </article>
+
+    <hr />
+  </main>
+
+  <script>
+    hljs.highlightAll();
+
+    const pid = "how-javascript-works";
+    getLikes(pid).then((count) => {
+      document.querySelector(".like-count").textContent = count;
+    });
+    document.querySelector(".like-btn").addEventListener("click", async () => {
+      await addLike(pid);
+      const count = await getLikes(pid);
+      document.querySelector(".like-count").textContent = count;
+    });
+  </script>
+</body>
+
+</html>

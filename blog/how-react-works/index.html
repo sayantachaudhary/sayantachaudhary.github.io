@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>How React Actually Works? </title>
+  <meta name="description" content="Aim to demystify React&#39;s inner workings." />
+  <!-- Social Meta -->
+  <meta property="og:title" content="How React Actually Works?" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://sayanta.is-a-fullstack.dev/blog/how-react-works/" />
+  <meta property="og:image" content="https://sayanta.is-a-fullstack.dev/blog/assets/.png" />
+  <!-- Base Style -->
+  <link rel="stylesheet" href="/css/base/reset.css" />
+  <link rel="stylesheet" href="/css/base/global.css" />
+  <link rel="stylesheet" href="/css/theme/theme.css" />
+  <link rel="stylesheet" href="/css/theme/font.css" />
+  <!-- Layout -->
+  <link rel="stylesheet" href="/css/layout/layout.css" />
+  <!-- Components -->
+  <link rel="stylesheet" href="/css/components/button.css" />
+  <!-- Page Specific -->
+  <link rel="stylesheet" href="/css/pages/post.css" />
+  <!-- JS -->
+  <script src="/js/dark-mode.js"></script>
+  <script src="/js/navbar.js" defer></script>
+  <script src="/js/script.js" defer></script>
+  <script src="/js/blog.js"></script>
+  <!-- Highlight.js -->
+  <link rel="stylesheet" class="hljs-theme"
+    href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/atom-one-light.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+</head>
+
+<body>
+  <main class="container-md">
+    <article class="post">
+      <header class="post-header">
+        <button class="btn btn-ghost bb" onclick="navigation.back()">
+          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 256 256">
+            <path
+              d="M232,144a64.07,64.07,0,0,1-64,64H80a8,8,0,0,1,0-16h88a48,48,0,0,0,0-96H51.31l34.35,34.34a8,8,0,0,1-11.32,11.32l-48-48a8,8,0,0,1,0-11.32l48-48A8,8,0,0,1,85.66,45.66L51.31,80H168A64.07,64.07,0,0,1,232,144Z">
+            </path>
+          </svg>
+          Back to Blog
+        </button>
+        <!-- <nav aria-label="breadcrumb" class="breadcrumb"> -->
+        <!--   <ol> -->
+        <!--     <li><a href="/">Home</a></li> -->
+        <!--     <li><a href="/blog">Blog</a></li> -->
+        <!--     <li><span aria-current="page">How React Actually Works?</span></li> -->
+        <!--   </ol> -->
+        <!-- </nav> -->
+
+        <h1>How React Actually Works?</h1>
+        <div class="post-meta">
+          <time datetime="2026-01-16">Jan 16, 2026</time>
+        </div>
+      </header>
+      <p>After you complete this article, you will have a solid understanding of:</p>
+<ul>
+<li>How JSX is converted to JavaScript</li>
+<li>The purpose and structure of React Elements</li>
+<li>What rendering means in React</li>
+<li>When components re-render and why</li>
+<li>What is Virtual DOM and Fiber Tree</li>
+<li>How the Virtual DOM and Fiber Tree optimize performance</li>
+<li>How diffing algorithm works</li>
+<li>The reconciliation process that makes React efficient</li>
+<li>How React Works Behind the Scenes</li>
+</ul>
+<p>If you've worked with ReactJS, you've probably heard the words “render” and “re-render” a million times. But have you ever stopped to think about what they actually mean? How does React work behind the scenes? How does it decide when to update the UI and when to stay put? In this post, we’ll dive into the inner workings of React, break down its optimization tricks, and see what really happens under the hood. Let's get into it!</p>
+<p>When you write React code, you probably write JSX. JSX stands for JavaScript XML. It is a syntax extension introduced by ReactJS. Our web applications run on the browser—they run on the V8 Engine if you use Google Chrome, for example—and browsers don't know what JSX is. They only understand JavaScript. So our JSX code needs to be converted to JavaScript first, and for React, Babel handles this process.</p>
+<h2 id="how-does-babel-convert-jsx-to-javascript%3F" tabindex="-1">How Does Babel Convert JSX to JavaScript?</h2>
+<p>Babel takes the JSX and convert it to the <code>React.createElement()</code> function. This function returns a JavaScript object called a <code>React Element</code>.</p>
+<p>Don't get confused too soon! Don't worry, we'll go through all of this throughout this blog and you'll have a solid understanding of these concepts.</p>
+<p>Our main goal is always to get a <code>React Element</code> from JSX. We could skip writing JSX in our codebase and write a bunch of <code>React.createElement()</code> function calls. That would work with no problem. Or you can just write JSX—which is much easier—and let Babel convert your code into <code>React Elements</code>.</p>
+<h2 id="what-is-react.createelement()%3F" tabindex="-1">What is React.createElement()?</h2>
+<p>Okay, so now we know we have to call <code>React.createElement()</code> to create our <code>React Element</code>. But what does this function actually do? How does it look? Why is it essential in our React apps?</p>
+<p><code>React.createElement()</code> is the fundamental function used by React to create React Elements. JSX is just syntactic sugar for this function call.</p>
+<p>For example, if you write this JSX:</p>
+<pre><code class="language-html">&lt;h1&gt;DeepIntoDev&lt;/h1&gt;
+</code></pre>
+<p>It is internally converted to:</p>
+<pre><code class="language-jsx">React.createElement(&quot;h1&quot;, null, &quot;DeepIntoDev&quot;);
+</code></pre>
+<p>Syntax of React.createElement()</p>
+<pre><code class="language-jsx">React.createElement(type, props, ...children);
+</code></pre>
+<p>type (element or component):</p>
+<ul>
+<li>If it's a element, it represents a standard HTML tag (h1, p, div...)</li>
+<li>If it's a function or class, it represents a React component.</li>
+</ul>
+<p>props (object):</p>
+<ul>
+<li>Attributes like className, id, onClick, etc.</li>
+<li>null means there are no attributes.</li>
+</ul>
+<p>...children (optional):</p>
+<ul>
+<li>Content inside the element (text, other elements, or components)</li>
+</ul>
+<p>Now, let's start with basic examples, then we will explore more complex scenarios.</p>
+<p>JSX:</p>
+<pre><code class="language-jsx">&lt;h1 className=&quot;text-3xl&quot;&gt;Deep Into Dev&lt;/h1&gt;
+</code></pre>
+<p>Converted to:</p>
+<pre><code class="language-jsx">React.createElement(&quot;h1&quot;, { className: &quot;text-3xl&quot; }, &quot;Deep Into Dev&quot;);
+</code></pre>
+<p>JSX:</p>
+<pre><code class="language-html">&lt;div&gt;
+  &lt;h3 className=&quot;text-3xl&quot;&gt;Deep Into Dev&lt;/h3&gt;
+  &lt;span&gt;Deep into React&lt;/span&gt;
+&lt;/div&gt;
+</code></pre>
+<p>Pending...</p>
+
+      <footer class="post-footer">
+        <button title="like" class="btn btn-primary like-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 256 256">
+            <path d="M80,104V208H32a8,8,0,0,1-8-8V112a8,8,0,0,1,8-8Z" opacity="0.2"></path>
+            <path
+              d="M234,80.12A24,24,0,0,0,216,72H160V56a40,40,0,0,0-40-40,8,8,0,0,0-7.16,4.42L75.06,96H32a16,16,0,0,0-16,16v88a16,16,0,0,0,16,16H204a24,24,0,0,0,23.82-21l12-96A24,24,0,0,0,234,80.12ZM32,112H72v88H32ZM223.94,97l-12,96a8,8,0,0,1-7.94,7H88V105.89l36.71-73.43A24,24,0,0,1,144,56V80a8,8,0,0,0,8,8h64a8,8,0,0,1,7.94,9Z">
+            </path>
+          </svg>
+          <span class="like-count">0</span>
+        </button>
+      </footer>
+    </article>
+
+    <hr />
+  </main>
+
+  <script>
+    hljs.highlightAll();
+
+    const pid = "how-react-works";
+    getLikes(pid).then((count) => {
+      document.querySelector(".like-count").textContent = count;
+    });
+    document.querySelector(".like-btn").addEventListener("click", async () => {
+      await addLike(pid);
+      const count = await getLikes(pid);
+      document.querySelector(".like-count").textContent = count;
+    });
+  </script>
+</body>
+
+</html>
