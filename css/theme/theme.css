@@ -1,7 +1,7 @@
 :root {
   --font-sans: "inter", system-ui, sans-serif;
   --font-serif: serif;
-  --font-mono: "iBMPlexMono", "JetBrainsMono", monospace;
+  --font-mono: "iBMPlexMono", monospace;
 
   --text-sm: 0.875rem;
   --text-base: 1rem;

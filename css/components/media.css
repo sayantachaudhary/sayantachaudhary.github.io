@@ -16,7 +16,7 @@
   align-items: center;
   text-align: center;
   gap: calc(var(--spacing) * 4);
-  border: 1px solid var(--neutral-200);
+  /* border: 1px solid var(--neutral-200); */
   border-radius: var(--radius-lg);
   padding: calc(var(--spacing) * 4);
   background-color: var(--neutral-100);
@@ -30,7 +30,7 @@
 
   .media-body {
     .media-title {
-      margin-bottom: calc(var(--spacing) * 2);
+      margin-bottom: calc(var(--spacing) * 4);
     }
   }
 
