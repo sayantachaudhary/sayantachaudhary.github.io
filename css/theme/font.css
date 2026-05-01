@@ -91,7 +91,7 @@ blockquote {
     width: 0.25rem;
     height: 100%;
     background: var(--neutral-800);
-    border-top-right-radius: var(--radius-md);
-    border-bottom-right-radius: var(--radius-md);
+    border-top-right-radius: var(--radius-sm);
+    border-bottom-right-radius: var(--radius-sm);
   }
 }
