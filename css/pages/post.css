@@ -37,6 +37,7 @@ body {
 
   img {
     cursor: zoom-in;
+    border-radius: var(--radius-md);
 
     &.fullscreen {
       position: fixed;
@@ -91,8 +92,8 @@ body {
     overflow-x: auto;
     white-space: pre;
 
-    > code,
-    > samp {
+    >code,
+    >samp {
       border-radius: 0;
       padding: 0 !important;
       background: none;
