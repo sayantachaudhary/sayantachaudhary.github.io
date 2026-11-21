@@ -116,3 +116,9 @@ section {
   margin-inline: auto;
   margin-top: calc(var(--spacing) * 4);
 }
+
+/* input[type="date"]::-webkit-calendar-picker-indicator { */
+/*   filter: invert(1); */
+/*   cursor: pointer; */
+/*   background-color: green; */
+/* } */
